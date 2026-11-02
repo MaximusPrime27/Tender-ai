@@ -37,10 +37,17 @@ if [ -f ops/extra.sql ]; then
     }" "$DB" > "$out/extra.txt" 2>&1
 fi
 
-git checkout -q -B ops-reports
-git rm -rq --cached . >/dev/null 2>&1; find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-mkdir -p reports && cp "$out"/* reports/ && rm -rf "$out"
-git add reports
-git -c user.name="tender-server" -c user.email="server@tender-ai" commit -qm "Отчёт $(date '+%F %H:%M')" || true
-git push -qf origin ops-reports && echo "$req-$day" > "$stamp"
-git checkout -qf main
+# Отчёты копятся в ветке reports отдельной папкой по дате: latest/ — последний, <дата>/ — история для динамики.
+R="$REPO-reports"
+if [ ! -d "$R/.git" ]; then
+  git clone -q --branch reports "$(git remote get-url origin)" "$R" 2>/dev/null || {
+    rm -rf "$R"; mkdir -p "$R"; git -C "$R" init -q; git -C "$R" remote add origin "$(git remote get-url origin)"
+    git -C "$R" checkout -q -b reports; }
+fi
+cd "$R" || exit 1
+git pull -q --rebase origin reports 2>/dev/null
+d="$(date +%F_%H%M)"
+mkdir -p "$d" && cp "$out"/* "$d"/ && rm -rf latest && cp -r "$d" latest && rm -rf "$out"
+git add -A
+git -c user.name="tender-server" -c user.email="server@tender-ai" commit -qm "Отчёт $d" || true
+git push -q origin reports && echo "$req-$day" > "$stamp"
