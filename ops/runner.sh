@@ -13,6 +13,22 @@ cd "$REPO" || exit 1
 git fetch -q origin main || exit 1
 git checkout -q -B main origin/main
 
+# Напоминания владельцу в Telegram: строки ops/reminders.txt вида «2026-11-05 21:00|текст» (время московское).
+if [ -f ops/reminders.txt ]; then
+  sent="$REPO/../.tender-ops-sent"; touch "$sent"
+  now="$(TZ=Europe/Moscow date '+%F %H:%M')"
+  tok="$(grep -E '^TELEGRAM_BOT_TOKEN=' /opt/tender-ai/.env | cut -d= -f2- | tr -d '"'\''\r')"
+  chat="$(grep -E '^TELEGRAM_ALLOWED_CHAT_IDS=' /opt/tender-ai/.env | cut -d= -f2- | tr -d '"'\''\r ' | cut -d, -f1)"
+  while IFS='|' read -r when text; do
+    [ -z "$when" ] && continue
+    key="$(echo "$when|$text" | sha1sum | cut -c1-12)"
+    if [[ "$now" > "$when" || "$now" == "$when" ]] && ! grep -q "$key" "$sent" && [ -n "$tok" ] && [ -n "$chat" ]; then
+      curl -s -o /dev/null --data-urlencode "chat_id=$chat" --data-urlencode "text=⏰ $text" \
+        "https://api.telegram.org/bot$tok/sendMessage" && echo "$key" >> "$sent"
+    fi
+  done < ops/reminders.txt
+fi
+
 req="$(sha1sum ops/request.txt 2>/dev/null | cut -c1-12)"
 day="$(date +%F)"
 stamp="$REPO/../.tender-ops-last"
