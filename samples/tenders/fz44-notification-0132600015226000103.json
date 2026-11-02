@@ -1,0 +1,1879 @@
+{
+  "doc_type": "epNotificationEF2020",
+  "published_at": "2026-09-17T10:59:44.432000",
+  "source": {
+    "id": "44038750",
+    "externalId": "12833494",
+    "versionNumber": "1",
+    "commonInfo": {
+      "purchaseNumber": "0132600015226000103",
+      "docNumber": "№0132600015226000103",
+      "plannedPublishDate": "2026-09-17+03:00",
+      "publishDTInEIS": "2026-09-17T13:59:44.432+03:00",
+      "href": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0132600015226000103",
+      "placingWay": {
+        "code": "EAP20",
+        "name": "Электронный аукцион"
+      },
+      "ETP": {
+        "code": "ETP_MMVB",
+        "name": "Электронная торговая площадка «Фабрикант»",
+        "url": "https://www.fabrikant.ru"
+      },
+      "contractConclusionOnSt83Ch2": "true",
+      "purchaseObjectInfo": "Оказание услуг по финансовой аренде (лизингу) 2 ед. специализированной дорожной техники"
+    },
+    "purchaseResponsibleInfo": {
+      "responsibleOrgInfo": {
+        "regNum": "01326000152",
+        "consRegistryNum": "223D3455",
+        "fullName": "АДМИНИСТРАЦИЯ ДАЛЬНЕКОНСТАНТИНОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ",
+        "shortName": "АДМИНИСТРАЦИЯ ДАЛЬНЕКОНСТАНТИНОВСКОГО ОКРУГА",
+        "postAddress": "606310 РП ДАЛЬНЕЕ КОНСТАНТИНОВО УЛ СОВЕТСКАЯ 99",
+        "factAddress": "606310 РП ДАЛЬНЕЕ КОНСТАНТИНОВО УЛ СОВЕТСКАЯ 99",
+        "INN": "5250077573",
+        "KPP": "525001001"
+      },
+      "responsibleRole": "RA",
+      "responsibleInfo": {
+        "orgPostAddress": "606310 РП ДАЛЬНЕЕ КОНСТАНТИНОВО УЛ СОВЕТСКАЯ 99",
+        "orgFactAddress": "606310 РП ДАЛЬНЕЕ КОНСТАНТИНОВО УЛ СОВЕТСКАЯ 99",
+        "contactPersonInfo": {
+          "lastName": "Храмова",
+          "firstName": "Светлана",
+          "middleName": "Вячеславовна"
+        },
+        "contactEMail": "zakazdknnov@yandex.ru",
+        "contactPhone": "8-83168-51684",
+        "addInfo": "Информация о заказчике: Управление строительства, архитектуры и жилищно-коммунального хозяйства администрации Дальнеконстантиновского муниципального округа Нижегородской области.\nЮридический адрес: 606310, Нижегородская область, м.о.Дальнеконстантиновский,  р.п. Дальнее Константиново ул. Советская, д.99\nТел. 8 (83168) 5-11-32\nОтветственное должностное лицо: Артмеладзе Бадри Михайлович.\nАдрес электронной почты osgkhdk@mail.ru"
+      }
+    },
+    "printFormInfo": {
+      "url": "https://zakupki.gov.ru/epz/order/notice/printForm/view.html?regNumber=0132600015226000103"
+    },
+    "attachmentsInfo": {
+      "attachmentInfo": [
+        {
+          "publishedContentId": "01A0AE7E739178AE911E8DDAC57B98BC",
+          "fileName": "Обоснование и расчет НМЦК.pdf",
+          "fileSize": "945860",
+          "docDescription": "Обоснование и расчет НМЦК.pdf",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E739178AE911E8DDAC57B98BC",
+          "docKindInfo": {
+            "code": "MRJ",
+            "name": "Обоснование начальной (максимальной) цены контракта"
+          }
+        },
+        {
+          "publishedContentId": "01A0AE7E74A67C03A8820E6C5E29245B",
+          "fileName": "Муниципальный контракт (проект).DOCX",
+          "fileSize": "128611",
+          "docDescription": "Муниципальный контракт (проект).DOCX",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E74A67C03A8820E6C5E29245B",
+          "docKindInfo": {
+            "code": "CP",
+            "name": "Проект контракта"
+          }
+        },
+        {
+          "publishedContentId": "01A0AE7E77F3786B81CD7F74AB543F9B",
+          "fileName": "Описание объекта закупки (раздел II извещения).pdf",
+          "fileSize": "9741494",
+          "docDescription": "Описание объекта закупки (раздел II извещения).pdf",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E77F3786B81CD7F74AB543F9B",
+          "docKindInfo": {
+            "code": "POD",
+            "name": "Описание объекта закупки"
+          }
+        },
+        {
+          "publishedContentId": "01A0AE7E76407490B5DED3AC59C35D57",
+          "fileName": "Описание объекта закупки (раздел II извещения).docx",
+          "fileSize": "46015",
+          "docDescription": "Описание объекта закупки (раздел II извещения).docx",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E76407490B5DED3AC59C35D57",
+          "docKindInfo": {
+            "code": "POD",
+            "name": "Описание объекта закупки"
+          }
+        },
+        {
+          "publishedContentId": "01A0AE7E771577D4A883635B1EEE9B65",
+          "fileName": "Общие условия закупки (раздел I извещения).docx",
+          "fileSize": "40987",
+          "docDescription": "Общие условия закупки (раздел I извещения).docx",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E771577D4A883635B1EEE9B65",
+          "docKindInfo": {
+            "code": "CAR",
+            "name": "Требование к содержанию, составу заявки на участие в закупке"
+          }
+        },
+        {
+          "publishedContentId": "01A0AE7E7577790BA5547C2B2A474F9D",
+          "fileName": "Техническое задание.docx",
+          "fileSize": "73172",
+          "docDescription": "Техническое задание.docx",
+          "docDate": "2026-09-17T11:32:08+03:00",
+          "url": "https://zakupki.gov.ru/44fz/filestore/public/1.0/download/priz/file.html?uid=01A0AE7E7577790BA5547C2B2A474F9D",
+          "docKindInfo": {
+            "code": "AD",
+            "name": "Дополнительная информация и документы"
+          }
+        }
+      ]
+    },
+    "serviceSigns": {
+      "isIncludeKOKS": "false",
+      "isControlP1Ch5St99": "true"
+    },
+    "notificationInfo": {
+      "procedureInfo": {
+        "collectingInfo": {
+          "startDT": "2026-09-17T13:59:44+03:00",
+          "endDT": "2026-09-25T08:00:00+03:00"
+        },
+        "biddingDate": "2026-09-25+03:00",
+        "summarizingDate": "2026-09-29+03:00"
+      },
+      "contractConditionsInfo": {
+        "maxPriceInfo": {
+          "maxPrice": "27580392.15",
+          "currency": {
+            "code": "RUB",
+            "name": "РОССИЙСКИЙ РУБЛЬ"
+          },
+          "interbudgetaryTransfer": "false"
+        }
+      },
+      "customerRequirementsInfo": {
+        "customerRequirementInfo": {
+          "customer": {
+            "regNum": "03323000477",
+            "consRegistryNum": "223D2668",
+            "fullName": "УПРАВЛЕНИЕ СТРОИТЕЛЬСТВА, АРХИТЕКТУРЫ И ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА АДМИНИСТРАЦИИ ДАЛЬНЕКОНСТАНТИНОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ"
+          },
+          "applicationGuarantee": {
+            "amount": "275803.92",
+            "account": {
+              "bik": "012202102",
+              "settlementAccount": "03232643225300003200",
+              "personalAccount": "055007026",
+              "creditOrgName": "Волго-Вятское ГУ Банка России//УФК по Нижегородской области г.Нижний Новгород.",
+              "corrAccountNumber": "40102810745370000024"
+            },
+            "procedureInfo": "В соответствии с требованиями п.13.1 раздела II извещения об осуществлении закупки",
+            "part": "1.0"
+          },
+          "contractGuarantee": {
+            "amount": "2758039.22",
+            "account": {
+              "bik": "012202102",
+              "settlementAccount": "03232643225300003200",
+              "personalAccount": "055007026",
+              "creditOrgName": "Волго-Вятское ГУ Банка России//УФК по Нижегородской области г.Нижний Новгород.",
+              "corrAccountNumber": "40102810745370000024"
+            },
+            "procedureInfo": "В соответствии с Контрактом",
+            "part": "10.0"
+          },
+          "contractConditionsInfo": {
+            "maxPriceInfo": {
+              "maxPrice": "27580392.15"
+            },
+            "mustPublicDiscussion": "false",
+            "IKZInfo": {
+              "purchaseCode": "263521500998052150100100390020000244",
+              "publishYear": "2026",
+              "OKPD2Info": {
+                "undefined": "0000"
+              },
+              "KVRInfo": {
+                "KVR": {
+                  "code": "244",
+                  "name": "Прочая закупка товаров, работ и услуг"
+                }
+              },
+              "customerCode": "35215009980521501001",
+              "purchaseNumber": "0039",
+              "purchaseOrderNumber": "002"
+            },
+            "tenderPlan2020Info": {
+              "plan2020Number": "202603323000477001",
+              "position2020Number": "202603323000477001000030"
+            },
+            "contractExecutionPaymentPlan": {
+              "contractExecutionTermsInfo": {
+                "notRelativeTermsInfo": {
+                  "isFromConclusionDate": "true",
+                  "endDate": "2031-12-31+03:00"
+                }
+              },
+              "financingSourcesInfo": {
+                "budgetFinancingsInfo": {
+                  "budgetInfo": {
+                    "code": "32031793",
+                    "name": "Бюджет Дальнеконстантиновского муниципального округа Нижегородской области"
+                  },
+                  "budgetLevelInfo": {
+                    "code": "30",
+                    "name": "местный бюджет"
+                  },
+                  "OKTMOInfo": {
+                    "code": "22530000",
+                    "name": "Муниципальные образования Нижегородской области / Муниципальные округа Нижегородской области / Дальнеконстантиновский муниципальный округ"
+                  }
+                },
+                "currentYear": "2026",
+                "financeInfo": {
+                  "total": "27580392.15",
+                  "currentYear": "1772625.00",
+                  "firstYear": "7090375.00",
+                  "secondYear": "5317750.00",
+                  "subsecYears": "13399642.15"
+                }
+              },
+              "stagesInfo": {
+                "stageInfo": {
+                  "sid": "21917626",
+                  "externalSid": "45499447-badc-43f1-b0ff-ec99ba97b768",
+                  "termsInfo": {
+                    "notRelativeTermsInfo": {
+                      "isFromConclusionDate": "true",
+                      "endDate": "2031-12-31+03:00"
+                    }
+                  },
+                  "budgetFinancingsInfo": {
+                    "budgetFinancingInfo": {
+                      "KBK": "132050277705S2860244",
+                      "paymentYearInfo": {
+                        "total": "27580392.15",
+                        "currentYear": "1772625.00",
+                        "firstYear": "7090375.00",
+                        "secondYear": "5317750.00",
+                        "subsecYears": "13399642.15"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "deliveryPlacesInfo": {
+              "byGARInfo": {
+                "sid": "61738038",
+                "externalSid": "5f7ec9bc-13cf-4d30-8001-8c37deaa91b3",
+                "countryInfo": {
+                  "countryCode": "643",
+                  "countryFullName": "Российская Федерация"
+                },
+                "GARInfo": {
+                  "GARGuid": "442ab5db-9593-4b5e-8763-0a4c40a565b6",
+                  "GARAddress": "обл. Нижегородская, м.о. Дальнеконстантиновский, рп. Дальнее Константиново, ул. Советская, д. 99"
+                },
+                "deliveryPlace": "606310, Нижегородская область, р.п. Дальнее Константиново, ул. Советская, д.99."
+              }
+            },
+            "isOneSideRejectionSt95": "true",
+            "isExecutionStagesTerms": "false"
+          },
+          "warrantyInfo": {
+            "warrantyServiceRequirement": "Гарантийный срок эксплуатации специализированной дорожной техники действует при условии соблюдения требований заводов-изготовителей, изложенных в руководстве по эксплуатации на соответствующий тип техники, включая своевременное прохождение технического обслуживания, а также обязательную своевременную постановку на гарантийный учет в авторизованных заводом-изготовителем сервисных центрах.",
+            "manufacturersWarrantyRequirement": "Поставляемое оборудование должно являться новым, не бывшем в эксплуатации, готовым к эксплуатации, не прошедшим ремонт, в том числе восстановление, замену составных частей, не должно иметь дефектов и недостатков, связанных с конструкцией, материалами или функционированием при использовании, дефектов и недостатков внешнего (товарного) вида (потёртостей, царапин, иных повреждений, загрязнений и др.). Год выпуска не ранее 2025 года.",
+            "warrantyTerm": "Погрузчик ковшовый:с момента подписания документа о приемке 12 месяцев или 2000 м/ч, в зависимости от того, что наступает раньше.  Экскаватор-погрузчик:с момента подписания документа о приемке 12 месяцев или 2000 м/ч, в зависимости от того, что наступает раньше."
+          },
+          "addInfo": "Установлена"
+        }
+      },
+      "purchaseObjectsInfo": {
+        "notDrugPurchaseObjectsInfo": {
+          "purchaseObject": [
+            {
+              "sid": "222894384",
+              "externalSid": "b78fd8e6-3055-422c-baa0-491e2a0914dd",
+              "KTRU": {
+                "code": "28.92.20.000-00000020",
+                "name": "Погрузчик ковшовый",
+                "versionId": "386601",
+                "versionNumber": "6",
+                "characteristics": {
+                  "characteristicsUsingReferenceInfo": [
+                    {
+                      "sid": "328370876",
+                      "externalSid": "34a89285-651b-46bd-9447-5165cb0bc1fe",
+                      "code": "eddea09e-7",
+                      "name": "Вид ходовой части",
+                      "type": "1",
+                      "kind": "1",
+                      "values": {
+                        "value": {
+                          "sid": "423880788",
+                          "qualityDescription": "Колесная"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370877",
+                      "externalSid": "955385c9-f27e-42db-9d48-eb205fd5fd56",
+                      "code": "dfc91ce3-3",
+                      "name": "Тип погрузчика",
+                      "type": "1",
+                      "kind": "1",
+                      "values": {
+                        "value": {
+                          "sid": "423880789",
+                          "qualityDescription": "Фронтальный одноковшовый погрузчик"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370878",
+                      "externalSid": "c389d735-c734-44b8-be5a-5833817554d3",
+                      "code": "1c21fd32-d",
+                      "name": "Номинальная грузоподъемность",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880790",
+                          "OKEI": {
+                            "code": "168",
+                            "nationalCode": "т",
+                            "name": "Тонна; метрическая тонна (1000 кг)"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greater",
+                              "min": "2",
+                              "maxMathNotation": "lessOrEqual",
+                              "max": "4"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370879",
+                      "externalSid": "a1b06b33-0299-410e-b522-8151eec8dff1",
+                      "code": "a030831a-f",
+                      "name": "Номинальная мощность двигателя (ей)",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880791",
+                          "OKEI": {
+                            "code": "251",
+                            "nationalCode": "л. с",
+                            "name": "Лошадиная сила"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "150",
+                              "maxMathNotation": "less",
+                              "max": "200"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370880",
+                      "externalSid": "53b4a771-cb39-4e00-a246-37574b75baf7",
+                      "code": "44a07876-6",
+                      "name": "Шарнирно-сочлененная рама",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880792",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370881",
+                      "externalSid": "d6a5a438-6eeb-474e-be37-ceaf88af6e7a",
+                      "code": "4932424c-3",
+                      "name": "Высота подъема ковша погрузчика",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880793",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "3000",
+                              "maxMathNotation": "less",
+                              "max": "3500"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370882",
+                      "externalSid": "385a649f-4d98-4a84-a3c2-dcbba0977109",
+                      "code": "56ca0100-3",
+                      "name": "Объем ковша",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880794",
+                          "OKEI": {
+                            "code": "113",
+                            "nationalCode": "м[3*]",
+                            "name": "Кубический метр"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "2",
+                              "maxMathNotation": "less",
+                              "max": "2.5"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370883",
+                      "externalSid": "34215312-167e-4fec-b4d4-9c292d10fc1c",
+                      "code": "354c8f27-7",
+                      "name": "Наличие отопителя",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880795",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370884",
+                      "externalSid": "8dc80a86-2cdf-43d1-a6db-d36fd5e26f21",
+                      "code": "1a6d50ae-f",
+                      "name": "Наличие устройства защиты оператора ROPS",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880796",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370885",
+                      "externalSid": "e21122f4-b07a-4170-92f8-660036982280",
+                      "code": "1490df94-7",
+                      "name": "Наличие устройства защиты оператора FOPS",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880797",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370886",
+                      "externalSid": "2d7d8fb1-0c6e-403e-a929-3a4ac9b71457",
+                      "code": "a032438b-f",
+                      "name": "Тип двигателя",
+                      "type": "1",
+                      "kind": "3",
+                      "values": {
+                        "value": {
+                          "sid": "423880798",
+                          "qualityDescription": "Дизельный"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370887",
+                      "externalSid": "34c4d984-c682-4e94-b38d-2e30d61086eb",
+                      "code": "cd21e673-1",
+                      "name": "Трансмиссия",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880799",
+                          "qualityDescription": "Гидромеханическая"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    }
+                  ],
+                  "characteristicsUsingTextForm": [
+                    {
+                      "sid": "328370869",
+                      "externalSid": "c05ac17b-091f-4a51-8a84-8d758f85b410",
+                      "name": "Эксплуатационная масса",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880781",
+                          "externalSid": "8cec9e2d-9a59-4750-b543-9f944bb58ff5",
+                          "OKEI": {
+                            "code": "168",
+                            "nationalCode": "т",
+                            "name": "Тонна; метрическая тонна (1000 кг)"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "lessOrEqual",
+                              "max": "14"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370870",
+                      "externalSid": "ec559504-cbfd-4464-b9e6-b2d1433f16fe",
+                      "name": "Количество передач вперед/назад",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880782",
+                          "externalSid": "aa694de7-9ce2-4a17-8437-38a394b668ea",
+                          "qualityDescription": "4/2"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370871",
+                      "externalSid": "f76c8327-301a-4009-82e1-a8a0b14c505c",
+                      "name": "Компоновка моста",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880783",
+                          "externalSid": "6aeb4827-8788-4e76-95c1-8f07272292c4",
+                          "qualityDescription": "Главная передача и дифференциал в центральном редукторе, конечная планетарная передача и многодисковый тормоз в колёсном редукторе"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370872",
+                      "externalSid": "fc4a03bc-fe18-4710-b07d-ab4d91f3ade6",
+                      "name": "Тип гидросистемы погрузочного оборудования и рулевого управления",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880784",
+                          "externalSid": "3cd4bd81-589c-43af-8125-413c773c2a62",
+                          "qualityDescription": "Объединённая для погрузочного оборудования и рулевого управления, двухнасосная с открытым центром, приоритетным клапаном для рулевого управления и аварийным насосом рулевого управления"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370873",
+                      "externalSid": "a35a87b9-480f-4122-89b1-b1cb787a7e47",
+                      "name": "Рабочая тормозная система",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880785",
+                          "externalSid": "85cb67aa-899d-4670-805c-2a463a23b5d1",
+                          "qualityDescription": "Многодисковые тормозные механизмы в «масле» в ступицах колёс с раздельным гидравлическим приводом по мостам"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370874",
+                      "externalSid": "5bf4318a-14ee-43c6-ade4-7dba1e23d8bd",
+                      "name": "Стояночная и аварийная тормозные системы",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880786",
+                          "externalSid": "749d39b7-8ae2-498d-9a62-54af0d6579b1",
+                          "qualityDescription": "Однодисковый сухой тормозной механизм с пружинным сжатием и гидравлическим растормаживанием"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370875",
+                      "externalSid": "7242d41c-9e30-40f5-b04b-fd2e5a4ed819",
+                      "name": "Топливный бак",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880787",
+                          "externalSid": "073c5804-40a3-4a73-8be2-ed021ea31e3b",
+                          "OKEI": {
+                            "code": "112",
+                            "nationalCode": "л; дм[3*]",
+                            "name": "Литр; кубический дециметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "lessOrEqual",
+                              "max": "225"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "addCharacteristicInfoReason": "Каталог товаров, работ, услуг для обеспечения государственных и муниципальных нужд, утвержденными Постановлением Правительства РФ от 08.02.2017 № 145 не применялся в связи с отсутствием позиций КТРУ для товаров, указанных в описании объекта закупки"
+                },
+                "OKPD2": {
+                  "OKPDCode": "28.92.2",
+                  "OKPDName": "Машины прочие для перемещения, грейдерных работ, планирования, скреперных работ, выемки, трамбовки, уплотнения или добычи, самоходные, для грунта, минералов или руд (включая бульдозеры, одноковшовые экскаваторы и дорожные катки)"
+                }
+              },
+              "name": "Погрузчик ковшовый",
+              "OKEI": {
+                "code": "796",
+                "nationalCode": "шт",
+                "name": "Штука"
+              },
+              "customerQuantities": {
+                "customerQuantity": {
+                  "customer": {
+                    "regNum": "03323000477",
+                    "consRegistryNum": "223D2668",
+                    "fullName": "УПРАВЛЕНИЕ СТРОИТЕЛЬСТВА, АРХИТЕКТУРЫ И ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА АДМИНИСТРАЦИИ ДАЛЬНЕКОНСТАНТИНОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ"
+                  },
+                  "quantity": "1"
+                }
+              },
+              "price": "1000.00",
+              "volumeSpecifyingMethod": "QF",
+              "quantity": {
+                "value": "1.00000000000"
+              },
+              "sum": "1000.00",
+              "type": "PRODUCT",
+              "hierarchyType": "ND",
+              "restrictionsInfo": {
+                "isProhibitionForeignPurchaseObjects": "true"
+              }
+            },
+            {
+              "sid": "222894385",
+              "externalSid": "9e2cf881-7c22-4cfb-8439-fe369352ae5e",
+              "OKPD2": {
+                "OKPDCode": "64.91.10.190",
+                "OKPDName": "Услуги по финансовой аренде (лизингу/сублизингу) в прочих областях, кроме племенных животных"
+              },
+              "name": "Услуги по финансовой аренде (лизингу/сублизингу) в прочих областях, кроме племенных животных",
+              "OKEI": {
+                "code": "876",
+                "nationalCode": "УСЛ ЕД",
+                "name": "Условная единица"
+              },
+              "customerQuantities": {
+                "customerQuantity": {
+                  "customer": {
+                    "regNum": "03323000477",
+                    "consRegistryNum": "223D2668",
+                    "fullName": "УПРАВЛЕНИЕ СТРОИТЕЛЬСТВА, АРХИТЕКТУРЫ И ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА АДМИНИСТРАЦИИ ДАЛЬНЕКОНСТАНТИНОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ"
+                  },
+                  "quantity": "1"
+                }
+              },
+              "price": "27578392.15",
+              "volumeSpecifyingMethod": "QF",
+              "quantity": {
+                "value": "1.00000000000"
+              },
+              "sum": "27578392.15",
+              "type": "SERVICE",
+              "hierarchyType": "ND"
+            },
+            {
+              "sid": "222894386",
+              "externalSid": "ef348367-885c-4244-8b06-d49d11a0b613",
+              "KTRU": {
+                "code": "28.92.20.000-00000004",
+                "name": "Экскаватор",
+                "versionId": "374582",
+                "versionNumber": "11",
+                "characteristics": {
+                  "characteristicsUsingReferenceInfo": [
+                    {
+                      "sid": "328370920",
+                      "externalSid": "a4937e29-d50b-432e-b578-b767cf6289b0",
+                      "code": "0b2cd589-3",
+                      "name": "Тип экскаватора",
+                      "type": "1",
+                      "kind": "1",
+                      "values": {
+                        "value": {
+                          "sid": "423880832",
+                          "qualityDescription": "Экскаватор-погрузчик"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370921",
+                      "externalSid": "117c8e0e-437c-4d7c-813f-ddc0460953fe",
+                      "code": "61932420-e",
+                      "name": "Вид ходовой части",
+                      "type": "1",
+                      "kind": "1",
+                      "values": {
+                        "value": {
+                          "sid": "423880833",
+                          "qualityDescription": "Колесная"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370922",
+                      "externalSid": "0abb45c1-fb85-44e1-a54d-370e878aa43f",
+                      "code": "9b26733d-4",
+                      "name": "Объем ковша",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880834",
+                          "OKEI": {
+                            "code": "113",
+                            "nationalCode": "м[3*]",
+                            "name": "Кубический метр"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "lessOrEqual",
+                              "max": "0.3"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370923",
+                      "externalSid": "7f885e4d-9839-4513-865e-47dc3472448d",
+                      "code": "41094009-9",
+                      "name": "Вид дополнительного и рабочего оборудования",
+                      "type": "1",
+                      "kind": "3",
+                      "values": {
+                        "value": {
+                          "sid": "423880835",
+                          "qualityDescription": "Ковш погрузочный"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370924",
+                      "externalSid": "3b657414-42ca-43e3-99c1-55c20d681200",
+                      "code": "f75895c2-e",
+                      "name": "Возможность подключения навесного гидрооборудования",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880836",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370925",
+                      "externalSid": "2173738b-31b8-4f5d-bb9f-8647e6d63832",
+                      "code": "0510518d-6",
+                      "name": "Колесная формула",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880837",
+                          "qualityDescription": "4х4"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370926",
+                      "externalSid": "de9e2416-e587-4600-9eee-9ad0e373324c",
+                      "code": "f879886a-9",
+                      "name": "Наличие отопителя",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880838",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370927",
+                      "externalSid": "51202330-80a0-4221-9fff-5c23cc8b7f23",
+                      "code": "63210d4d-e",
+                      "name": "Наличие системы кондиционирования",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880839",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370928",
+                      "externalSid": "5bdfbc10-818b-411e-8a71-80d0c876ac20",
+                      "code": "9f0cc370-4",
+                      "name": "Номинальная грузоподъемность",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880840",
+                          "OKEI": {
+                            "code": "168",
+                            "nationalCode": "т",
+                            "name": "Тонна; метрическая тонна (1000 кг)"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "less",
+                              "max": "5"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      }
+                    },
+                    {
+                      "sid": "328370929",
+                      "externalSid": "f20538f7-f8e8-453a-8ada-9dc64d302f25",
+                      "code": "f563b10c-d",
+                      "name": "Номинальная мощность двигателя (ей)",
+                      "type": "2",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880841",
+                          "OKEI": {
+                            "code": "251",
+                            "nationalCode": "л. с",
+                            "name": "Лошадиная сила"
+                          },
+                          "valueFormat": "N",
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "less",
+                              "max": "100"
+                            }
+                          }
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370930",
+                      "externalSid": "b0fda4cc-4a25-423a-9050-356d166277b0",
+                      "code": "7f514bc3-4",
+                      "name": "Тип двигателя",
+                      "type": "1",
+                      "kind": "3",
+                      "values": {
+                        "value": {
+                          "sid": "423880842",
+                          "qualityDescription": "Дизельный"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370931",
+                      "externalSid": "396ae5bd-e427-4816-b859-b01b583f936d",
+                      "code": "a4382d17-1",
+                      "name": "Наличие устройства защиты оператора FOPS",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880843",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370932",
+                      "externalSid": "aa08eec6-e2d4-457b-8f33-5b0e6ddf896a",
+                      "code": "fda43533-c",
+                      "name": "Наличие устройства защиты оператора ROPS",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880844",
+                          "qualityDescription": "Да"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    },
+                    {
+                      "sid": "328370933",
+                      "externalSid": "9d67b9c2-d2d9-4c8e-bb87-9c6a13b237b9",
+                      "code": "51da00b5-9",
+                      "name": "Трансмиссия",
+                      "type": "1",
+                      "kind": "2",
+                      "values": {
+                        "value": {
+                          "sid": "423880845",
+                          "qualityDescription": "Гидромеханическая"
+                        }
+                      },
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      }
+                    }
+                  ],
+                  "characteristicsUsingTextForm": [
+                    {
+                      "sid": "328370888",
+                      "externalSid": "3781cb1f-d08d-4d4d-af19-c269ad0ec055",
+                      "name": "Тип экскаватора-погрузчика",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880800",
+                          "externalSid": "7d7e2fdd-b6c4-4d2d-9ef7-b181bdd773bf",
+                          "qualityDescription": "равноколёсный"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370889",
+                      "externalSid": "33e40c1a-1a69-4534-80c1-feb505ae3fca",
+                      "name": "Режимы управления колесами 2WS, 4WS, crab",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880801",
+                          "externalSid": "f16dcafb-3e93-4b8e-b596-3d120073f0ff",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370890",
+                      "externalSid": "b858a603-6e3a-45ba-83c3-cef4d34ccf7b",
+                      "name": "Длина, экскаваторная стрела в транспортном положении",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880802",
+                          "externalSid": "9bae1b24-dd1c-4b37-8374-7f2d0cb51e25",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "maxMathNotation": "lessOrEqual",
+                              "max": "6450"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370891",
+                      "externalSid": "c588ceb6-fcea-499a-af7f-88e821d663e3",
+                      "name": "Высота по крыше кабины",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880803",
+                          "externalSid": "af62070d-027d-4260-90a0-830c7f011c4e",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "2800"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370892",
+                      "externalSid": "af15eaea-a3e4-437f-a903-b30597d60147",
+                      "name": "Ширина",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880804",
+                          "externalSid": "c4d4aeeb-67ae-44bd-8eb2-26a082fec0a2",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "2450"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370893",
+                      "externalSid": "2845428d-c020-4e54-91a1-3b94637e8110",
+                      "name": "Максимальная скорость передвижения",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880805",
+                          "externalSid": "63016227-2885-452f-8a5b-dbb4b1ba9ad3",
+                          "OKEI": {
+                            "code": "333",
+                            "nationalCode": "км/ч",
+                            "name": "Километр в час"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "35"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370894",
+                      "externalSid": "b154084d-8689-4378-8bf6-f001fdf9bcb9",
+                      "name": "Количество скоростей вперед",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880806",
+                          "externalSid": "53214865-9622-4e03-abe2-978b8260a73c",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370895",
+                      "externalSid": "33133a25-f87a-4320-8457-7dd10e9352c0",
+                      "name": "Количество скоростей назад",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880807",
+                          "externalSid": "81f259ba-bbf5-4234-aa99-365e79f9068a",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "4"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370896",
+                      "externalSid": "aa7253a6-3d27-44a6-9293-fd941b230e08",
+                      "name": "Колесная база",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880808",
+                          "externalSid": "b2d5a9a5-428c-411c-adb8-c48aedad42c8",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "2210"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370897",
+                      "externalSid": "67ecd965-d023-4289-822f-4822eb00c5c5",
+                      "name": "Рабочее давление в гидросистеме",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880809",
+                          "externalSid": "01a455f4-0ca0-4b6c-93d2-2758f0fe08e0",
+                          "OKEI": {
+                            "code": "298",
+                            "nationalCode": "МПа",
+                            "name": "Мегапаскаль"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "22.5"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370898",
+                      "externalSid": "ad292494-631d-4ad1-992c-302034d5534a",
+                      "name": "Тип гидронасосов",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880810",
+                          "externalSid": "076c590b-425f-4e1e-bad1-ee8a0f3a153d",
+                          "qualityDescription": "Шестерённые"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370899",
+                      "externalSid": "231c7260-0c3c-40b9-8726-8aa9175c685c",
+                      "name": "Открывающиеся окна на дверях кабины, поднимающееся заднее окно",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880811",
+                          "externalSid": "9c836f72-6da5-410d-b5ed-44e99990ef28",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370900",
+                      "externalSid": "e355af95-8c4d-4807-be1f-62b0c18f3b60",
+                      "name": "Принудительная 100 % блокировка дифференциала заднего моста",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880812",
+                          "externalSid": "7258a42a-0551-45a1-b953-c74303100902",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370901",
+                      "externalSid": "484e4df2-b78a-408d-b731-5b70a18cdd5b",
+                      "name": "Аудио (FM, mp3, USB, 2 динамика)",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880813",
+                          "externalSid": "67e193dd-cf4b-4175-9e26-22123e939886",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370902",
+                      "externalSid": "5278c576-9a1b-4b43-ab0f-6cffb0945fd7",
+                      "name": "Однопоточный и двухпо-точный гидроконтуры с быстроразъемными соеди-нениями",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880814",
+                          "externalSid": "b73da4b3-16f8-4051-ba7c-fb259c7ae275",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370903",
+                      "externalSid": "e0fee5df-3236-4d69-a315-4eac16471725",
+                      "name": "Управление погрузочным и экскаваторным оборудованием- рычаги",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880815",
+                          "externalSid": "2fd85077-2f0b-43d9-9967-67cc6f35b618",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370904",
+                      "externalSid": "e1a5dee4-eb4f-4978-91a3-3b002f22ff7d",
+                      "name": "Дисковые тормоза в масляной ванне",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880816",
+                          "externalSid": "e2fd67d0-f631-49a6-b9ad-95a968c5789d",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370905",
+                      "externalSid": "9a1252c1-6262-4d42-bc27-e464dace2151",
+                      "name": "Цельнолитая каретка экскаваторного оборудования",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880817",
+                          "externalSid": "486c22fe-624c-4423-a8b4-4552b58af9f5",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370906",
+                      "externalSid": "7dd0508e-8e36-4717-9cc8-38b89dddec40",
+                      "name": "Транспортный фиксатор стрелы с управлением из кабины",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880818",
+                          "externalSid": "53264d5a-d490-4348-b173-87f8c6bebd90",
+                          "qualityDescription": "да"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370907",
+                      "externalSid": "202a84d1-542c-47a2-b98e-6836a40d3cfd",
+                      "name": "Ёмкость топливного бака",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880819",
+                          "externalSid": "6063846c-48a6-4b58-b5c5-5d7ae154f4e0",
+                          "OKEI": {
+                            "code": "112",
+                            "nationalCode": "л; дм[3*]",
+                            "name": "Литр; кубический дециметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "120"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370908",
+                      "externalSid": "e1c3d3e4-b8fd-4451-be8c-76cf29042c75",
+                      "name": "Объём гидробака",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880820",
+                          "externalSid": "a9d79b58-9a82-4c39-9226-caef0ba1af96",
+                          "OKEI": {
+                            "code": "112",
+                            "nationalCode": "л; дм[3*]",
+                            "name": "Литр; кубический дециметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "90"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370909",
+                      "externalSid": "b772dfda-e9cb-461f-8292-00fa85fc1c8e",
+                      "name": "Рабочий объем двигателя",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880821",
+                          "externalSid": "26a07cc2-8700-4d9b-b9f6-1d495f5198e2",
+                          "OKEI": {
+                            "code": "112",
+                            "nationalCode": "л; дм[3*]",
+                            "name": "Литр; кубический дециметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "4.43"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370910",
+                      "externalSid": "0d6b2416-0e7b-4973-a091-36b9e4820b6f",
+                      "name": "Тип погрузочного ковша",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880822",
+                          "externalSid": "d5377825-3695-49b8-9951-5d8cefbd2685",
+                          "qualityDescription": "челюстной"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370911",
+                      "externalSid": "769801b8-10a5-4b3d-957a-f45fcfdfc351",
+                      "name": "Количество функций погрузочного ковша",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880823",
+                          "externalSid": "05f67152-1896-4ebe-b07e-28c570049a5e",
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "7"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370912",
+                      "externalSid": "d78d3cf2-b6a9-4263-adcf-fea7540095c5",
+                      "name": "Ёмкость погрузочного ковша",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880824",
+                          "externalSid": "38188155-de07-4952-a43e-6f95aeecea43",
+                          "OKEI": {
+                            "code": "113",
+                            "nationalCode": "м[3*]",
+                            "name": "Кубический метр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "1.2"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370913",
+                      "externalSid": "1efa9123-97a6-498b-a4cd-4ca8f544e9d1",
+                      "name": "Высота разгрузки по кромке ковша при угле разгрузки 45 град.",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880825",
+                          "externalSid": "11c9a8a1-61d1-4df9-87e2-1809e462cbce",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "2820"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370914",
+                      "externalSid": "39ce9744-9892-4428-a489-4613ad3a2271",
+                      "name": "Высота подъема по пальцу погрузочного ковша",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880826",
+                          "externalSid": "9402d3e8-695c-45bf-a1c5-36d877dc88f4",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "3680"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370915",
+                      "externalSid": "68dc3ed8-cf9f-49b0-b5f2-f08a11a42e40",
+                      "name": "Тип рукояти экскаваторного оборудования",
+                      "type": "1",
+                      "characteristicsFillingInstruction": {
+                        "code": "6",
+                        "name": "Значение характеристики не может изменяться участником закупки"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880827",
+                          "externalSid": "ca139c11-375e-4c46-aa7b-5966dc1e3e95",
+                          "qualityDescription": "телескопическая"
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370916",
+                      "externalSid": "248eaa6a-2941-4eb5-90dd-54551281221b",
+                      "name": "Объём экскаваторного ковша",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880828",
+                          "externalSid": "30dd3ecc-4324-41a8-9590-454ec1abc71c",
+                          "OKEI": {
+                            "code": "113",
+                            "nationalCode": "м[3*]",
+                            "name": "Кубический метр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "0.25"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370917",
+                      "externalSid": "cbc4491b-4ed8-43a7-a4ef-62b591a300a4",
+                      "name": "Максимальная глубина копания с вытянутой рукоятью",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880829",
+                          "externalSid": "c432339f-3c33-4436-bbc3-e457b289df0d",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "5600"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370918",
+                      "externalSid": "4f2d0bc1-7c2e-498c-a16e-7cfc9e1d88e9",
+                      "name": "Максимальная высота выгрузки с вытянутой рукоятью",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880830",
+                          "externalSid": "bdd697d3-0b27-44d7-a937-adf1202055c2",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "4560"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "sid": "328370919",
+                      "externalSid": "f8e460e4-bfd4-4d78-91cd-b6d87aa016bc",
+                      "name": "Максимальный радиус копания с выдвинутой рукоятью",
+                      "type": "2",
+                      "characteristicsFillingInstruction": {
+                        "code": "2",
+                        "name": "Участник закупки указывает в заявке конкретное значение характеристики"
+                      },
+                      "values": {
+                        "value": {
+                          "sid": "423880831",
+                          "externalSid": "2fb3cf4b-f622-4934-8c32-f44102b5c3b9",
+                          "OKEI": {
+                            "code": "003",
+                            "nationalCode": "мм",
+                            "name": "Миллиметр"
+                          },
+                          "rangeSet": {
+                            "valueRange": {
+                              "minMathNotation": "greaterOrEqual",
+                              "min": "6925"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "addCharacteristicInfoReason": "Каталог товаров, работ, услуг для обеспечения государственных и муниципальных нужд, утвержденными Постановлением Правительства РФ от 08.02.2017 № 145 не применялся в связи с отсутствием позиций КТРУ для товаров, указанных в описании объекта закупки"
+                },
+                "OKPD2": {
+                  "OKPDCode": "28.92.2",
+                  "OKPDName": "Машины прочие для перемещения, грейдерных работ, планирования, скреперных работ, выемки, трамбовки, уплотнения или добычи, самоходные, для грунта, минералов или руд (включая бульдозеры, одноковшовые экскаваторы и дорожные катки)"
+                }
+              },
+              "name": "Экскаватор",
+              "OKEI": {
+                "code": "796",
+                "nationalCode": "шт",
+                "name": "Штука"
+              },
+              "customerQuantities": {
+                "customerQuantity": {
+                  "customer": {
+                    "regNum": "03323000477",
+                    "consRegistryNum": "223D2668",
+                    "fullName": "УПРАВЛЕНИЕ СТРОИТЕЛЬСТВА, АРХИТЕКТУРЫ И ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА АДМИНИСТРАЦИИ ДАЛЬНЕКОНСТАНТИНОВСКОГО МУНИЦИПАЛЬНОГО ОКРУГА НИЖЕГОРОДСКОЙ ОБЛАСТИ"
+                  },
+                  "quantity": "1"
+                }
+              },
+              "price": "1000.00",
+              "volumeSpecifyingMethod": "QF",
+              "quantity": {
+                "value": "1.00000000000"
+              },
+              "sum": "1000.00",
+              "type": "PRODUCT",
+              "hierarchyType": "ND",
+              "restrictionsInfo": {
+                "isProhibitionForeignPurchaseObjects": "true"
+              }
+            }
+          ],
+          "totalSum": "27580392.15",
+          "quantityUndefined": "false"
+        }
+      },
+      "requirementsInfo": {
+        "requirementInfo": [
+          {
+            "preferenseRequirementInfo": {
+              "shortName": "ET44",
+              "name": "Единые требования к участникам закупок в соответствии с ч. 1 ст. 31 Закона № 44-ФЗ"
+            }
+          },
+          {
+            "preferenseRequirementInfo": {
+              "shortName": "TR442",
+              "name": "Требования к участникам закупок в соответствии с ч. 1.1 ст. 31 Закона № 44-ФЗ"
+            }
+          },
+          {
+            "preferenseRequirementInfo": {
+              "shortName": "ETP44312",
+              "name": "Требования к участникам закупок в соответствии с ч. 2.1 ст. 31 Закона № 44-ФЗ"
+            },
+            "addRequirements": {
+              "addRequirement": {
+                "shortName": "TVS3BN",
+                "name": "Требования в соответствии c пунктом 4 ПП РФ от 29.12.2021 №2571",
+                "content": "Наличие у участника закупки опыта  исполнения (с учетом правопреемства)  в течение трех лет  до даты подачи заявки на участие в закупке контракта или договора, заключенного в соответствии с Федеральным законом от 18 июля 2011 года № 223-ФЗ «О закупках товаров, работ, услуг отдельными видами юридических лиц» при условии исполнения таким участником закупки требований об уплате неустоек (штрафов, пеней), предъявленных при исполнении таких контракта, договора. Стоимость исполненных обязательств по таким контракту, договору должна составлять не менее двадцати процентов начальной (максимальной) цены контракта.\nИнформация и документы, подтверждающие соответствие участника закупки дополнительному требованию, установленному в соответствии с частью 2.1 ст. 31 Закона о контрактной системе, являются информация и документы, предусмотренные хотя бы одним из следующих подпунктов:\nа) номер реестровой записи в предусмотренном Законом о контрактной системе реестре контрактов, заключенных заказчиками (в случае исполнения участником закупки контракта, информация и документы в отношении которого включены в установленном порядке в такой реестр и размещены на официальном сайте единой информационной системы в информационно-телекоммуникационной сети \"Интернет\");\nб) выписка из предусмотренного Законом о контрактной системе реестра контрактов, содержащего сведения, составляющие государственную тайну (в случае исполнения участником закупки контракта, информация о котором включена в установленном порядке в такой реестр);\nв) исполненный контракт, заключенный в соответствии с Законом о контрактной системе, или договор, заключенный в соответствии с Федеральным законом \"О закупках товаров, работ, услуг отдельными видами юридических лиц\", а также акт приемки поставленных товаров, выполненных работ, оказанных услуг, подтверждающий цену поставленных товаров, выполненных работ, оказанных услуг."
+              }
+            }
+          },
+          {
+            "preferenseRequirementInfo": {
+              "shortName": "TOVNPIVR",
+              "name": "Требование об отсутствии в реестре недобросовестных поставщиков (подрядчиков, исполнителей) информации, включенной в такой реестр в связи отказом поставщика (подрядчика, исполнителя) от исполнения контракта по причине введения в отношении заказчика санкций и (или) мер ограничительного характера"
+            }
+          }
+        ]
+      },
+      "flags": {
+        "purchaseObjectsCh9St37": "false"
+      }
+    },
+    "@schemeVersion": "16.2"
+  }
+}

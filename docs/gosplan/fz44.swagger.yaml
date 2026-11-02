@@ -1,0 +1,2849 @@
+openapi: 3.1.0
+info:
+  title: ГосПлан API 44-ФЗ
+  summary: API доступа к данным ГИС ЕИС ЗАКУПКИ по 44-ФЗ
+  description: |
+
+    ## Общие сведения
+
+    Данный документ описывает интерфейс для доступа к данным,
+    опубликованным в Единой информационной системе в сфере закупок
+    (*ЕИС Закупки*, [https://zakupki.gov.ru](https://zakupki.gov.ru)) по 44-ФЗ.
+
+    Сайт проекта - [https://gosplan.info/](https://gosplan.info/)
+  contact:
+    name: Поддержка
+    email: mail@gosplan.info
+  version: v2.4.0
+  termsOfService: https://gosplan.info/legal/api-usage/
+servers:
+  - url: https://v2test.gosplan.info
+    description: Тестовый сервер
+  - url: https://v2.gosplan.info
+    description: Продуктовый сервер
+tags:
+  - name: Планы-графики
+    description: >-
+      Методы работы с планами-графиками и позициями (см.
+      [документацию](https://gosplan.info/docs/guides/planning/))
+  - name: Закупки
+    description: >-
+      Методы для запросов закупок (см.
+      [документацию](https://gosplan.info/docs/guides/purchases/))
+  - name: Процедуры
+    description: Методы для получения информации о процедурах заключения контрактов
+  - name: Контракты
+    description: >-
+      Методы для получения информации о контрактах (см.
+      [документацию](https://gosplan.info/docs/guides/contracts/))
+  - name: Жалобы
+    description: Методы для получения информации о жалобах.
+  - name: Справочники
+    description: Методы для получения справочных данных (НСИ)
+paths:
+  /fz44/tenderplans:
+    get:
+      summary: Получить планы-графики
+      description: |
+        Каждый элемент списка - это урезанная версия ПГ:
+          содержит номер, версию и общую информация (поле *source.commonInfo*),
+          Общая информация включает в себя данные заказчика и владельца ПГ,
+          плановый период и даты жизненного цикла.
+      operationId: getTenderPlans
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/owner'
+        - $ref: '#/components/parameters/plan_number'
+        - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/skip'
+        - name: sort
+          in: query
+          description: >
+            Параметр сортировки:
+
+            * `updated_at_desc` - убывание даты/времени обновления плана-графика
+
+            * `updated_at_asc` - возрастание даты/времени обновления
+            плана-графика
+          required: false
+          schema:
+            type: string
+            enum:
+              - updated_at_desc
+              - updated_at_asc
+            default: updated_at_desc
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TenderPlanIndex'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/tenderplans/{plan_number}:
+    get:
+      summary: Получить план-график по номеру
+      description: >
+        Документ плана-графика возвращается практически в оригинальном виде
+        (поле *source*).
+      operationId: getTenderPlan
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/plan_number_in_path'
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenderPlan'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/tenderplans/{plan_number}/positions:
+    get:
+      summary: Получить позиции плана-графика
+      description: >
+        Элемент списка - позиция плана-графика. Включает в себя общую информацию
+        об
+
+        объекте закупки, финансовое обеспечение, детализацию по КВР и прочую
+        информацию.
+
+
+        Статус `404` возвращается в случае, если не найден план-график с
+        указанным номером.
+      operationId: getTenderPlanPositions
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/plan_number_in_path'
+        - $ref: '#/components/parameters/centralized_inn'
+        - $ref: '#/components/parameters/classifier_position'
+        - $ref: '#/components/parameters/ikz'
+        - $ref: '#/components/parameters/joint_inn'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/object_info_position'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/publish_year'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/sort_position'
+      responses:
+        '200':
+          description: >
+            Список позиций заданного плана-графика.
+
+            Формат элементов списка в соответствии со xsd-схемой документа
+            *tenderPlan2020/positions/position*.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TenderPlanPosition'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/tenderplans/positions:
+    get:
+      summary: Получить список позиций без привязки к плану-графику
+      description: >
+        Элемент списка - позиция плана-графика. Включает в себя общую информацию
+        об
+
+        объекте закупки, финансовое обеспечение, детализацию по КВР и прочую
+        информацию.
+
+
+        В отличии от метода `tenderplans/{plan_number}/positions` могут быть
+        возвращены
+
+        позиции из различных планов-графиков.
+      operationId: getPositions
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/centralized_inn'
+        - $ref: '#/components/parameters/classifier_position'
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/ikz'
+        - $ref: '#/components/parameters/joint_inn'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/object_info_position'
+        - $ref: '#/components/parameters/owner'
+        - $ref: '#/components/parameters/plan_number'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/publish_year'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/sort_position'
+      responses:
+        '200':
+          description: |
+            Список позиций, удовлетворяющих параметрам запроса.
+            Формат элементов списка в соответствии со xsd-схемой документа
+            *tenderPlan2020/positions/position*.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TenderPlanPosition'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/tenderplans/{plan_number}/special_purchase_positions:
+    get:
+      summary: Получить позиции особой закупки заданного плана-графика
+      description: >
+        Элемент списка - позиция особой закупки плана-графика. 
+
+
+        Статус `404` возвращается в случае, если не найден план-график с
+        указанным номером.
+      operationId: getTenderPlanSpecialPositions
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/plan_number_in_path'
+        - $ref: '#/components/parameters/centralized_inn'
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/ikz'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/owner'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/publish_year'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/sort_position'
+        - name: type_code
+          in: query
+          schema:
+            type: string
+          description: >
+            Код типа  особой закупки из справочника "Типы особых закупок
+
+            для планов-графиков закупок с 01.01.2020" (см.
+            [справочник](http://localhost:4321/docs/xml/nsiSpecialPurchases_all_20260802000002_001.xml)).
+
+            Например, код `P7_2_83` - это *Лекарственные препараты (п. 7 ч. 2
+            ст. 83, п. 3. ч. 2 ст. 83.1 Закона № 44-ФЗ (в редакции до
+            01.01.2022)*.
+      responses:
+        '200':
+          description: |
+            Список позиций особой закупик заданного плана-графика.
+            Формат элементов списка в соответствии со xsd-схемой документа
+            *tenderPlan2020/specialPurchasePositions/specialPurchasePosition*.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TenderPlanPosition'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/tenderplans/special_purchase_positions:
+    get:
+      summary: Получить позиции особой закупки
+      description: |
+        Элемент списка - позиция особой закупки произвольного плана-графика. 
+      operationId: getSpecialPositions
+      tags:
+        - Планы-графики
+      parameters:
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/centralized_inn'
+        - $ref: '#/components/parameters/ikz'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/owner'
+        - $ref: '#/components/parameters/plan_number'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/publish_year'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/sort_position'
+        - name: type_code
+          in: query
+          schema:
+            type: string
+          description: >
+            Код типа  особой закупки из справочника "Типы особых закупок
+
+            для планов-графиков закупок с 01.01.2020" (см.
+            [справочник](https://gosplan.info/docs/xml/nsiSpecialPurchases_all_20260802000002_001.xml)).
+
+            Например, код `P7_2_83` - это *Лекарственные препараты (п. 7 ч. 2
+            ст. 83, п. 3. ч. 2 ст. 83.1 Закона № 44-ФЗ (в редакции до
+            01.01.2022)*.
+      responses:
+        '200':
+          description: |
+            Список позиций особой закупик заданного плана-графика.
+            Формат элементов списка в соответствии со xsd-схемой документа
+            *tenderPlan2020/specialPurchasePositions/specialPurchasePosition*.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TenderPlanPosition'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/purchases:
+    get:
+      summary: Получить закупки
+      description: >
+        Элемент списка - базовая информация о закупке: регион, номер, тип, дата
+        публикации и
+
+        обновления, этап и прочее. Подробную информацию см. в схеме ответа.
+      operationId: getPurchases
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/classifier_purchase'
+        - name: collecting_finished_after
+          in: query
+          description: >
+            Дата и время окончания подачи заявок на участие в процедуре закупки
+
+            *после* заданного параметра. Например, значение
+
+            `collecting_finished_after=2023-09-01T18:00:00Z` означает, что в
+            выборку попадут
+
+            закупки, которые имеют дату и время окончания *после* заданной даты.
+          schema:
+            type: string
+            format: date-time
+        - name: collecting_finished_before
+          in: query
+          description: |
+            Дата и время окончания подачи заявок на участие в процедуре закупки
+            *до* заданного параметра.
+          schema:
+            type: string
+            format: date-time
+        - name: contract_guarantee_amount_ge
+          in: query
+          description: >
+            Обеспечение исполнения контракта выше заданного значения (в валюте
+            контракта)
+          schema:
+            type: number
+            format: float
+        - name: contract_guarantee_amount_le
+          in: query
+          description: >
+            Обеспечение исполнения контракта ниже заданного значения (в валюте
+            контракта)
+          schema:
+            type: number
+            format: float
+        - name: contract_guarantee_part_ge
+          in: query
+          description: >
+            Обеспечение исполнения контракта. Доля от начальной (максимальной)
+            цены контракта
+
+            выше заданного параметра (в процентах).
+          schema:
+            type: number
+            format: float
+        - name: contract_guarantee_part_le
+          in: query
+          description: >
+            Обеспечение исполнения контракта. Доля от начальной (максимальной)
+            цены контракта
+
+            ниже заданного параметра (в процентах).
+          schema:
+            type: number
+            format: float
+        - $ref: '#/components/parameters/currency_code'
+        - $ref: '#/components/parameters/currency_code_not'
+        - $ref: '#/components/parameters/customer'
+        - name: drug
+          in: query
+          description: |
+            Признак закупки лекарственных препаратов.
+            `0` - объектами закупки **не** являются лекартсвенные препараты;
+            `1` - объектами закупки являются лекарственные препараты.
+          schema:
+            type: integer
+            enum:
+              - 0
+              - 1
+        - $ref: '#/components/parameters/ikz'
+        - $ref: '#/components/parameters/limit'
+        - name: max_price_ge
+          in: query
+          description: |
+            Начальная (максимальная) цена контракта выше чем значение параметра.
+            Например, закупки дороже 1 млн задаются через параметр
+            `max_price_ge=1000000`.
+          schema:
+            type: number
+            format: float
+        - name: max_price_le
+          in: query
+          description: |
+            Начальная (максимальная) цена контракта ниже чем значение параметра.
+          schema:
+            type: number
+            format: float
+        - $ref: '#/components/parameters/object_info_purchase'
+        - $ref: '#/components/parameters/owner'
+        - $ref: '#/components/parameters/plan_number'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/purchase_number'
+        - $ref: '#/components/parameters/published_after'
+        - $ref: '#/components/parameters/published_before'
+        - $ref: '#/components/parameters/published_forpast'
+        - name: purchase_type
+          in: query
+          description: >
+            Тип закупки. Допускается указывать несколько параметров в запросе:
+
+            `purchase_type=type1&purchase_type=type2&purchase_type=type3`.
+
+            Расшифровка документов в
+            [документации](https://gosplan.info/docs/xml/nsiDocumentTypesList_all_20260606020234_0.xml)
+          schema:
+            $ref: '#/components/schemas/PurchaseType'
+        - $ref: '#/components/parameters/region'
+        - name: responsible
+          in: query
+          description: ИНН организации, осуществляющей размещение
+          schema:
+            type: string
+        - $ref: '#/components/parameters/skip'
+        - name: sort
+          in: query
+          description: >
+            Параметры сортировки:
+
+            * `collecting_finished_at_desc` - дата/время окончания подачи
+            заявок, убывание
+
+            * `collecting_finished_at_asc` - дата/время окончания подачи заявок,
+            возрастание
+
+            * `max_price_desc` - максимальная цена, убывание
+
+            * `max_price_asc` - максимальная цена, возрастание
+
+            * `published_at_desc` - дата/время публикации документа, убывание
+
+            * `published_at_asc` - дата/время публикации документа, возрастание
+
+            * `updated_at_desc` - дата/время обновления документа, убывание
+
+            * `updated_at_asc` - дата/время обновления документа, возрастание
+          schema:
+            type: string
+            default: published_at_desc
+            enum:
+              - collecting_finished_at_asc
+              - collecting_finished_at_desc
+              - max_price_asc
+              - max_price_desc
+              - published_at_asc
+              - published_at_desc
+              - updated_at_asc
+              - updated_at_desc
+        - name: stage
+          in: query
+          description: |
+            Этап закупки.
+            `1` - подача заявок,
+            `2` - работа комиссии,
+            `3` - закупка завершена,
+            `4` - закупка отменена.
+          schema:
+            type: integer
+            enum:
+              - 1
+              - 2
+              - 3
+              - 4
+        - $ref: '#/components/parameters/updated_after'
+        - $ref: '#/components/parameters/updated_before'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PurchaseIndex'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/purchases/{purchase_number}:
+    get:
+      summary: Получить закупку по номеру
+      description: |
+        Возвращается документ, включающий в себя все документы, опубликованные
+        в рамках данной закупки: извещения, протоколы, разъяснения, результат
+        проведения процедуры. Оригинальные документы, приведенные в формат
+        *json*, находятся в поле `docs`.
+      operationId: getPurchaseByNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Purchase'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/purchases/{purchase_number}/notification:
+    get:
+      summary: Получить извещение о закупке
+      description: >
+        Возвращается крайняя версия извещения о закупке. Формат ответа
+
+        зависит от типа документа (поле `doc_type`).
+
+
+        Извещение - это документ, в котором заказчик описывает что именно
+
+        он хочет закупить, условия проведения процедуры и требования к
+        участникам.
+      operationId: getNotificationByPurchaseNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/purchases/{purchase_number}/protocols:
+    get:
+      summary: Получить протоколы закупки
+      description: >
+        В качестве ответа возвращается массив документов закупки, которые
+
+        относятся к типу *Протокол*.
+
+        Описание типов документов приводится
+        [здесь](https://gosplan.info/docs/xml/nsiDocumentTypesList_all_20260606020234_0.xml).
+
+
+        В случае отсутствия протоколов в закупке возвращается статус `200` и
+
+        пустой список.
+      operationId: getProtocolsByPurchaseNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/purchases/{purchase_number}/clarifications:
+    get:
+      summary: Получить разъяснения положений извещения и результатов
+      description: >
+        В качестве ответа возвращается массив документов, которые относятся
+
+        к типам *Разъяснений*.
+
+        Описание типов документов приводится
+        [здесь](https://gosplan.info/docs/xml/nsiDocumentTypesList_all_20260606020234_0.xml).
+
+
+        В случае отсутствия разъяснений в закупке возвращается статус `200` и
+
+        пустой список.
+      operationId: getClarificationsByPurchaseNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/purchases/{purchase_number}/result:
+    get:
+      summary: Получить результат проведения процедуры определения поставщика
+      description: >
+        В ответе на запрос возвращается документ с типом `fcsPlacementResult`.
+
+        Формат документа в соответствии с xsd-схемой.
+
+
+        Если закупка не существует или в существующей закупке отсутствует
+        документ
+
+        результата определения поставщика, возвращается статус `404`.
+      operationId: getResultByPurchaseNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/purchases/{purchase_number}/complaints:
+    get:
+      summary: Получить жалобы
+      description: >
+        В качестве ответа возвращается список жалоб, относящихся к данной
+        закупке.
+
+
+        В случае отсутствия жалоб в закупке возвращается статус `200` и
+
+        пустой список.
+      operationId: getComplaintsByPurchaseNumber
+      tags:
+        - Закупки
+      parameters:
+        - $ref: '#/components/parameters/purchase_number_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ComplaintIndex'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/procedures:
+    get:
+      summary: Получить процедуры заключения контрактов
+      description: >
+        Ответ на запрос содержит массив процедур заключения контрактов.
+
+        Объект массива включает в себя номер закупки, ИНН заказчика и
+        поставщика,
+
+        цену и предмет контракта.
+
+
+        В рамках одной закупки может быть создано одна или несколько процедур
+
+        заключения контрактов, в зависимости от условий закупки.
+      operationId: getProcedures
+      tags:
+        - Процедуры
+      parameters:
+        - name: contract_project_number
+          in: query
+          description: Номер проекта контракта
+          schema:
+            type: string
+        - $ref: '#/components/parameters/currency_code'
+        - $ref: '#/components/parameters/currency_code_not'
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/limit'
+        - name: participant
+          in: query
+          description: ИНН поставщика
+          schema:
+            type: string
+        - $ref: '#/components/parameters/price_ge'
+        - $ref: '#/components/parameters/price_le'
+        - $ref: '#/components/parameters/published_after'
+        - $ref: '#/components/parameters/published_before'
+        - $ref: '#/components/parameters/purchase_number'
+        - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/skip'
+        - name: sort
+          in: query
+          description: |
+            Параметры сортировки:
+            * `price_desc` - максимальная цена, убывание
+            * `price_asc` - максимальная цена, возрастание
+            * `published_at_desc` - дата/время публикации документа, убывание
+            * `published_at_asc` - дата/время публикации документа, возрастание
+            * `updated_at_desc` - дата/время обновления документа, убывание
+            * `updated_at_asc` - дата/время обновления документа, возрастание
+          schema:
+            type: string
+            enum:
+              - price_desc
+              - price_asc
+              - published_at_desc
+              - published_at_asc
+              - updated_at_desc
+              - updated_at_asc
+            default: updated_at_desc
+        - $ref: '#/components/parameters/subject'
+        - $ref: '#/components/parameters/updated_after'
+        - $ref: '#/components/parameters/updated_before'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProcedureIndex'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/procedures/{contract_project_number}:
+    get:
+      summary: Получить процедуру заключения контракта
+      description: |
+        Возвращается объект, содержащий документы процедуры заключения контракта
+      operationId: getProcedureByContractProjectNumber
+      tags:
+        - Процедуры
+      parameters:
+        - name: contract_project_number
+          in: path
+          required: true
+          description: Номер проекта контракта
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Procedure'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/contracts:
+    get:
+      summary: Получить контракты
+      description: >
+        Элемент списка - базовая информация о контракте: предмет и цена
+        контракта,
+
+        ИНН заказчика и поставщика, связь с закупкой и планом-графиком, другая
+
+        полезная информация.
+
+        Подробную информацию см. в схеме ответа.
+      operationId: getContracts
+      tags:
+        - Контракты
+      parameters:
+        - $ref: '#/components/parameters/classifier_purchase'
+        - $ref: '#/components/parameters/currency_code'
+        - $ref: '#/components/parameters/currency_code_not'
+        - $ref: '#/components/parameters/customer'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/plan_number'
+        - $ref: '#/components/parameters/position_number'
+        - $ref: '#/components/parameters/price_ge'
+        - $ref: '#/components/parameters/price_le'
+        - $ref: '#/components/parameters/published_after'
+        - $ref: '#/components/parameters/published_before'
+        - $ref: '#/components/parameters/published_forpast'
+        - $ref: '#/components/parameters/purchase_number'
+        - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/reg_num'
+        - $ref: '#/components/parameters/skip'
+        - name: sort
+          in: query
+          description: |
+            Параметры сортировки:
+            * `price_desc` - максимальная цена, убывание
+            * `price_asc` - максимальная цена, возрастание
+            * `published_at_desc` - дата/время публикации документа, убывание
+            * `published_at_asc` - дата/время публикации документа, возрастание
+            * `updated_at_desc` - дата/время обновления документа, убывание
+            * `updated_at_asc` - дата/время обновления документа, возрастание
+          schema:
+            type: string
+            default: published_at_desc
+            enum:
+              - price_desc
+              - price_asc
+              - published_at_desc
+              - published_at_asc
+              - updated_at_desc
+              - updated_at_asc
+        - name: stage
+          in: query
+          description: |
+            Текущее состояние контракта.
+            `E` - исполнение,
+            `ET` - исполнение прекращено,
+            `EC` - исполнение завершено,
+            `IN` - аннулировано.
+          schema:
+            type: string
+            enum:
+              - E
+              - ET
+              - EC
+              - IN
+        - $ref: '#/components/parameters/subject_contract'
+        - name: supplier
+          in: query
+          description: ИНН поставщика
+          schema:
+            type: string
+        - $ref: '#/components/parameters/updated_after'
+        - $ref: '#/components/parameters/updated_before'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContractIndex'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/contracts/{reg_num}:
+    get:
+      summary: Получить контракт по номеру
+      description: |
+        В ответе содержатся все документы, опубликованные в ЕИС, с заданным
+        номером контракта. К этим документам относятся: информация о заключенном
+        контракте, информация об исполнении контракта и прочие сопутствующие
+        документы.
+      operationId: getContractByNumber
+      tags:
+        - Контракты
+      parameters:
+        - $ref: '#/components/parameters/reg_num_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contract'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/contracts/{reg_num}/contract:
+    get:
+      summary: Получить крайний документ контракта
+      description: |
+        В ответе возвращается крайняя версия документа *contract*.
+        Формат документа в соответствии с xsd-схемой.
+      operationId: getContractByContractNumber
+      tags:
+        - Контракты
+      parameters:
+        - $ref: '#/components/parameters/reg_num_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/contracts/{reg_num}/procedures:
+    get:
+      summary: Получить процедуры контракта
+      description: >
+        Элемент массива в ответе - информация о процедуре контракта. Тип
+        документа - *contractProcedure*.
+      operationId: getProceduresByContractNumber
+      tags:
+        - Контракты
+      parameters:
+        - $ref: '#/components/parameters/reg_num_in_path'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Document'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/complaints:
+    get:
+      summary: Получить жалобы
+      description: |
+        Элемент списка - базовая информация о жалобе
+      operationId: getComplaints
+      tags:
+        - Жалобы
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/published_after'
+        - $ref: '#/components/parameters/published_before'
+        - $ref: '#/components/parameters/published_forpast_no_default'
+        - $ref: '#/components/parameters/purchase_number'
+        - $ref: '#/components/parameters/region'
+        - $ref: '#/components/parameters/skip'
+        - name: reg_number
+          in: query
+          description: Номер реестровой записи жалобы (согласно ПП РФ №1148)
+        - name: sort
+          in: query
+          description: |
+            Параметры сортировки:
+            * `published_at_desc` - дата/время публикации документа, убывание
+            * `published_at_asc` - дата/время публикации документа, возрастание
+            * `updated_at_desc` - дата/время обновления документа, убывание
+            * `updated_at_asc` - дата/время обновления документа, возрастание
+          schema:
+            type: string
+            default: published_at_desc
+            enum:
+              - published_at_desc
+              - published_at_asc
+              - updated_at_desc
+              - updated_at_asc
+        - $ref: '#/components/parameters/updated_after'
+        - $ref: '#/components/parameters/updated_before'
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ComplaintIndex'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+  /fz44/components/{reg_number}:
+    get:
+      summary: Получить жалобу по номеру
+      description: |
+        В ответе содержатся все документы, опубликованные в ЕИС, с заданным
+        номером жалоба.
+      operationId: getComplaintByNumber
+      tags:
+        - Жалобы
+      parameters:
+        - name: reg_num
+          in: path
+          required: true
+          description: Номер реестровой записи жалобы (согласно ПП РФ №1148)
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Complaint'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /fz44/organizations:
+    get:
+      summary: Получить организации заказчиков
+      description: |
+        Элемент массива в ответе - карточка организации.
+      operationId: getOrganizations
+      tags:
+        - Справочники
+      parameters:
+        - name: reg_num
+          in: query
+          description: Регистрационный номер
+        - name: inn
+          in: query
+          description: ИНН организации
+        - $ref: '#/components/parameters/region'
+        - name: sort
+          in: query
+          description: |
+            Параметр сортировки:
+            * `inn_desc/_asc` - убывание/возрастание номера ИНН
+            * `region_desc/_asc` - возрастание возрастание номера региона
+          required: false
+          schema:
+            type: string
+            enum:
+              - inn_desc
+              - inn_asc
+              - region_desc
+              - region_asc
+            default: region_desc
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OrganizationIndex'
+  /fz44/organizations/{reg_num}:
+    get:
+      summary: Получить организацию заказчика по регистрационному номеру
+      operationId: getOrganizationByNumber
+      tags:
+        - Справочники
+      parameters:
+        - name: reg_num
+          in: path
+          required: true
+          description: Регистрационный номер организации
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Корректный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Organization'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  headers:
+    x-total:
+      description: Общее количество записей, удовлетворяющих запросу
+      schema:
+        type: integer
+  parameters:
+    centralized:
+      name: centralized
+      in: query
+      description: |
+        Признак централизованной закупки.
+        `0` - позиции без признака централизованной закупки,
+        `1` - позиции с признаком централизованной закупки.
+      schema:
+        type: integer
+        enum:
+          - 0
+          - 1
+    centralized_inn:
+      name: centralized_inn
+      in: query
+      description: |
+        ИНН уполномоченного органа, осуществляющего централизованную закупку.
+      schema:
+        type: string
+    classifier_position:
+      name: classifier
+      in: query
+      description: |
+        Классификация по ОКПД2 или его группе. Формат: `xx.yy.zz.qq`
+        (`classifier=33.20&classifier=32.99.15.140`).
+      schema:
+        type: string
+    classifier_purchase:
+      name: classifier
+      in: query
+      description: >
+        Классификация по ОКПД2 или КТРУ или их группам.
+
+        (`classifier=33.20&classifier=32.99.15&classifier=26.20.11.110-00000165`).
+      schema:
+        type: string
+    currency_code:
+      name: currency_code
+      in: query
+      description: Код валюты
+      schema:
+        type: string
+        enum:
+          - RUB
+    currency_code_not:
+      name: currency_code_not
+      in: query
+      description: >
+        Исключить код валюты из выборки.
+
+        Например, если требуются только *валютные* закупки или контракты, то
+        необходимо
+
+        указать `currency_code_not=RUB`.
+      schema:
+        type: string
+        enum:
+          - RUB
+    customer:
+      name: customer
+      in: query
+      description: ИНН заказчика
+      schema:
+        type: string
+    ikz:
+      name: ikz
+      in: query
+      description: Идентификационный код закупки
+      schema:
+        type: string
+    joint:
+      name: joint
+      in: query
+      description: |
+        Признак совместных торгов.
+        `0` - позиции без признака совместных торгов,
+        `1` - позиции с признаком совместных торгов.
+      schema:
+        type: integer
+        enum:
+          - 0
+          - 1
+    joint_inn:
+      name: joint_inn
+      in: query
+      description: |
+        ИНН организатора проведения совместного конкурса или аукциона.
+      schema:
+        type: string
+    ktru:
+      name: ktru
+      in: query
+      description: >
+        Классификация по КТРУ. Формат: `xx.yy.zz.qqq-vvvvvvvvvv`.
+
+        Допускается: (1) указывать начальный фрагмент кода `xx.yy`,
+
+        (2) указывать несколько значений через запятую `xx.yy.zz,zz.yy.xx`, но
+        не более 3х.
+
+        При одновременном указании параметров `okpd2` и `ktru` выборка закупок
+
+        работает по условию **ИЛИ**.
+      schema:
+        type: string
+    limit:
+      name: limit
+      in: query
+      description: Количество возвращаемых записей массива
+      schema:
+        type: integer
+        default: 20
+        minimum: 1
+        maximum: 100
+    okpd2:
+      name: okpd2
+      in: query
+      description: >
+        Классификация по ОКПД2. Формат: `xx.yy.zz.qq`
+
+        Допускается указывать начальный фрагмент кода и/или несколько параметров
+        okpd2, но не более 3х.
+
+        При одновременном указании параметров `okpd2` и `ktru` выборка закупок
+
+        работает по условию **ИЛИ**.
+      schema:
+        type: string
+    object_info:
+      name: object_info
+      in: query
+      description: >
+        Наименование объекта закупки. Допускается указывать частичное
+        наименование
+
+        или ключевые слова.
+
+
+        **ВНИМАНИЕ**. При указании данного параметра сортировка результатов
+        выполняется по релевантности соответствия, поле `sort` не применяется.
+      schema:
+        type: string
+    object_info_position:
+      name: object_info
+      in: query
+      description: >
+        Наименование объекта закупки, код или наименование закупки по ОКДП2.
+
+        Допускается указывать частичное наименование или неполный код.
+
+
+        **ВНИМАНИЕ**. При указании данного параметра сортировка результатов
+        выполняется по релевантности соответствия, поле `sort` не применяется.
+      schema:
+        type: string
+    object_info_purchase:
+      name: object_info
+      in: query
+      description: >
+        Наименование объекта закупки, место поставки товара или оказания услуги.
+
+        Допускается указывать частичное или полное наименование.
+
+
+        **ВНИМАНИЕ**. При указании данного параметра сортировка результатов
+        выполняется по релевантности соответствия, поле `sort` не применяется.
+      schema:
+        type: string
+    owner:
+      name: owner
+      in: query
+      description: ИНН организации-владельца версии плана-графика
+      schema:
+        type: string
+    plan_number:
+      name: plan_number
+      in: query
+      description: Реестровый номер плана-графика закупок в ЕИС
+      schema:
+        type: string
+    plan_number_in_path:
+      name: plan_number
+      in: path
+      description: Реестровый номер плана-графика закупок в ЕИС
+      required: true
+      schema:
+        type: string
+    position_number:
+      name: position_number
+      in: query
+      description: Номер позиции плана-графика
+      schema:
+        type: string
+    price_ge:
+      name: price_ge
+      in: query
+      description: |
+        Цена контракта выше чем значение параметра.
+        Например, контракты дороже 1 млн задаются через параметр
+        `max_price_ge=1000000`.
+      schema:
+        type: number
+        format: float
+    price_le:
+      name: price_le
+      in: query
+      description: |
+        Цена контракта ниже чем значение параметра
+      schema:
+        type: number
+        format: float
+    publish_year:
+      name: publish_year
+      in: query
+      description: Планируемый год размещения извещения
+      schema:
+        type: integer
+    published_after:
+      name: published_after
+      in: query
+      description: >
+        Дата публикации документа больше или равно чем данный параметр.
+
+        Значение должно быть задано в формате ISO 8601 `date-time` с
+        обязательным указанием зоны (например, `2025-03-01T00:00:00+03:00`).
+
+        Параметр не может быть меньше 2024-01-01 и позже начала следующего
+        месяца относительно сервера.
+
+        В рамках одного запроса `published_after` не может превышать
+        `published_before`, а также не может быть позже полей
+        `updated_after`/`updated_before` для той же сущности.
+
+        Нарушение любого условия приводит к ответу `422 UnprocessableEntity`.
+      schema:
+        type: string
+        format: date-time
+    published_before:
+      name: published_before
+      in: query
+      description: >
+        Дата публикации документа меньше или равно чем данный параметр.
+
+        Используется тот же формат ISO 8601 `date-time` с указанием зоны и тот
+        же диапазон (от 2024-01-01 до начала следующего месяца).
+
+        `published_before` не может быть меньше `published_after`, а итоговые
+        даты публикации не могут быть позднее связанного `updated_before`.
+
+        Нарушения приводят к `422 UnprocessableEntity`.
+      schema:
+        type: string
+        format: date-time
+    published_forpast:
+      name: published_forpast
+      in: query
+      description: >
+        Относительный период публикации, начиная от текущей даты.
+
+
+        Задается в формате `r'^\d+[ymd]$'`.
+
+
+        Пример: `5d` - опубликовано за крайние 5 дней, `2m` - 2 месяца,  `1y` -
+        1 год.
+          
+        Максимальное значение: `3y`
+
+
+        Данный параметр игнорируется, если:
+
+          * не заданы `published_after` и `published_before`
+          * задан параметр `purchase_number`, `plan_number`, `position_number`
+      schema:
+        type: string
+        default: 1m
+    published_forpast_no_default:
+      name: published_forpast
+      in: query
+      description: >
+        Относительный период публикации, начиная от текущей даты.
+
+
+        Задается в формате `r'^\d+[ymd]$'`.
+
+
+        Пример: `5d` - опубликовано за крайние 5 дней, `2m` - 2 месяца,  `1y` -
+        1 год.
+          
+        Максимальное значение: `3y`
+
+
+        Данный параметр игнорируется, если:
+
+          * не заданы `published_after` и `published_before`
+          * задан параметр `purchase_number`, `plan_number`, `position_number`
+      schema:
+        type: string
+    purchase_number:
+      name: purchase_number
+      in: query
+      description: Номер закупки
+      schema:
+        type: string
+    purchase_number_in_path:
+      name: purchase_number
+      in: path
+      required: true
+      description: Номер закупки
+      schema:
+        type: string
+    reg_num:
+      name: reg_num
+      in: query
+      description: Номер реестровой записи (номер контракта).
+      schema:
+        type: string
+    reg_num_in_path:
+      name: reg_num
+      in: path
+      required: true
+      description: Номер реестровой записи (номер контракта).
+      schema:
+        type: string
+    region:
+      name: region
+      in: query
+      description: >
+        Код региона.
+
+        Допускается указывать несколько параметров `region=1&region=2&region=3`.
+
+        Расшифровка кодов приведена на странице [Коды
+        регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+      schema:
+        type: integer
+    skip:
+      name: skip
+      in: query
+      description: Количество записей, которые надо пропустить
+      schema:
+        type: integer
+        default: 0
+        minimum: 0
+    sort_position:
+      name: sort
+      in: query
+      description: >
+        Параметр сортировки:
+
+        * `published_at_desc` - убывание даты/времени публикации крайней версии
+        плана-графика
+
+        * `published_at_asc` - возрастание даты/времени публикации крайней
+        версии плана-графика
+      required: false
+      schema:
+        type: string
+        enum:
+          - published_at_desc
+          - published_at_asc
+        default: published_at_desc
+    subject:
+      name: subject
+      in: query
+      description: >
+        Предмет контракта. Допускается указывать частичное наименование
+
+        или ключевые слова.
+
+
+        **ВНИМАНИЕ**. При указании данного параметра сортировка результатов
+        выполняется по релевантности соответствия, поле `sort` не применяется.
+      schema:
+        type: string
+    subject_contract:
+      name: subject
+      in: query
+      description: >
+        Предмет контракта, код по ОКДП2 или КТРУ, место поставки товара или
+        оказания услуг. Допускается указывать частичное наименование
+
+        или ключевые слова.
+
+
+        **ВНИМАНИЕ**. При указании данного параметра сортировка результатов
+        выполняется по релевантности соответствия, поле `sort` не применяется.
+      schema:
+        type: string
+    updated_after:
+      name: updated_after
+      in: query
+      description: >
+        Дата обновления документа в ЕИС *после* указанной даты.
+
+        Формат ISO 8601 `date-time` с указанием зоны обязателен.
+
+        Значение ограничено диапазоном от 2024-01-01 до начала следующего
+        месяца; `updated_after` не может быть позже `updated_before` или позже
+        `published_before` (т.к. обновление не может предшествовать публикации).
+
+        При нарушении возвращается `422 UnprocessableEntity`.
+      schema:
+        type: string
+        format: date-time
+    updated_before:
+      name: updated_before
+      in: query
+      description: >
+        Дата обновления документа в ЕИС *до* указанной даты.
+
+        Применяются те же требования к формату и диапазону, что и для
+        `updated_after`.
+
+        `updated_before` не может быть меньше `updated_after` и не может быть
+        раньше `published_after`.
+
+        Нарушение этих условий приводит к `422 UnprocessableEntity`.
+      schema:
+        type: string
+        format: date-time
+  responses:
+    NotFound:
+      description: Запись не найдена
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              detail:
+                type: string
+                enum:
+                  - Документ не найден
+    UnprocessableEntity:
+      description: Некорректный запрос
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              detail:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ctx:
+                      type: object
+                      description: Контекст параметра
+                    input:
+                      type: string
+                      description: Введенный параметр
+                    loc:
+                      type: array
+                      description: Локация параметра
+                    msg:
+                      type: string
+                      description: Текст ошибки
+                    type:
+                      type: string
+                      description: Тип ошибки
+                    url:
+                      type: string
+                      description: Ссылка на описание ошибки
+  schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+    Contract:
+      description: Объект контракта
+      type: object
+      allOf:
+        - description: Информация о контракте
+          type: object
+          properties:
+            currency_code:
+              type: string
+              description: Код валюты
+            customer:
+              type: string
+              description: ИНН заказчика
+              example: '2720048360'
+            delivery_places:
+              type: array
+              description: |
+                Места поставки товара, выполнения работы или оказания услуги
+              items:
+                type: string
+            doc_created_at:
+              type: string
+              format: date-time
+              description: Дата и время создания документа в БД
+            doc_updated_at:
+              type: string
+              format: date-time
+              description: Дата и время обновления документа в БД
+            docs:
+              type: array
+              description: Документы закупки
+              items:
+                description: Запись о документе
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+            elact_at:
+              type: string
+              format: date-time
+              description: |
+                Дата и время доступности формирования документов электронного
+                актирования по контракту.
+            exe_end:
+              type: string
+              format: date
+              description: Дата окончания исполнения контракта
+            exe_start:
+              type: string
+              format: date
+              description: Дата начала исполнения контракта
+            ktru:
+              type: array
+              description: Классификация по КТРУ
+              items:
+                type: string
+            okpd2:
+              type: array
+              description: Классификация по ОКПД2
+              items:
+                type: string
+            plan_number:
+              type: string
+              description: Реестровый номер плана-графика закупок в ЕИС
+              example: '202301762000006001'
+            position_number:
+              type: string
+              description: Номер позиции плана-графика
+              example: '202203722000951001000009'
+            price:
+              type: number
+              format: float
+              description: Цена контракта
+              example: 1234567.89
+            published_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации первого документа контракта в ЕИС
+            purchase_number:
+              type: string
+              description: Номер закупки
+              example: '0322300110923000104'
+            reg_num:
+              type: string
+              description: Номер реестровой записи (номер контракта).
+            region:
+              type: integer
+              description: >-
+                Код региона. Расшифровка кодов приведена на странице [Коды
+                регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+              example: 23
+            stage:
+              type: string
+              description: |
+                Текущее состояние контракта.
+                `E` - исполнение,
+                `ET` - исполнение прекращено,
+                `EC` - исполнение завершено,
+                `IN` - аннулировано.
+            subject:
+              type: string
+              description: Предмет контракта
+            suppliers:
+              type: array
+              description: ИНН поставщиков
+              items:
+                type: string
+            updated_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации крайнего документа контракта в ЕИС
+        - description: Список документов
+          type: object
+          properties:
+            docs:
+              type: array
+              items:
+                description: Документ
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+                  source:
+                    type: object
+                    description: >
+                      Документ в формате *json*. Формат документа зависит от
+                      типа документа и
+
+                      описывается в соответствующей xsd-схеме.
+    ContractIndex:
+      description: Информация о контракте
+      type: object
+      properties:
+        currency_code:
+          type: string
+          description: Код валюты
+        customer:
+          type: string
+          description: ИНН заказчика
+          example: '2720048360'
+        delivery_places:
+          type: array
+          description: |
+            Места поставки товара, выполнения работы или оказания услуги
+          items:
+            type: string
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        docs:
+          type: array
+          description: Документы закупки
+          items:
+            description: Запись о документе
+            type: object
+            properties:
+              doc_type:
+                type: string
+                description: >
+                  Тип документа. Расшифровка типов документов для
+                  соответствующей
+
+                  группы документов приведена на старнице
+                  [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+              published_at:
+                type: string
+                format: date-time
+                description: Дата и время публикации документа
+        elact_at:
+          type: string
+          format: date-time
+          description: |
+            Дата и время доступности формирования документов электронного
+            актирования по контракту.
+        exe_end:
+          type: string
+          format: date
+          description: Дата окончания исполнения контракта
+        exe_start:
+          type: string
+          format: date
+          description: Дата начала исполнения контракта
+        ktru:
+          type: array
+          description: Классификация по КТРУ
+          items:
+            type: string
+        okpd2:
+          type: array
+          description: Классификация по ОКПД2
+          items:
+            type: string
+        plan_number:
+          type: string
+          description: Реестровый номер плана-графика закупок в ЕИС
+          example: '202301762000006001'
+        position_number:
+          type: string
+          description: Номер позиции плана-графика
+          example: '202203722000951001000009'
+        price:
+          type: number
+          format: float
+          description: Цена контракта
+          example: 1234567.89
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первого документа контракта в ЕИС
+        purchase_number:
+          type: string
+          description: Номер закупки
+          example: '0322300110923000104'
+        reg_num:
+          type: string
+          description: Номер реестровой записи (номер контракта).
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+          example: 23
+        stage:
+          type: string
+          description: |
+            Текущее состояние контракта.
+            `E` - исполнение,
+            `ET` - исполнение прекращено,
+            `EC` - исполнение завершено,
+            `IN` - аннулировано.
+        subject:
+          type: string
+          description: Предмет контракта
+        suppliers:
+          type: array
+          description: ИНН поставщиков
+          items:
+            type: string
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации крайнего документа контракта в ЕИС
+    Document:
+      description: Документ
+      type: object
+      properties:
+        doc_type:
+          type: string
+          description: >
+            Тип документа. Расшифровка типов документов для соответствующей
+
+            группы документов приведена на старнице
+            [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации документа
+        source:
+          type: object
+          description: >
+            Документ в формате *json*. Формат документа зависит от типа
+            документа и
+
+            описывается в соответствующей xsd-схеме.
+    DocumentItem:
+      description: Запись о документе
+      type: object
+      properties:
+        doc_type:
+          type: string
+          description: >
+            Тип документа. Расшифровка типов документов для соответствующей
+
+            группы документов приведена на старнице
+            [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации документа
+    Documents:
+      description: Список документов
+      type: object
+      properties:
+        docs:
+          type: array
+          items:
+            description: Документ
+            type: object
+            properties:
+              doc_type:
+                type: string
+                description: >
+                  Тип документа. Расшифровка типов документов для
+                  соответствующей
+
+                  группы документов приведена на старнице
+                  [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+              published_at:
+                type: string
+                format: date-time
+                description: Дата и время публикации документа
+              source:
+                type: object
+                description: >
+                  Документ в формате *json*. Формат документа зависит от типа
+                  документа и
+
+                  описывается в соответствующей xsd-схеме.
+    Procedure:
+      description: Объект процедуры заключения контракта
+      type: object
+      allOf:
+        - description: Информация о процедуре заключения контракта
+          type: object
+          properties:
+            contract_project_number:
+              type: string
+              description: Номер проекта контракта
+              example: '03762000029230000840001'
+            currency_code:
+              type: string
+              description: Код валюты
+            customer:
+              type: string
+              description: ИНН заказчика
+              example: '2720048360'
+            doc_created_at:
+              type: string
+              format: date-time
+              description: Дата и время создания документа в БД
+            doc_updated_at:
+              type: string
+              format: date-time
+              description: Дата и время обновления документа в БД
+            docs:
+              type: array
+              description: Документы закупки
+              items:
+                description: Запись о документе
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+            participant:
+              type: string
+              description: ИНН поставщика
+              example: '2311298626'
+            price:
+              type: number
+              format: float
+              description: Цена контракта
+              example: 1234567.89
+            published_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации первого документа процедуры
+            purchase_number:
+              type: string
+              description: Номер закупки
+              example: '0322300110923000104'
+            region:
+              type: integer
+              description: >-
+                Код региона. Расшифровка кодов приведена на странице [Коды
+                регионов](https://wiki.gosplan.info/docs/regions)
+              example: 23
+            subject:
+              type: string
+              description: Предмет контракта
+            updated_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации крайнего документа процедуры
+        - description: Список документов
+          type: object
+          properties:
+            docs:
+              type: array
+              items:
+                description: Документ
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+                  source:
+                    type: object
+                    description: >
+                      Документ в формате *json*. Формат документа зависит от
+                      типа документа и
+
+                      описывается в соответствующей xsd-схеме.
+    ProcedureIndex:
+      description: Информация о процедуре заключения контракта
+      type: object
+      properties:
+        contract_project_number:
+          type: string
+          description: Номер проекта контракта
+          example: '03762000029230000840001'
+        currency_code:
+          type: string
+          description: Код валюты
+        customer:
+          type: string
+          description: ИНН заказчика
+          example: '2720048360'
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        docs:
+          type: array
+          description: Документы закупки
+          items:
+            description: Запись о документе
+            type: object
+            properties:
+              doc_type:
+                type: string
+                description: >
+                  Тип документа. Расшифровка типов документов для
+                  соответствующей
+
+                  группы документов приведена на старнице
+                  [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+              published_at:
+                type: string
+                format: date-time
+                description: Дата и время публикации документа
+        participant:
+          type: string
+          description: ИНН поставщика
+          example: '2311298626'
+        price:
+          type: number
+          format: float
+          description: Цена контракта
+          example: 1234567.89
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первого документа процедуры
+        purchase_number:
+          type: string
+          description: Номер закупки
+          example: '0322300110923000104'
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://wiki.gosplan.info/docs/regions)
+          example: 23
+        subject:
+          type: string
+          description: Предмет контракта
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации крайнего документа процедуры
+    Purchase:
+      description: Объект закупки
+      type: object
+      allOf:
+        - description: Информация о закупке
+          type: object
+          properties:
+            collecting_finished_at:
+              type: string
+              format: date-time
+              description: >-
+                Дата и время окончания подачи заявок на участие в процедуре
+                закупки
+            contract_guarantee_amount:
+              type: number
+              format: float
+              description: >
+                Обеспечение исполнения контракта выше заданного значения в
+                валюте контракта
+              example: 1234.56
+            contract_guarantee_part:
+              type: number
+              format: float
+              description: >
+                Обеспечение исполнения контракта. Доля от начальной
+                (максимальной) цены контракта
+
+                выше заданного параметра в процентах.
+              example: 5
+            currency_code:
+              type: string
+              description: Код валюты
+              example: RUB
+            customers:
+              type: array
+              description: ИНН заказчиков
+              items:
+                type: string
+              example:
+                - '0301002668'
+            delivery_places:
+              type: array
+              description: |
+                Место поставки товара, выполнения работы или оказания услуги
+              items:
+                type: string
+              example:
+                - >-
+                  Краснодарский край, Усть-Лабинский район, хутор Болгов, ул.
+                  Красная, 53
+                - Усть-Лабинский район станица Воронежская улица Ленина 57
+            delivery_places_kladr:
+              type: array
+              description: |
+                Место доставки товара, выполнения работы или оказания услуги
+                по справочнику КЛАДР
+              items:
+                type: string
+            doc_created_at:
+              type: string
+              format: date-time
+              description: Дата и время создания документа в БД
+            doc_updated_at:
+              type: string
+              format: date-time
+              description: Дата и время обновления документа в БД
+            docs:
+              type: array
+              description: Документы закупки
+              items:
+                description: Запись о документе
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+            ikzs:
+              type: array
+              description: Идентификационные коды закупок
+              items:
+                type: string
+            ktru:
+              type: array
+              description: Классификация по КТРУ
+              items:
+                type: string
+              example:
+                - 32.50.50.190-00000466
+                - 32.50.50.190-00002923
+            max_price:
+              type: number
+              format: float
+              description: Начальная (максимальная) цена контракта
+              example: 12345.67
+            object_info:
+              type: string
+              description: Наименование объекта закупки
+              example: Поставка лекарственных препаратов для медицинского применения
+            okpd2:
+              type: array
+              description: Классификация по ОКПД2
+              items:
+                type: string
+              example:
+                - 81.10.10.000
+            owners:
+              type: array
+              description: ИНН организаций-владельцев версии планов-графиков
+              items:
+                type: string
+              example:
+                - '0301002668'
+            plan_numbers:
+              type: array
+              description: Номера планов-графиков закупок в ЕИС
+              items:
+                type: string
+              example:
+                - '0322300110923000104'
+            position_numbers:
+              type: array
+              description: Номер позиции плана-графика
+              items:
+                type: string
+              example:
+                - '202305196000075001000002'
+            published_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации первого документа закупки в ЕИС
+            purchase_number:
+              type: string
+              description: Номер закупки
+              example: '0322300110923000104'
+            purchase_type:
+              description: >
+                Расшифровка типов закупок приведена
+
+                на [странице описания
+                закупки](https://wiki.gosplan.info/docs/purchases)
+              type: string
+              enum:
+                - epNotificationEF2020
+                - epNotificationEOK
+                - epNotificationEOKD
+                - epNotificationEOKOU
+                - epNotificationEZK
+                - epNotificationEZP
+                - epNotificationEZK2020
+                - epNotificationEOK2020
+            region:
+              type: integer
+              description: >-
+                Код региона. Расшифровка кодов приведена на странице [Коды
+                регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+              example: 23
+            responsible:
+              type: string
+              description: ИНН организации, осуществляющей размещение
+              example: '2720048360'
+            stage:
+              type: integer
+              enum:
+                - 1
+                - 2
+                - 3
+                - 4
+              description: |
+                этап закупки.
+                `1` - подача заявок,
+                `2` - работа комиссии,
+                `3` - закупка завершена,
+                `4` - закупка отменена.
+              example: 1
+            updated_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации крайнего документа закупки
+        - description: Список документов
+          type: object
+          properties:
+            docs:
+              type: array
+              items:
+                description: Документ
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+                  source:
+                    type: object
+                    description: >
+                      Документ в формате *json*. Формат документа зависит от
+                      типа документа и
+
+                      описывается в соответствующей xsd-схеме.
+    PurchaseIndex:
+      description: Информация о закупке
+      type: object
+      properties:
+        collecting_finished_at:
+          type: string
+          format: date-time
+          description: Дата и время окончания подачи заявок на участие в процедуре закупки
+        contract_guarantee_amount:
+          type: number
+          format: float
+          description: >
+            Обеспечение исполнения контракта выше заданного значения в валюте
+            контракта
+          example: 1234.56
+        contract_guarantee_part:
+          type: number
+          format: float
+          description: >
+            Обеспечение исполнения контракта. Доля от начальной (максимальной)
+            цены контракта
+
+            выше заданного параметра в процентах.
+          example: 5
+        currency_code:
+          type: string
+          description: Код валюты
+          example: RUB
+        customers:
+          type: array
+          description: ИНН заказчиков
+          items:
+            type: string
+          example:
+            - '0301002668'
+        delivery_places:
+          type: array
+          description: |
+            Место поставки товара, выполнения работы или оказания услуги
+          items:
+            type: string
+          example:
+            - >-
+              Краснодарский край, Усть-Лабинский район, хутор Болгов, ул.
+              Красная, 53
+            - Усть-Лабинский район станица Воронежская улица Ленина 57
+        delivery_places_kladr:
+          type: array
+          description: |
+            Место доставки товара, выполнения работы или оказания услуги
+            по справочнику КЛАДР
+          items:
+            type: string
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        docs:
+          type: array
+          description: Документы закупки
+          items:
+            description: Запись о документе
+            type: object
+            properties:
+              doc_type:
+                type: string
+                description: >
+                  Тип документа. Расшифровка типов документов для
+                  соответствующей
+
+                  группы документов приведена на старнице
+                  [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+              published_at:
+                type: string
+                format: date-time
+                description: Дата и время публикации документа
+        ikzs:
+          type: array
+          description: Идентификационные коды закупок
+          items:
+            type: string
+        ktru:
+          type: array
+          description: Классификация по КТРУ
+          items:
+            type: string
+          example:
+            - 32.50.50.190-00000466
+            - 32.50.50.190-00002923
+        max_price:
+          type: number
+          format: float
+          description: Начальная (максимальная) цена контракта
+          example: 12345.67
+        object_info:
+          type: string
+          description: Наименование объекта закупки
+          example: Поставка лекарственных препаратов для медицинского применения
+        okpd2:
+          type: array
+          description: Классификация по ОКПД2
+          items:
+            type: string
+          example:
+            - 81.10.10.000
+        owners:
+          type: array
+          description: ИНН организаций-владельцев версии планов-графиков
+          items:
+            type: string
+          example:
+            - '0301002668'
+        plan_numbers:
+          type: array
+          description: Номера планов-графиков закупок в ЕИС
+          items:
+            type: string
+          example:
+            - '0322300110923000104'
+        position_numbers:
+          type: array
+          description: Номер позиции плана-графика
+          items:
+            type: string
+          example:
+            - '202305196000075001000002'
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первого документа закупки в ЕИС
+        purchase_number:
+          type: string
+          description: Номер закупки
+          example: '0322300110923000104'
+        purchase_type:
+          description: >
+            Расшифровка типов закупок приведена
+
+            на [странице описания
+            закупки](https://wiki.gosplan.info/docs/purchases)
+          type: string
+          enum:
+            - epNotificationEF2020
+            - epNotificationEOK
+            - epNotificationEOKD
+            - epNotificationEOKOU
+            - epNotificationEZK
+            - epNotificationEZP
+            - epNotificationEZK2020
+            - epNotificationEOK2020
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+          example: 23
+        responsible:
+          type: string
+          description: ИНН организации, осуществляющей размещение
+          example: '2720048360'
+        stage:
+          type: integer
+          enum:
+            - 1
+            - 2
+            - 3
+            - 4
+          description: |
+            этап закупки.
+            `1` - подача заявок,
+            `2` - работа комиссии,
+            `3` - закупка завершена,
+            `4` - закупка отменена.
+          example: 1
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации крайнего документа закупки
+    PurchaseType:
+      description: |
+        Расшифровка типов закупок приведена
+        на [странице описания закупки](https://wiki.gosplan.info/docs/purchases)
+      type: string
+      enum:
+        - epNotificationEF2020
+        - epNotificationEOK
+        - epNotificationEOKD
+        - epNotificationEOKOU
+        - epNotificationEZK
+        - epNotificationEZP
+        - epNotificationEZK2020
+        - epNotificationEOK2020
+    TenderPlan:
+      description: План-график
+      type: object
+      properties:
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        region:
+          type: integer
+          description: Код региона
+          example: 23
+        created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        source:
+          type: object
+          description: |
+            Документ плана-графика.
+            Формат поля в соответствии со xsd-схемой документа *tenderPlan2020*
+    TenderPlanIndex:
+      description: Краткая информация о плане-графике
+      type: object
+      properties:
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первой версии документа в ЕИС
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://wiki.gosplan.info/docs/regions)
+          example: 23
+        plan_number:
+          type: string
+          description: Регистрационный номер плана
+          example: '2230746745'
+        source:
+          type: object
+          description: Документ плана-графика (фрагмент)
+          properties:
+            planNumber:
+              type: string
+              description: Реестровый номер плана-графика закупок в ЕИС
+              example: '202301762000006001'
+            versionNumber:
+              type: integer
+              description: Номер версии плана-графика закупок
+              example: 42
+            commonInfo:
+              type: object
+              description: >-
+                Формат поля в соответствии со xsd-схемой документа
+                *tenderPlan2020/commonInfo*
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в ЕИС
+    TenderPlanPosition:
+      description: Позиция плана-графика / позиции особой закупки
+      type: object
+      properties:
+        customer:
+          type: string
+          description: ИНН заказчика
+          example: '2720048360'
+        owner:
+          type: string
+          description: ИНН владельца плана-графика
+          example: '2720048360'
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        plan_number:
+          type: string
+          description: Реестровый номер плана-графика закупок в ЕИС
+          example: '202301762000006001'
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первой версии документа в ЕИС
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://wiki.gosplan.info/docs/regions)
+          example: 23
+        source:
+          type: object
+          description: |
+            Формат позиции в соответствии со xsd-схемой документа
+            *tenderPlan2020/positions/position* или
+            *tenderPlan2020/specialPurchasePositions/specialPurchasePosition*.
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в ЕИС
+        version:
+          type: integer
+          description: Номер версии плана-графика закупок
+          example: 42
+    Organization:
+      description: Информация об организации (справочник nsiOrganization)
+      type: object
+      properties:
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+          example: 23
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        source:
+          type: object
+          description: Карточка организации из справочника
+          properties:
+            regNumber:
+              type: string
+              description: Реестровый номер организации
+              example: '20007005143'
+            INN:
+              type: string
+              description: ИНН
+            KPP:
+              type: string
+              description: КПП
+            fullName:
+              type: string
+              description: Полное наименование
+            factualAddress:
+              type: string
+              description: Фактический адрес
+            postalAddress:
+              type: string
+              description: Почтовый адрес
+            email:
+              type: string
+              description: Адрес электронной почты
+            phone:
+              type: string
+              description: Номер телефона
+            contactPerson:
+              type: object
+              properties:
+                lastName:
+                  type: string
+                firstName:
+                  type: string
+                middleName:
+                  type: string
+            registrationDate:
+              type: string
+            IKUInfo:
+              type: object
+            OGRN:
+              type: string
+            OKFS:
+              type: object
+            OKOPF:
+              type: object
+            OKPO:
+              type: string
+            OKVED:
+              type: string
+            organizationRoles:
+              type: object
+            authorityRegion:
+              type: object
+            organizationType:
+              type: object
+            timeZone:
+              type: string
+            timeZoneUtcOffset:
+              type: string
+            timeZoneOlson:
+              type: string
+            actual:
+              type: string
+            register:
+              type: string
+    OrganizationIndex:
+      description: Информация об организации (справочник nsiOrganization)
+      type: object
+      properties:
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+          example: 23
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        source:
+          type: object
+          description: Фрагмент карточки организации из справочника
+          properties:
+            regNumber:
+              type: string
+              description: Реестровый номер организации
+              example: '20007005143'
+            INN:
+              type: string
+              description: ИНН
+            KPP:
+              type: string
+              description: КПП
+            fullName:
+              type: string
+              description: Полное наименование
+            factualAddress:
+              type: string
+              description: Фактический адрес
+            postalAddress:
+              type: string
+              description: Почтовый адрес
+            email:
+              type: string
+              description: Адрес электронной почты
+            phone:
+              type: string
+              description: Номер телефона
+            contactPerson:
+              type: object
+              properties:
+                lastName:
+                  type: string
+                firstName:
+                  type: string
+                middleName:
+                  type: string
+            timeZone:
+              type: string
+            timeZoneUtcOffset:
+              type: string
+            timeZoneOlson:
+              type: string
+            actual:
+              type: string
+            register:
+              type: string
+    Complaint:
+      description: Объект жалобы
+      type: object
+      allOf:
+        - description: Информация о жалобе
+          type: object
+          properties:
+            reg_number:
+              type: string
+              description: Номер реестровой записи жалобы (согласно ПП РФ №1148)
+              example: '202600114959011112'
+            doc_created_at:
+              type: string
+              format: date-time
+              description: Дата и время создания документа в БД
+            doc_updated_at:
+              type: string
+              format: date-time
+              description: Дата и время обновления документа в БД
+            docs:
+              type: array
+              description: Документы закупки
+              items:
+                description: Запись о документе
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+            published_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации первого документа жалобы в ЕИС
+            updated_at:
+              type: string
+              format: date-time
+              description: Дата и время публикации крайнего документа жалобы в ЕИС
+            region:
+              type: integer
+              description: >-
+                Код региона. Расшифровка кодов приведена на странице [Коды
+                регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+              example: 23
+            object:
+              type: string
+              description: >
+                Предмет жалобы. Варианты: `purchase`, `order`, `sketchPlan`,
+                `tenderPlan`.
+              example: purchase
+        - description: Список документов
+          type: object
+          properties:
+            docs:
+              type: array
+              items:
+                description: Документ
+                type: object
+                properties:
+                  doc_type:
+                    type: string
+                    description: >
+                      Тип документа. Расшифровка типов документов для
+                      соответствующей
+
+                      группы документов приведена на старнице
+                      [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+                  published_at:
+                    type: string
+                    format: date-time
+                    description: Дата и время публикации документа
+                  source:
+                    type: object
+                    description: >
+                      Документ в формате *json*. Формат документа зависит от
+                      типа документа и
+
+                      описывается в соответствующей xsd-схеме.
+    ComplaintIndex:
+      description: Информация о жалобе
+      type: object
+      properties:
+        reg_number:
+          type: string
+          description: Номер реестровой записи жалобы (согласно ПП РФ №1148)
+          example: '202600114959011112'
+        doc_created_at:
+          type: string
+          format: date-time
+          description: Дата и время создания документа в БД
+        doc_updated_at:
+          type: string
+          format: date-time
+          description: Дата и время обновления документа в БД
+        docs:
+          type: array
+          description: Документы закупки
+          items:
+            description: Запись о документе
+            type: object
+            properties:
+              doc_type:
+                type: string
+                description: >
+                  Тип документа. Расшифровка типов документов для
+                  соответствующей
+
+                  группы документов приведена на старнице
+                  [документации](https://wiki.gosplan.info/docs#A.2BBBQEPgQ6BEMEPAQ1BD0EQgRL_.2BBD8EPg_44.2D.2BBCQEFw.2D)
+              published_at:
+                type: string
+                format: date-time
+                description: Дата и время публикации документа
+        published_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации первого документа жалобы в ЕИС
+        updated_at:
+          type: string
+          format: date-time
+          description: Дата и время публикации крайнего документа жалобы в ЕИС
+        region:
+          type: integer
+          description: >-
+            Код региона. Расшифровка кодов приведена на странице [Коды
+            регионов](https://gosplan.info/docs/dictionaries/regions-kladr/)
+          example: 23
+        object:
+          type: string
+          description: >
+            Предмет жалобы. Варианты: `purchase`, `order`, `sketchPlan`,
+            `tenderPlan`.
+          example: purchase

@@ -1,0 +1,4309 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-10-08",
+  "purpose": "Кандидаты для снабжения Tender AI, не подтверждённые коммерческие предложения",
+  "directions": {
+    "office": "Оргтехника и расходники",
+    "network": "Связь, коммутация, СКС",
+    "cctv": "Видеонаблюдение и СКУД",
+    "computers": "Компьютеры и инфраструктура"
+  },
+  "suppliers": [
+    {
+      "id": "merlion",
+      "name": "MERLION",
+      "site": "merlion.com",
+      "directions": [
+        "office",
+        "computers",
+        "network"
+      ],
+      "source_url": "https://merlion.com/partners/api",
+      "access_mode": "api_partner",
+      "notes": "Официально заявлен API; требуется регистрация партнёра. Схему, доступные цены и полномочия получить у поставщика.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://merlion.com/partners/api"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "feed_docs": [
+        {
+          "url": "https://merlion.com/partners/api/",
+          "status": "official_docs_read",
+          "credentials": "partner_credentials_required",
+          "live_api_tested": false,
+          "allowed_operations": [
+            "catalog_read",
+            "specifications_read",
+            "price_read",
+            "stock_read"
+          ],
+          "orders_enabled": false
+        }
+      ]
+    },
+    {
+      "id": "netlab",
+      "name": "NETLAB",
+      "site": "netlab.ru",
+      "directions": [
+        "office",
+        "computers",
+        "network",
+        "cctv"
+      ],
+      "source_url": "https://www.netlab.ru/partnyeram/servisy-b2b-i-api/",
+      "access_mode": "api_partner",
+      "notes": "Официально заявлены B2B и API. Доступ и персональные условия необходимо получить.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.netlab.ru/partnyeram/servisy-b2b-i-api/"
+      ],
+      "contacts": {
+        "email": "NLpartnership@netlab.ru",
+        "phone": "+7 (495) 933-75-08"
+      },
+      "focus_words": [],
+      "documentation_urls": [
+        "https://www.netlab.ru/nldealer/docs/web_services_netlab_how_to_start.pdf",
+        "https://www.netlab.ru/nldealer/docs/web_services_netlab_documentation_1.0.pdf"
+      ]
+    },
+    {
+      "id": "treolan",
+      "name": "Treolan",
+      "site": "treolan.ru",
+      "directions": [
+        "computers",
+        "network"
+      ],
+      "source_url": "https://b2b.treolan.ru/info/174/conditions",
+      "access_mode": "b2b_price_export",
+      "notes": "Авторизованным партнёрам доступны цены, наличие и выгрузка прайс-листов. API в этой проверке не подтверждён.",
+      "recommended_priority": 2,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://b2b.treolan.ru/info/174/conditions"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "onboarding_url": "https://www.treolan.ru/bepartner"
+    },
+    {
+      "id": "tayle",
+      "name": "Тайле",
+      "site": "tayle.ru",
+      "directions": [
+        "network",
+        "cctv"
+      ],
+      "source_url": "https://www.tayle.ru/partnership/",
+      "access_mode": "partner_request",
+      "notes": "Есть регистрация партнёра. Сетевое оборудование, СКС и инфраструктура; цену и формат выгрузки запросить.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.tayle.ru/partnership/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "onboarding_url": "https://www.tayle.ru/oforms/partnerregister/"
+    },
+    {
+      "id": "landata",
+      "name": "Landata",
+      "site": "landata.ru",
+      "directions": [
+        "network",
+        "computers",
+        "cctv"
+      ],
+      "source_url": "https://www.landata.ru/partners/",
+      "access_mode": "partner_request",
+      "notes": "Партнёрская работа, сетевое/телеком-оборудование, серверы и СХД; видеонаблюдение UNV описано в официальном разделе. Условия цены запросить.",
+      "recommended_priority": 2,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_search_result",
+      "evidence_urls": [
+        "https://www.landata.ru/partners/",
+        "https://www.landata.ru/equipment/",
+        "https://landata.ru/equipment/uniview/partnerstvo/"
+      ],
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "rrc",
+      "name": "RRC",
+      "site": "rrc.ru",
+      "directions": [
+        "network",
+        "computers"
+      ],
+      "source_url": "https://rrc.ru/partners",
+      "access_mode": "partner_request",
+      "notes": "На официальной странице есть заявка партнёра. Формат прайса/API не подтверждён.",
+      "recommended_priority": 2,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://rrc.ru/partners"
+      ],
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "comptek",
+      "name": "CompTek",
+      "site": "comptek.ru",
+      "directions": [
+        "network",
+        "computers"
+      ],
+      "source_url": "https://comptek.ru/",
+      "access_mode": "quote_request",
+      "notes": "Сетевой и телеком-дистрибьютор. Официальный контакт sales@comptek.ru. API/прайс не подтверждены.",
+      "recommended_priority": 2,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_search_result",
+      "evidence_urls": [
+        "https://comptek.ru/"
+      ],
+      "contacts": {
+        "email": "sales@comptek.ru"
+      },
+      "focus_words": []
+    },
+    {
+      "id": "ipmatika",
+      "name": "АйПиМатика",
+      "site": "ipmatika.ru",
+      "directions": [
+        "network"
+      ],
+      "source_url": "https://ipmatika.ru/",
+      "access_mode": "quote_request",
+      "notes": "Телекоммуникационные, IT и AV решения; телефония и оборудование связи. Официальный контакт info@ipmatika.ru. Формат выгрузки запросить.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://ipmatika.ru/"
+      ],
+      "contacts": {
+        "email": "info@ipmatika.ru"
+      },
+      "focus_words": []
+    },
+    {
+      "id": "vtt",
+      "name": "ВТТ",
+      "site": "vtt.ru",
+      "directions": [
+        "office"
+      ],
+      "source_url": "https://www.vtt.ru/",
+      "access_mode": "quote_request",
+      "notes": "Оптовый поставщик расходных материалов, запчастей и печатающей техники. Тип картриджа, комплектацию и цену подтверждать отдельно.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.vtt.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "feed_docs": [
+        {
+          "url": "https://api-info.vtt.ru/",
+          "status": "official_docs_read",
+          "credentials": "partner_credentials_required",
+          "live_api_tested": false,
+          "allowed_operations": [
+            "catalog_read",
+            "specifications_read",
+            "price_read",
+            "stock_read"
+          ],
+          "orders_enabled": false
+        }
+      ]
+    },
+    {
+      "id": "bulat",
+      "name": "Булат Групп / 7Q",
+      "site": "bulat-group.ru",
+      "directions": [
+        "office"
+      ],
+      "source_url": "https://bulat-group.ru/",
+      "access_mode": "wholesale_price_request",
+      "notes": "На официальном сайте есть надпись «Прайс-лист Опт». Свободная ссылка на скачивание оптового файла не подтверждена; запросить прайс у отдела продаж.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://bulat-group.ru/"
+      ],
+      "contacts": {
+        "email": "info@bulat-group.ru",
+        "phone": "8 (800) 350-82-18"
+      },
+      "focus_words": []
+    },
+    {
+      "id": "tinko",
+      "name": "ТД ТИНКО",
+      "site": "tinko.ru",
+      "directions": [
+        "cctv",
+        "network"
+      ],
+      "source_url": "https://www.tinko.ru/",
+      "access_mode": "public_excel_price_link",
+      "notes": "Официальный сайт содержит ссылки на Excel/ZIP прайсы и складские остатки. Прямое чтение файлов не удалось; структура, дата и применимость цен не подтверждены.",
+      "recommended_priority": 1,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.tinko.ru/"
+      ],
+      "contacts": {
+        "phone": "8 (800) 200-84-65"
+      },
+      "focus_words": []
+    },
+    {
+      "id": "mt_techno",
+      "name": "МТ-ТЕХНО",
+      "site": "mt-t.ru",
+      "directions": [
+        "cctv",
+        "network"
+      ],
+      "source_url": "https://mt-t.ru/optovie-postavki/videonabludenie/",
+      "access_mode": "public_price_link_stale_risk",
+      "notes": "Есть ссылки на прайсы видеонаблюдения; часть обозначена 2021–2022 годами. Не использовать без проверки актуальности. Запросить текущие условия.",
+      "recommended_priority": 3,
+      "priority_basis": "Практический порядок подключения, не рейтинг цены или надёжности",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://mt-t.ru/optovie-postavki/videonabludenie/"
+      ],
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_sima",
+      "name": "Сима-ленд",
+      "site": "sima-land.ru",
+      "directions": [
+        "g-furniture",
+        "g-stationery",
+        "g-hygiene",
+        "g-household",
+        "g-clothes",
+        "g-shoes",
+        "g-textile",
+        "g-sport",
+        "g-toys",
+        "g-souvenirs",
+        "g-dishes",
+        "g-packaging",
+        "g-plants"
+      ],
+      "source_url": "https://www.sima-land.ru/info/shop/integration/",
+      "access_mode": "api_partner",
+      "notes": "Посуда, игрушки, текстиль, одежда, сувениры, бытовые и спортивные товары. Официально описаны API и прайс; каталог и оптовые условия найдены в поиске. Прямое открытие этих страниц в просмотрщике завершилось таймаутом. Ограничения: Проверить права, актуальную версию API, MOQ/кратность и реальный склад. Не считать публичную минимальную цену ценой вашей партии.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.sima-land.ru/info/shop/integration/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": [],
+      "feed_docs": [
+        {
+          "url": "https://www.sima-land.ru/info/shop/integration/",
+          "status": "indexed_access_limited",
+          "credentials": "partner_credentials_required",
+          "live_api_tested": false,
+          "allowed_operations": [
+            "catalog_read",
+            "specifications_read",
+            "price_read",
+            "stock_read"
+          ],
+          "orders_enabled": false
+        }
+      ]
+    },
+    {
+      "id": "reg_tor",
+      "name": "TOR Industries",
+      "site": "tor-industries.ru",
+      "directions": [
+        "g-tools",
+        "g-lifting"
+      ],
+      "source_url": "https://tor-industries.ru/",
+      "access_mode": "partner_request",
+      "notes": "Грузоподъёмное и складское оборудование, гидравлический инструмент, такелаж. Оптовый/розничный поставщик с каталогом и техническими параметрами. Ограничения: Уточнить грузоподъёмность, высоту, питание, комплектность, доставку и предложение на партию.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://tor-industries.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_tss",
+      "name": "ГК ТСС",
+      "site": "tss.ru",
+      "directions": [
+        "g-motors",
+        "g-garden"
+      ],
+      "source_url": "https://www.tss.ru/",
+      "access_mode": "quote_request",
+      "notes": "Генераторы, сварочное и строительное оборудование. Есть производство, дилерские поставки и официальные PDF-каталоги. Ограничения: Каталог модели не фиксирует текущую комплектацию и склад; нужен паспорт исполнения и КП.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.tss.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_lenreactiv",
+      "name": "ЛенРеактив",
+      "site": "lenreactiv.ru",
+      "directions": [
+        "g-chemistry",
+        "g-lab"
+      ],
+      "source_url": "https://lenreactiv.ru/magazin/",
+      "access_mode": "quote_request",
+      "notes": "Реактивы, лабораторная посуда и оборудование. Компания прямо указывает, что цены каталога оптовые для юридических лиц. Ограничения: Не отключать действующие исключения проекта для ограниченных веществ. Проверять марку, чистоту и фасовку.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://lenreactiv.ru/magazin/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_technoavia",
+      "name": "Техноавиа",
+      "site": "technoavia.ru",
+      "directions": [
+        "g-workwear",
+        "g-shoes",
+        "g-ppe"
+      ],
+      "source_url": "https://www.technoavia.ru/",
+      "access_mode": "partner_request",
+      "notes": "Спецодежда, спецобувь, СИЗ. Производитель с оптовыми и розничными продажами и региональными подразделениями. Ограничения: Размерный ряд, защитные свойства и документы относятся к конкретному артикулу.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.technoavia.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_metro",
+      "name": "METRO для бизнеса",
+      "site": "metro-cc.ru",
+      "directions": [
+        "g-appliances",
+        "g-cleaning",
+        "g-hygiene",
+        "g-food-meat",
+        "g-food-fish",
+        "g-food-veg",
+        "g-food-dairy",
+        "g-food-bakery",
+        "g-food-grocery",
+        "g-food-all",
+        "g-drinks",
+        "g-dishes"
+      ],
+      "source_url": "https://metro-cc.ru/for-business",
+      "access_mode": "quote_request",
+      "notes": "Продукты, напитки, бытовая химия, посуда и хозяйственные товары. Официальный B2B-канал, оптовые условия и предложения для бизнеса. Ограничения: Наличие и доставка привязаны к торговому центру/адресу; свежесть и срок годности проверять по партии.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://metro-cc.ru/for-business"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_foodcity",
+      "name": "ФУД СИТИ",
+      "site": "foodcity.ru",
+      "directions": [
+        "g-food-meat",
+        "g-food-fish",
+        "g-food-veg",
+        "g-food-dairy",
+        "g-food-bakery",
+        "g-food-grocery",
+        "g-food-all"
+      ],
+      "source_url": "https://dm.foodcity.ru/byers/ryba-i-moreprodukty?language=en",
+      "access_mode": "quote_request",
+      "notes": "Продукты: мясо, рыба, овощи, фрукты, бакалея, молочная продукция. Оптовый продовольственный центр и канал поиска конкретных торговых компаний. Ограничения: ФУД СИТИ не следует записывать единым продавцом всех товаров; нужен продавец/ИНН, склад, партия и логистика.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://dm.foodcity.ru/byers/ryba-i-moreprodukty?language=en"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_medikom",
+      "name": "МЕДИКОМ",
+      "site": "medikom.ru",
+      "directions": [
+        "g-disinfect",
+        "g-med-supplies",
+        "g-med-equip",
+        "g-lab"
+      ],
+      "source_url": "https://medikom.ru/",
+      "access_mode": "quote_request",
+      "notes": "Медицинские расходные материалы и оборудование. Официальный сайт выделяет оптовые поставки, каталоги и регистрационные документы. Ограничения: Область применения и необходимые документы проверять по точной модели; не включать автоматически исключённые группы.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://medikom.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_medmos",
+      "name": "МедМос",
+      "site": "med-mos.ru",
+      "directions": [
+        "g-med-equip"
+      ],
+      "source_url": "https://med-mos.ru/",
+      "access_mode": "quote_request",
+      "notes": "Медицинское и реабилитационное оборудование. Профильный каталог оборудования, сервис и контакты для заказа. Ограничения: Оптовую/дилерскую цену, точное исполнение и доступность документов нужно запросить отдельно.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://med-mos.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_saturn",
+      "name": "Сатурн",
+      "site": "saturn.net",
+      "directions": [
+        "g-paints",
+        "g-building",
+        "g-plumbing",
+        "g-windows",
+        "g-wood"
+      ],
+      "source_url": "https://sam.saturn.net/structure/o-gruppe-kompaniy/",
+      "access_mode": "partner_request",
+      "notes": "Стройматериалы, отделка, краски, листовые материалы, крепёж. Официально описаны оптово-розничные строймаркеты; региональные каталоги и оптовые скидки. Ограничения: Регион входит в идентификатор предложения; доставка тяжёлой партии может изменить выбор.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://sam.saturn.net/structure/o-gruppe-kompaniy/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_metalservice",
+      "name": "МЕТАЛЛСЕРВИС",
+      "site": "mc.ru",
+      "directions": [
+        "g-metal",
+        "g-hardware"
+      ],
+      "source_url": "https://mc.ru/price",
+      "access_mode": "b2b_price_export",
+      "notes": "Металлопрокат, трубы, метизы. Есть официальный каталог и раздел прайс-листов. Ограничения: Проверять марку стали, ГОСТ, длину, массу и единицу цены; метры не равны тоннам без данных.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://mc.ru/price"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_zarnitza",
+      "name": "ПО Зарница",
+      "site": "zarnitza.ru",
+      "directions": [
+        "g-lab",
+        "g-sport",
+        "g-edu"
+      ],
+      "source_url": "https://zarnitza.ru/catalog/",
+      "access_mode": "quote_request",
+      "notes": "Учебное и лабораторное оборудование, тренажёры, наглядные пособия. Официальный каталог производителя и скачиваемые каталоги. Ограничения: Состав комплекса фиксировать спецификацией; не добавлять монтаж/обучение к поставке без основания.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://zarnitza.ru/catalog/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_slami",
+      "name": "SLAMI",
+      "site": "slami.ru",
+      "directions": [
+        "g-av",
+        "g-music"
+      ],
+      "source_url": "https://slami.ru/company/",
+      "access_mode": "b2b_price_export",
+      "notes": "Музыкальные инструменты, профессиональное звуковое и световое оборудование. Официальная страница дистрибьютора содержит ссылку на прайс-лист. Ограничения: Проверить применимость прайса к вашему договору, комплект и гарантию.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://slami.ru/company/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_valta",
+      "name": "Валта",
+      "site": "valta.ru",
+      "directions": [
+        "g-feed"
+      ],
+      "source_url": "https://valta.ru/clients/pet_shop/",
+      "access_mode": "partner_request",
+      "notes": "Корма и товары для домашних животных. Описано сотрудничество с зоомагазинами; есть каталог кормов и товаров. Ограничения: Покрывает зоотовары, не весь рынок сельскохозяйственных комбикормов; проверять вид животного и упаковку.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://valta.ru/clients/pet_shop/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_gavrish",
+      "name": "Гавриш",
+      "site": "semenagavrish.ru",
+      "directions": [
+        "g-plants"
+      ],
+      "source_url": "https://semenagavrish.ru/semena-optom/",
+      "access_mode": "partner_request",
+      "notes": "Семена; питомники растений через официальный сайт группы. Подтверждена оптовая продажа семян; gavrish.ru содержит направления профессиональных семян и питомников. Ограничения: Поставщика саженцев и удобрений уточнять отдельно; проверять сорт, партию и сроки.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://semenagavrish.ru/semena-optom/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_grass",
+      "name": "GRASS",
+      "site": "grass.su",
+      "directions": [
+        "g-cleaning",
+        "g-household",
+        "g-disinfect"
+      ],
+      "source_url": "https://grass.su/buy/",
+      "access_mode": "partner_request",
+      "notes": "Бытовая/профессиональная химия, клининг, инвентарь. Есть канал для юрлиц и дилеров; dealers.grass.su — динамический дилерский портал. Ограничения: Покупательский API не подтверждён; концентрация и назначение важнее похожего названия.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://grass.su/buy/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_rossko",
+      "name": "ROSSKO",
+      "site": "rossko.ru",
+      "directions": [
+        "g-autoparts"
+      ],
+      "source_url": "https://api.rossko.ru/",
+      "access_mode": "api_partner",
+      "notes": "Автозапчасти. Документация API 2.1 и GetSearch; опубликована поддержка HTTPS. Ограничения: Ключи берутся в кабинете; аналоги и остатки зависят от настроек, аналоги не равны доказанной совместимости.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://api.rossko.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_stankoprom",
+      "name": "Станкопром",
+      "site": "stankoprom.ru",
+      "directions": [
+        "g-machines"
+      ],
+      "source_url": "https://stankoprom.ru/catalog/",
+      "access_mode": "quote_request",
+      "notes": "Промышленное станочное оборудование. Официальный каталог токарного, фрезерного и другого станочного оборудования. Ограничения: Индивидуальная комплектация, срок изготовления и условия пусконаладки; открытый каталог не равен готовому оптовому прайсу.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://stankoprom.ru/catalog/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_brt",
+      "name": "Балаковорезинотехника",
+      "site": "balrt.ru",
+      "directions": [
+        "g-autoparts",
+        "g-rubber-plastic"
+      ],
+      "source_url": "https://www.balrt.ru/",
+      "access_mode": "quote_request",
+      "notes": "Резинотехнические изделия, уплотнения и автомобильные РТИ. Официальный сайт производителя. Ограничения: Только подходящая номенклатура; для произвольных промышленных рукавов/пластика нужен отдельный подбор.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.balrt.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_gpn",
+      "name": "Газпромнефть — Региональные продажи",
+      "site": "gpn-trade.ru",
+      "directions": [
+        "g-fuel"
+      ],
+      "source_url": "https://gpn-trade.ru/",
+      "access_mode": "quote_request",
+      "notes": "Топливо, нефтепродукты. Официальный сайт содержит контакт для мелкооптовых клиентов; прямое открытие завершилось таймаутом. Ограничения: Цена зависит от базиса, объёма, даты и доставки. Это кандидат для КП, не источник подтверждённой цены.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://gpn-trade.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_autogermes",
+      "name": "АвтоГЕРМЕС, корпоративные продажи CHERY",
+      "site": "chery-avtogermes.ru",
+      "directions": [
+        "g-cars"
+      ],
+      "source_url": "https://chery-avtogermes.ru/customers/buy/corporate-sales/",
+      "access_mode": "quote_request",
+      "notes": "Легковые автомобили CHERY для организаций. На сайте дилера есть корпоративная программа, комплектации, прайс-листы. Ограничения: Покрытие ограничено брендом/каналом; спецтранспорт и другие марки требуют отдельных дилеров. Цена с кредитом/trade-in не цена обычной закупки.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://chery-avtogermes.ru/customers/buy/corporate-sales/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_kolesa",
+      "name": "Колёса Даром, оптовый канал",
+      "site": "kolesa-darom.ru",
+      "directions": [
+        "g-batteries",
+        "g-autoparts",
+        "g-tires",
+        "g-fuel"
+      ],
+      "source_url": "https://www.kolesa-darom.ru/pokupatelyu/optovikam/",
+      "access_mode": "partner_request",
+      "notes": "Шины, диски, аккумуляторы, автомасла. Официальная оптовая страница описывает доступ к ассортиментным складам и остаткам; прямое открытие вернуло 401. Ограничения: Не обходить доступ; получить партнёрский прайс. Размер, индекс нагрузки/скорости и дата производства значимы.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.kolesa-darom.ru/pokupatelyu/optovikam/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_abat",
+      "name": "Abat / дилерская сеть",
+      "site": "abat.ru",
+      "directions": [
+        "g-kitchen-equip"
+      ],
+      "source_url": "https://abat.ru/prodavtsy-oborudovaniya/",
+      "access_mode": "quote_request",
+      "notes": "Оборудование пищеблоков и общепита. Производитель указывает, что продажа ведётся через дилерскую сеть; есть сервисные материалы. Ограничения: Определить конкретного дилера и коммерческие условия; производителя не записывать продавцом без подтверждения.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://abat.ru/prodavtsy-oborudovaniya/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_prosv",
+      "name": "Просвещение",
+      "site": "prosv.ru",
+      "directions": [
+        "g-edu",
+        "g-books"
+      ],
+      "source_url": "https://prosv.ru/legal/public-offer-b2b/",
+      "access_mode": "quote_request",
+      "notes": "Учебники и учебные пособия. Подтверждены официальный каталог учебников и B2B-условия продажи. Ограничения: Сверять ISBN, автора, издание, год, часть и печатную/электронную форму; оптовая скидка не установлена.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://prosv.ru/legal/public-offer-b2b/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_ruselprom",
+      "name": "Русэлпром",
+      "site": "ruselprom.ru",
+      "directions": [
+        "g-motors"
+      ],
+      "source_url": "https://www.ruselprom.ru/products/",
+      "access_mode": "quote_request",
+      "notes": "Электродвигатели, генераторы, приводы и системы управления. Официальный производитель с каталогом и техническими документами. Ограничения: Не переносить характеристики серии на конкретное исполнение; трансформаторы искать отдельной веткой.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.ruselprom.ru/products/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_adl",
+      "name": "АДЛ",
+      "site": "adl.ru",
+      "directions": [
+        "g-electro",
+        "g-measuring",
+        "g-pumps",
+        "g-valves",
+        "g-hvac",
+        "g-plumbing"
+      ],
+      "source_url": "https://adl.ru/catalog/",
+      "access_mode": "b2b_price_export",
+      "notes": "Насосы, трубопроводная арматура, КИПиА, электрическое оборудование. Официальные каталог, прайсы и опросные листы; поставки оборудования для инженерных систем. Ограничения: Подбор по рабочей точке, среде, температуре, материалу и присоединению; компрессоры — отдельная номенклатура.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://adl.ru/catalog/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_rusklimat",
+      "name": "Русклимат для бизнеса",
+      "site": "rusklimat.com",
+      "directions": [
+        "g-hvac"
+      ],
+      "source_url": "https://b2b.rusklimat.com/help/faq.php",
+      "access_mode": "b2b_price_export",
+      "notes": "Кондиционирование, вентиляция, отопление, климатическая техника. Официальный B2B FAQ описывает скачивание каталога и прайса через Интернет Партнер. Ограничения: Отделять новое оборудование от уценки и дефектных позиций; получать комплектацию и цену своего договора.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://b2b.rusklimat.com/help/faq.php"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_doorhan",
+      "name": "DoorHan",
+      "site": "doorhan.ru",
+      "directions": [
+        "g-security",
+        "g-windows"
+      ],
+      "source_url": "https://doorhan.ru/dealer/",
+      "access_mode": "partner_request",
+      "notes": "Двери, ворота, роллеты, автоматика. Официальный дилерский раздел содержит каталог комплектации, инструкции и сертификаты. Ограничения: Заказные размеры, состав и монтаж фиксировать отдельно; не весь ассортимент оконных блоков покрывается.",
+      "recommended_priority": 4,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://doorhan.ru/dealer/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_galacentre",
+      "name": "Гала-Центр",
+      "site": "galacentre.ru",
+      "directions": [
+        "g-appliances",
+        "g-tools",
+        "g-garden",
+        "g-stationery",
+        "g-cleaning",
+        "g-hygiene",
+        "g-household",
+        "g-sport",
+        "g-toys",
+        "g-souvenirs",
+        "g-dishes",
+        "g-packaging"
+      ],
+      "source_url": "https://www.galacentre.ru/services/api.php",
+      "access_mode": "api_partner",
+      "notes": "Посуда, хозяйственные товары, бытовая техника, инструмент, сад, игрушки, спорт, канцелярия, подарки. Официально описаны REST API и выгрузка каталога с данными о товарах, ценах, наличии и изображениях. Ограничения: Открытие документации в исследовательском просмотрщике вернуло 502; проверить текущую версию API, договорные цены, склад, MOQ и кратность.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.galacentre.ru/services/api.php",
+        "https://www.galacentre.ru/services/",
+        "https://www.galacentre.ru/faq/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_komusopt",
+      "name": "Комус-ОПТ",
+      "site": "komus-opt.ru",
+      "directions": [
+        "g-paper",
+        "g-stationery"
+      ],
+      "source_url": "https://komus-opt.ru/api2/docs/api.html",
+      "access_mode": "api_partner",
+      "notes": "Офисная бумага, канцелярия и товары для офиса. Прочитана документация API v2.1 с обновлением от 22.09.2026: категории, товары, цены и остатки; доступ по токену партнёра. Ограничения: Подключать только методы чтения; персональные цены требуют токена. Расширение на остальные разделы выполнять по фактическому классификатору API.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://komus-opt.ru/api2/docs/api.html"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": [],
+      "feed_docs": [
+        {
+          "url": "https://komus-opt.ru/api2/docs/api.html",
+          "status": "official_docs_read",
+          "credentials": "partner_credentials_required",
+          "live_api_tested": false,
+          "allowed_operations": [
+            "catalog_read",
+            "specifications_read",
+            "price_read",
+            "stock_read"
+          ],
+          "orders_enabled": false
+        }
+      ]
+    },
+    {
+      "id": "reg_relef",
+      "name": "Рельеф-Центр",
+      "site": "relefopt.ru",
+      "directions": [
+        "g-paper",
+        "g-stationery",
+        "g-toys"
+      ],
+      "source_url": "https://relefopt.ru/upload/files/public_api.pdf",
+      "access_mode": "api_partner",
+      "notes": "Бумага, канцелярия, товары для школы и творчества. Официальная PDF-инструкция описывает API-ключ, товары, остатки, персональные цены, классификаторы и связи товаров. Ограничения: Документ имеет давнюю историю публикации; до подключения сверить действующую версию. Сопутствующий товар и аналог не равны точному совпадению.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://relefopt.ru/upload/files/public_api.pdf"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": [],
+      "feed_docs": [
+        {
+          "url": "https://relefopt.ru/upload/files/public_api.pdf",
+          "status": "official_docs_read",
+          "credentials": "partner_credentials_required",
+          "live_api_tested": false,
+          "allowed_operations": [
+            "catalog_read",
+            "specifications_read",
+            "price_read",
+            "stock_read"
+          ],
+          "orders_enabled": false
+        }
+      ]
+    },
+    {
+      "id": "reg_petrovich",
+      "name": "Петрович B2B",
+      "site": "business.petrovich.ru",
+      "directions": [
+        "g-building",
+        "g-paints",
+        "g-hardware",
+        "g-plumbing",
+        "g-windows",
+        "g-wood"
+      ],
+      "source_url": "https://business.petrovich.ru/",
+      "access_mode": "partner_request",
+      "notes": "Стройматериалы, отделка, сантехника, пиломатериалы, крепёж, двери. Найдены канал для юридических лиц и официальная EDI-интеграция для действующих оптовых клиентов. Ограничения: EDI-документ описывает обмен заказами и статусами, а не публичный API поиска каталога. Цены и доставка зависят от региона и договора.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://business.petrovich.ru/",
+        "https://b2b.petrovich.ru/edi-classic"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_klen",
+      "name": "КЛЕН",
+      "site": "klenmarket.ru",
+      "directions": [
+        "g-kitchen-equip",
+        "g-dishes",
+        "g-packaging"
+      ],
+      "source_url": "https://www.klenmarket.ru/shop/cookware/",
+      "access_mode": "partner_request",
+      "notes": "Профессиональное кухонное оборудование, посуда и инвентарь для общепита. Официальный каталог описывает оптовые продажи посуды и поставки оборудования и товаров для HoReCa. Ограничения: Уточнять профессиональное исполнение, питание, подключение, комплект и фасовку; API не подтверждён.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.klenmarket.ru/shop/cookware/",
+        "https://www.klenmarket.ru/shop/inventory/inventar-dlia-magazinov/odnorazovaia-posuda-i-upakovka/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_prist",
+      "name": "ПриСТ",
+      "site": "prist.ru",
+      "directions": [
+        "g-measuring",
+        "g-tools",
+        "g-furniture"
+      ],
+      "source_url": "https://prist.ru/",
+      "access_mode": "partner_request",
+      "notes": "Контрольно-измерительные приборы, паяльное оборудование, промышленная мебель. На официальном сайте есть приборы, услуги поставки, каталоги и брошюры, в том числе за 2026 год. Ограничения: Поверку, диапазон, точность и включённые опции проверять по конкретной поставке; не переносить характеристики серии.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://prist.ru/",
+        "https://prist.ru/library/katalogi/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_chimmed",
+      "name": "ХИММЕД",
+      "site": "chimmed.ru",
+      "directions": [
+        "g-lab",
+        "g-chemistry"
+      ],
+      "source_url": "https://chimmed.ru/products/laboratory_equipment",
+      "access_mode": "quote_request",
+      "notes": "Лабораторное оборудование, посуда, химические реактивы. Официальные каталоги лабораторного оборудования и химических реактивов. Ограничения: Сохранять ограничения платформы на исключённые вещества; чистота, концентрация и фасовка — признаки варианта.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://chimmed.ru/products/laboratory_equipment",
+        "https://chimmed.ru/products/chemical_reactives"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_apexmed",
+      "name": "Апексмед",
+      "site": "apexmed.ru",
+      "directions": [
+        "g-med-supplies",
+        "g-med-equip",
+        "g-furniture"
+      ],
+      "source_url": "https://apexmed.ru/catalog/",
+      "access_mode": "partner_request",
+      "notes": "Медицинские расходные материалы, инструменты, оборудование и медицинская мебель. Официальный каталог содержит медицинские изделия и оборудование; сайт указывает срок действия счетов и КП. Ограничения: Документы и стерильность проверять для артикула и партии; цену каталога не считать неизменной ценой поставки.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://apexmed.ru/catalog/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_dipos",
+      "name": "ДиПОС",
+      "site": "dipos.ru",
+      "directions": [
+        "g-metal",
+        "g-building"
+      ],
+      "source_url": "https://dipos.ru/docs/katalogi-i-prezentatsii/",
+      "access_mode": "partner_request",
+      "notes": "Металлопрокат, трубы, лист, сетка и металлопродукция. Официально опубликованы каталоги и презентации продукции, действует сеть региональных площадок. Ограничения: Марка стали, покрытие, размеры, масса, резка и доставка определяют фактическое предложение.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://dipos.ru/docs/katalogi-i-prezentatsii/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_sitsy",
+      "name": "Шуйские ситцы",
+      "site": "sitsy.ru",
+      "directions": [
+        "g-textile"
+      ],
+      "source_url": "https://sitsy.ru/",
+      "access_mode": "partner_request",
+      "notes": "Ткани, постельное бельё, полотенца и домашний текстиль. Прочитан каталог производителя; есть разделы для оптовиков, тканей, постельных и кухонных принадлежностей. Ограничения: Плотность, состав, размер и комплектация должны относиться к точному артикулу; оптовые условия проверяются отдельно.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://sitsy.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_tdl",
+      "name": "ТДЛ Текстиль",
+      "site": "tdl-textile.ru",
+      "directions": [
+        "g-textile",
+        "g-med-supplies"
+      ],
+      "source_url": "https://tdl-textile.ru/for-buyers/",
+      "access_mode": "partner_request",
+      "notes": "Ткани, домашний и медицинский текстиль. Официальная страница для покупателей описывает домашний текстиль и медицинские изделия собственных брендов. Ограничения: Медицинское назначение не выводить из обычной ткани; конкретные изделия и документы сверять по каталогу.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://tdl-textile.ru/for-buyers/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_ews",
+      "name": "Восток-Запад",
+      "site": "ews.ru",
+      "directions": [
+        "g-food-meat",
+        "g-food-fish",
+        "g-food-veg",
+        "g-food-dairy",
+        "g-food-bakery",
+        "g-food-grocery",
+        "g-food-all",
+        "g-drinks"
+      ],
+      "source_url": "https://www.ews.ru/",
+      "access_mode": "partner_request",
+      "notes": "Продукты питания для HoReCa: мясо, рыба, овощи, молочные продукты, бакалея и напитки. Прочитан официальный сайт оптового поставщика; доступны каталог, подключение клиента и личный кабинет. Ограничения: Ассортимент, договорная цена, температура, сроки годности и маршруты доставки проверяются для региона и партии.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.ews.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_luidor",
+      "name": "Луидор: коммерческий транспорт",
+      "site": "luidor-gaz.ru",
+      "directions": [
+        "g-cars"
+      ],
+      "source_url": "https://luidor-gaz.ru/corporate",
+      "access_mode": "quote_request",
+      "notes": "Коммерческие автомобили и специальные исполнения; автобусы через профильное подразделение. Найдена официальная страница корпоративных продаж и отдельный каталог автобусов группы. Ограничения: Открытие корпоративной страницы вернуло 401. Нужны точное исполнение, сроки производства и КП; общий прайс не равен готовой поставке.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://luidor-gaz.ru/corporate",
+        "https://bus.luidor.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_sportoptom",
+      "name": "Спортоптом",
+      "site": "sportoptom.ru",
+      "directions": [
+        "g-sport",
+        "g-clothes",
+        "g-shoes"
+      ],
+      "source_url": "https://sportoptom.ru/",
+      "access_mode": "partner_request",
+      "notes": "Спортивный инвентарь, спортивная одежда и обувь, товары для активного отдыха. Прочитан оптовый каталог; доступны поиск по наименованию/артикулу, разделы и указание прайс-листа. Ограничения: Условия размеров, материалов, комплектов и текущего прайса проверять; API не подтверждён.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://sportoptom.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_pozharka",
+      "name": "ГК Пожтехавтоматика",
+      "site": "pozharka.ru",
+      "directions": [
+        "g-fire",
+        "g-ppe"
+      ],
+      "source_url": "https://pozharka.ru/products",
+      "access_mode": "b2b_price_export",
+      "notes": "Огнетушители, пожарные рукава, шкафы, щиты и противопожарный инвентарь. Прочитан каталог; есть ссылка на прайс-лист и разделы противопожарного оборудования. Ограничения: Сам файл прайса и его формат не тестировались; проверять тип оборудования, комплект, дату выпуска и документы.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://pozharka.ru/products"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_sadkoplant",
+      "name": "Садовая компания Садко",
+      "site": "sadko-plant.ru",
+      "directions": [
+        "g-plants"
+      ],
+      "source_url": "https://www.sadko-plant.ru/kontakti/index.html",
+      "access_mode": "partner_request",
+      "notes": "Саженцы, декоративные и плодовые растения. Официальная страница питомника содержит каталог и информацию для оптовиков. Ограничения: Не путать одноимённые фирмы. Размер, возраст, подвой, корневая система, сезон и партия существенны.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.sadko-plant.ru/kontakti/index.html"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_gatchinsky",
+      "name": "Гатчинский комбикормовый завод",
+      "site": "gatchinsky-kkz.ru",
+      "directions": [
+        "g-feed"
+      ],
+      "source_url": "https://www.gatchinsky-kkz.ru/kombikorma",
+      "access_mode": "partner_request",
+      "notes": "Комбикорма для сельскохозяйственных животных и птицы. Официальный каталог описывает комбикорма по видам животных, фасовку и условия цен на площадках продаж. Ограничения: Прямое открытие вернуло 502. Региональное производство; доставка, рецептура и документы партии проверяются отдельно.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.gatchinsky-kkz.ru/kombikorma"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_phosagro",
+      "name": "ФосАгро / ФосАгро-Регион",
+      "site": "phosagro.com",
+      "directions": [
+        "g-plants"
+      ],
+      "source_url": "https://shop.phosagro.com/",
+      "access_mode": "quote_request",
+      "notes": "Минеральные удобрения. Найдены официальный магазин удобрений и карта региональной сбытовой сети производителя. Ограничения: Применимость ограничена удобрениями; не поставщик всех растений. Формула, форма, фасовка и доставка требуют точной сверки.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://shop.phosagro.com/",
+        "https://www.phosagro.ru/contacts/map/ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_electroshield",
+      "name": "Электрощит Самара",
+      "site": "electroshield.ru",
+      "directions": [
+        "g-motors",
+        "g-electro"
+      ],
+      "source_url": "https://www.electroshield.ru/catalog/",
+      "access_mode": "quote_request",
+      "notes": "Трансформаторы, щитовое оборудование, подстанции и распределительные устройства. Прочитан официальный каталог, включая силовые/измерительные трансформаторы и низковольтные устройства. Ограничения: Проектное исполнение определяется опросным листом; не считать серийную картинку подтверждённой комплектацией.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.electroshield.ru/catalog/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_felix",
+      "name": "ФЕЛИКС",
+      "site": "felix.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.felix.ru/",
+      "access_mode": "partner_request",
+      "notes": "Офисная мебель, кресла, столы, шкафы и мебель по проекту. Официальный сайт содержит каталоги, разделы оптовикам, дилерам и по работе с тендерами. Ограничения: Исполнение, материал, цвет, размер, сборка и доставка входят в конкретное предложение; скидку опта не предполагать.",
+      "recommended_priority": 2,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.felix.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "диван",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "кроват",
+        "матрас",
+        "мебел",
+        "гарнитур"
+      ],
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "reg_promet",
+      "name": "ПРОМЕТ",
+      "site": "promet.ru",
+      "directions": [
+        "g-furniture",
+        "g-windows"
+      ],
+      "source_url": "https://promet.ru/",
+      "access_mode": "partner_request",
+      "notes": "Сейфы, металлическая офисная, медицинская и производственная мебель, металлические двери. Официальная выдача подтверждает производителя и разделы металлической мебели. Ограничения: Прямое открытие вернуло 403; использовать разрешённую выгрузку/каталог дилера и документы. Не обходить защиту.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://promet.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_mixart",
+      "name": "MixArt Distribution",
+      "site": "mixart.ru",
+      "directions": [
+        "g-music",
+        "g-av"
+      ],
+      "source_url": "https://www.mixart.ru/",
+      "access_mode": "partner_request",
+      "notes": "Профессиональное аудио, микрофоны, музыкальное и AV-оборудование. Официальный сайт содержит каталог, бренды, руководства пользователя и брошюры. Ограничения: Проверять конкретные доступные инструменты/бренды и лицензии; список ассортимента не подтверждает склад.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "external_registry",
+      "evidence_urls": [
+        "https://www.mixart.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "reg_cin",
+      "name": "Фирма ЦИН",
+      "site": "cin.ru",
+      "directions": [
+        "g-rubber-plastic"
+      ],
+      "source_url": "https://cin.ru/",
+      "access_mode": "partner_request",
+      "notes": "Резинотехнические изделия, полимеры, рукава, прокладочные материалы и технические ткани. Прочитан каталог РТИ и полимерных материалов, есть изготовление деталей. Ограничения: Среда, давление, температура, размеры и марка материала существенны; ограничения закупки сохраняются.",
+      "recommended_priority": 3,
+      "priority_basis": "Реестр поставщиков по 73 группам (ChatGPT, 21.10.2026); сервисом не проверялось",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://cin.ru/"
+      ],
+      "evidence_checked_at": "2026-10-21",
+      "contacts": {},
+      "focus_words": []
+    },
+    {
+      "id": "kb_unitex",
+      "name": "ЮНИТЕКС",
+      "site": "unitex.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.unitex.ru/opt/",
+      "access_mode": "quote_request",
+      "notes": "Группа производителей. Дилерский раздел и широкий офисный ассортимент; модели и предложения продавцов хранить отдельно.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.unitex.ru/opt/",
+        "https://www.unitex.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "диван",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "кроват",
+        "матрас",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "kb_riva",
+      "name": "RIVA / РВ Групп",
+      "site": "riva.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://riva.ru/",
+      "access_mode": "quote_request",
+      "notes": "Группа производителей. На сайте заявлена работа только с дилерами. Обивка, цвет и исполнение входят в идентичность варианта.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://riva.ru/",
+        "https://riva.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "кресл",
+        "кроват",
+        "стул",
+        "матрас",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "kb_defo",
+      "name": "ДЭФО",
+      "site": "defo.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.defo.ru/about/partners/",
+      "access_mode": "quote_request",
+      "notes": "Поставщик бренда. Есть корпоративный отдел и партнерская программа; роль изготовителя подтверждать для конкретной марки и SKU.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.defo.ru/about/partners/",
+        "https://www.defo.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "диван",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        }
+      ]
+    },
+    {
+      "id": "kb_slavmeb",
+      "name": "Славянская мебель",
+      "site": "slavmeb.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.slavmeb.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Официальный сайт найден в поиске, прямое чтение завершилось таймаутом. Не считать подключенным парсером.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://www.slavmeb.ru/",
+        "https://www.slavmeb.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "стул",
+        "кресл",
+        "секци",
+        "табурет",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        }
+      ]
+    },
+    {
+      "id": "kb_fm18",
+      "name": "Фабрика им. Мебеля / fm18",
+      "site": "fm18.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://fm18.ru/ofisnaya-mebel/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. На сайте также есть учебная, дошкольная, гостиничная мебель и мебель для библиотек; отдельные условия для опта.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://fm18.ru/ofisnaya-mebel/",
+        "https://fm18.ru/ofisnaya-mebel/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "парт",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "детск",
+        "кроват",
+        "матрас",
+        "кафедр",
+        "библиотеч",
+        "диван",
+        "кресл",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "kindergarten",
+          "title": "Дошкольная мебель"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "library",
+          "title": "Библиотеки и читальные залы"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        }
+      ]
+    },
+    {
+      "id": "kb_mebela",
+      "name": "MEBELA",
+      "site": "mebela.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.mebela.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Ассортимент найден в индексе; при открытии 502. Отложенный источник, условия опта не проверены.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://www.mebela.ru/",
+        "https://www.mebela.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        }
+      ]
+    },
+    {
+      "id": "kb_chairman",
+      "name": "CHAIRMAN / Тайпит",
+      "site": "chairman.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://chairman.ru/",
+      "access_mode": "quote_request",
+      "notes": "Бренд производителя. Ссылка «Стать дилером» ведет на mebel.taipit.ru. PDF-инструкции бывают без текстового слоя; читать сноски обивок.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://chairman.ru/",
+        "https://chairman.ru/goods/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "диван",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        }
+      ]
+    },
+    {
+      "id": "kb_buro",
+      "name": "Бюрократ / MERLION",
+      "site": "buro.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://buro.ru/support/technic/",
+      "access_mode": "quote_request",
+      "notes": "Бренд производителя. На официальном сайте есть B2B MERLION, инструкции и техническая информация. Нагрузки моделей меняются: проверять версию.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://buro.ru/support/technic/",
+        "https://buro.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "стол",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        }
+      ]
+    },
+    {
+      "id": "kb_burochairs",
+      "name": "БюроКресла",
+      "site": "burochairs.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.burochairs.ru/about/",
+      "access_mode": "quote_request",
+      "notes": "Оптовый поставщик. Отдельный продавец кресел Бюрократ; не считать второй фабрикой. Оптовые условия и реквизиты опубликованы на сайте.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.burochairs.ru/about/",
+        "https://www.burochairs.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кресл",
+        "стул",
+        "секци",
+        "табурет",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "office_chairs",
+          "title": "Офисные кресла"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        }
+      ]
+    },
+    {
+      "id": "kb_promet",
+      "name": "ПРОМЕТ / ПРАКТИК",
+      "site": "safe.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.safe.ru/catalog/torgovye-marki/praktik-tm/",
+      "access_mode": "quote_request",
+      "notes": "Группа производителей. Сохранить существующий id promet. ПРАКТИК — марка группы; safe.ru не добавлять как независимого от ПРОМЕТ изготовителя.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.safe.ru/catalog/torgovye-marki/praktik-tm/",
+        "https://www.safe.ru/catalog/torgovye-marki/praktik-tm/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "шкаф",
+        "стеллаж",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "верстак",
+        "тумб",
+        "стол",
+        "инструмент",
+        "медицин",
+        "кушетк",
+        "кроват",
+        "ширм",
+        "стул",
+        "тележк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        },
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        },
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_paksmet",
+      "name": "ПАКС-Металл",
+      "site": "paksmet.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://paksmet.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. paksmet.ru и paks-met.ru не смешивать: второй сайт заявляет дилерскую роль. Автоматическое чтение основного сайта вернуло 403.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://paksmet.ru/",
+        "https://paksmet.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "шкаф",
+        "стеллаж",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "верстак",
+        "тумб",
+        "стол",
+        "инструмент",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        },
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_dikom",
+      "name": "ДиКом",
+      "site": "dikom.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.dikom.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Производитель металлической мебели; доступность загрузки и оптовые условия требуют проверки коннектора.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://www.dikom.ru/",
+        "https://www.dikom.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "шкаф",
+        "стеллаж",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "верстак",
+        "тумб",
+        "стол",
+        "инструмент",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        },
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_werstakoff",
+      "name": "Верстакофф",
+      "site": "werstakoff.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.werstakoff.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Верстаки, шкафы, стеллажи, антистатическая мебель; есть конфигуратор. Конфигурацию сохранять как состав компонентов.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.werstakoff.ru/",
+        "https://www.werstakoff.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "верстак",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "стол",
+        "инструмент",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        },
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        }
+      ]
+    },
+    {
+      "id": "kb_ferrum",
+      "name": "Феррум",
+      "site": "ferrum.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://ferrum.ru/docs",
+      "access_mode": "quote_request",
+      "notes": "Производитель. В документации отдельно доступны каталоги, прайсы, паспорта, сертификаты. Нагрузка на ящик, полку и верстак — разные поля.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://ferrum.ru/docs",
+        "https://ferrum.ru/catalog"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "верстак",
+        "шкаф",
+        "тумб",
+        "стеллаж",
+        "стол",
+        "инструмент",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        },
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        }
+      ]
+    },
+    {
+      "id": "kb_rosmet",
+      "name": "Росметалл",
+      "site": "rosmet.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.rosmet.com/contacts/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Подробные карточки учебной мебели с ростовыми группами. Параметры разных вариантов нельзя объединять.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.rosmet.com/contacts/",
+        "https://www.rosmet.com/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "детск",
+        "кроват",
+        "стеллаж",
+        "кафедр",
+        "библиотеч",
+        "тумб",
+        "матрас",
+        "кресл",
+        "секци",
+        "табурет",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "гардероб",
+        "пенал",
+        "обеденн",
+        "барн",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "kindergarten",
+          "title": "Дошкольная мебель"
+        },
+        {
+          "id": "library",
+          "title": "Библиотеки и читальные залы"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "horeca",
+          "title": "Столовые, кафе, обеденные группы"
+        }
+      ]
+    },
+    {
+      "id": "kb_altcom",
+      "name": "Альтком-Мебель",
+      "site": "altcommebel.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://altcommebel.ru/partners",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Есть дилерская программа и подбор комплектации учреждения. Точные материалы и исполнения подтверждать карточкой/спецификацией.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://altcommebel.ru/partners",
+        "https://www.altcommebel.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        }
+      ]
+    },
+    {
+      "id": "kb_agat",
+      "name": "ФМК АГАТ",
+      "site": "fmkagat.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://fmkagat.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Оснащение школ и детских садов, типовые и проектные решения. Сайт также ссылается на agatmk.ru; не создавать дубль фабрики автоматически.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://fmkagat.ru/",
+        "https://fmkagat.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "детск",
+        "кроват",
+        "стеллаж",
+        "диван",
+        "кресл",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "обеденн",
+        "барн",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "kindergarten",
+          "title": "Дошкольная мебель"
+        },
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        },
+        {
+          "id": "horeca",
+          "title": "Столовые, кафе, обеденные группы"
+        }
+      ]
+    },
+    {
+      "id": "kb_lamifor",
+      "name": "ЛАМИФОР",
+      "site": "lamifor.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://lamifor.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Прямо заявлена оптовая поставка школьной мебели. Рост, регулировки и пластик столешниц проверять по варианту.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://lamifor.ru/",
+        "https://lamifor.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        }
+      ]
+    },
+    {
+      "id": "kb_pelizma",
+      "name": "PELIZMA",
+      "site": "pelizma.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://pelizma.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Первичный сайт найден в индексе; прямое чтение — таймаут. Заявления о реестрах не подтверждают включение любого SKU.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://pelizma.ru/",
+        "https://pelizma.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "ресепшн",
+        "ресепшен",
+        "стойк",
+        "конференц",
+        "тумб",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "office_tables",
+          "title": "Офисные столы и рабочие места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        }
+      ]
+    },
+    {
+      "id": "kb_partastul",
+      "name": "ПартаСтул",
+      "site": "parta-stul.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://parta-stul.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Серийные парты, стулья, лабораторные столы; сайт предлагает спецусловия при крупных партиях. Условия конкретного КП неизвестны.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://parta-stul.ru/",
+        "https://parta-stul.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "парт",
+        "стол",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "шкаф",
+        "обеденн",
+        "барн",
+        "кресл",
+        "лаборатор",
+        "вытяжн",
+        "тумб",
+        "мойк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        },
+        {
+          "id": "horeca",
+          "title": "Столовые, кафе, обеденные группы"
+        },
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_ask_med",
+      "name": "АСК / tdask",
+      "site": "tdask.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://tdask.ru/serii-standart-i-optima/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Текстовое чтение возвращает только Loading/JavaScript. Не смешивать с prom-ask.ru без подтверждения юридической связи.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://tdask.ru/serii-standart-i-optima/",
+        "https://tdask.ru/serii-standart-i-optima/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "медицин",
+        "кушетк",
+        "кроват",
+        "стол",
+        "шкаф",
+        "тумб",
+        "ширм",
+        "стул",
+        "тележк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_met_med",
+      "name": "MET / met-company",
+      "site": "met-company.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://met-company.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Медицинские и функциональные кровати. met.ru учитывать как возможный связанный канал после проверки, не как независимый завод.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://met-company.ru/",
+        "https://met-company.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "медицин",
+        "кушетк",
+        "кроват",
+        "стол",
+        "шкаф",
+        "тумб",
+        "ширм",
+        "стул",
+        "тележк",
+        "матрас",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "kb_ferroplast",
+      "name": "ФЕРРОПЛАСТ МЕДИКАЛ",
+      "site": "shop.ferroplast.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://shop.ferroplast.ru/collections/katalog-medicinskaya-mebel",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Подробное описание содержит больше данных, чем блок характеристик. Опубликованная цена магазина не равна согласованной оптовой.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://shop.ferroplast.ru/collections/katalog-medicinskaya-mebel",
+        "https://shop.ferroplast.ru/collections/katalog-medicinskaya-mebel"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "медицин",
+        "кушетк",
+        "кроват",
+        "стол",
+        "шкаф",
+        "тумб",
+        "ширм",
+        "стул",
+        "тележк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_aybolit",
+      "name": "ТД Айболит / Айболит-2000",
+      "site": "aybolit2000.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://aybolit2000.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Есть каталог и медицинские серии; регистрационные документы проверять по точному изделию и исполнению, не по названию фирмы.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://aybolit2000.ru/",
+        "https://aybolit2000.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "медицин",
+        "кушетк",
+        "кроват",
+        "стол",
+        "шкаф",
+        "тумб",
+        "ширм",
+        "стул",
+        "тележк",
+        "лаборатор",
+        "вытяжн",
+        "мойк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        },
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_nv_lab",
+      "name": "НВ-Лаб",
+      "site": "nv-lab.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://www.nv-lab.ru/",
+      "access_mode": "quote_request",
+      "notes": "Производитель и дистрибьютор. Поставщик лабораторного оборудования и мебели; прямое чтение 403. Собственное производство/чужие марки различать на уровне изделия.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://www.nv-lab.ru/",
+        "https://www.nv-lab.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "лаборатор",
+        "вытяжн",
+        "стол",
+        "шкаф",
+        "тумб",
+        "мойк",
+        "медицин",
+        "кушетк",
+        "кроват",
+        "ширм",
+        "стул",
+        "тележк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        },
+        {
+          "id": "medical",
+          "title": "Медицинская мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_labteh",
+      "name": "Лабтех",
+      "site": "labteh.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://labteh.com/cid1127/mebel-laboratornaya-labtekh",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Есть лабораторная мебель собственной марки и изготовление по размерам. CPL/HPL/керамику нельзя считать одной столешницей.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://labteh.com/cid1127/mebel-laboratornaya-labtekh",
+        "https://labteh.com/cid1127/mebel-laboratornaya-labtekh"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "лаборатор",
+        "вытяжн",
+        "стол",
+        "шкаф",
+        "тумб",
+        "мойк",
+        "верстак",
+        "стеллаж",
+        "инструмент",
+        "парт",
+        "стул",
+        "ученическ",
+        "школьн",
+        "доск",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        },
+        {
+          "id": "industrial",
+          "title": "Верстаки, инструментальная и ESD мебель"
+        },
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_simplepro",
+      "name": "Simple PRO / СпецБалтМебель",
+      "site": "simple-pro.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://simple-pro.com/catalog/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Вытяжные шкафы, столы, мойки. Покрытие, реагенты, вентиляцию и коммуникации сверять отдельными требованиями.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://simple-pro.com/catalog/",
+        "https://simple-pro.com/catalog/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "лаборатор",
+        "вытяжн",
+        "стол",
+        "шкаф",
+        "тумб",
+        "мойк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_loip",
+      "name": "ЛОИП",
+      "site": "loip.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://loip.ru/catalog/download/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Серии ЛАБ, ЛАБ-М, ЛАБ-PRO различаются; существуют отдельные PDF-каталоги. Документ 2023/2024 не считать текущим автоматически.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://loip.ru/catalog/download/",
+        "https://loip.ru/catalog/laboratornaya-mebel/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "лаборатор",
+        "вытяжн",
+        "стол",
+        "шкаф",
+        "тумб",
+        "мойк",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "laboratory",
+          "title": "Лабораторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_bts",
+      "name": "BTS",
+      "site": "btsmebel.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://btsmebel.ru/page/sotrudnichestvo/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Корпусная мебель оптом; пригодность бытовой серии для учреждения подтверждается требованиями ТЗ, а не общей категорией.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://btsmebel.ru/page/sotrudnichestvo/",
+        "https://btsmebel.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кроват",
+        "шкаф",
+        "тумб",
+        "стол",
+        "стул",
+        "матрас",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        }
+      ]
+    },
+    {
+      "id": "kb_smf",
+      "name": "Солнечногорская мебельная фабрика",
+      "site": "smf-mebel.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://smf-mebel.com/mebel-for-hotel/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Оптовое и контрактное производство для гостиниц и общежитий. Заказное изделие требует утвержденной спецификации.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://smf-mebel.com/mebel-for-hotel/",
+        "https://smf-mebel.com/mebel-for-hotel/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кроват",
+        "шкаф",
+        "тумб",
+        "стол",
+        "стул",
+        "матрас",
+        "стеллаж",
+        "гардероб",
+        "пенал",
+        "парт",
+        "ученическ",
+        "школьн",
+        "доск",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "office_storage",
+          "title": "Шкафы, тумбы, офисные стеллажи"
+        },
+        {
+          "id": "school",
+          "title": "Школьная и аудиторная мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_ormatek_horeca",
+      "name": "Орматек HoReCa",
+      "site": "horeca.ormatek.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://horeca.ormatek.com/",
+      "access_mode": "quote_request",
+      "notes": "Бренд производителя. Профессиональное оснащение спальных мест: матрасы, основания, сопутствующие изделия. Размер матраса не равен габариту кровати.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://horeca.ormatek.com/",
+        "https://horeca.ormatek.com/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "матрас",
+        "матрац",
+        "наматрасник",
+        "кроват",
+        "шкаф",
+        "тумб",
+        "стол",
+        "стул",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "mattresses",
+          "title": "Матрасы и основания"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "kb_gartlex",
+      "name": "Гартлекс",
+      "site": "gartlex.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://gartlex.ru/partners/cooperations/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Дилерская программа и проектная мягкая мебель. Обивка, модуль, категория ткани и механизм обязательны для связи цены и изделия.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://gartlex.ru/partners/cooperations/",
+        "https://gartlex.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "диван",
+        "кресл",
+        "пуф",
+        "банкетк",
+        "кушетк",
+        "мягк",
+        "стул",
+        "секци",
+        "табурет",
+        "стол",
+        "обеденн",
+        "барн",
+        "кроват",
+        "шкаф",
+        "тумб",
+        "матрас",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "soft_seating",
+          "title": "Диваны, мягкие модули, зоны ожидания"
+        },
+        {
+          "id": "visitor_seating",
+          "title": "Стулья, многоместные секции и зал"
+        },
+        {
+          "id": "horeca",
+          "title": "Столовые, кафе, обеденные группы"
+        },
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        }
+      ]
+    },
+    {
+      "id": "kb_stolprom",
+      "name": "СТОЛПРОМ / stolprom.com",
+      "site": "stolprom.com",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://stolprom.com/produktsiya/obedennye-gruppy",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Обеденные группы, столы, стулья. stolprom.ru представляет другую промышленную мебель; не объединять фирмы по похожему домену.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://stolprom.com/produktsiya/obedennye-gruppy",
+        "https://stolprom.com/produktsiya/obedennye-gruppy"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "стол",
+        "стул",
+        "обеденн",
+        "барн",
+        "кресл",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "horeca",
+          "title": "Столовые, кафе, обеденные группы"
+        }
+      ]
+    },
+    {
+      "id": "kb_hobbyka",
+      "name": "Хоббика",
+      "site": "hobbyka.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://hobbyka.ru/catalog/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Садово-парковая мебель; сайт найден, чтение завершилось таймаутом. Монтаж и основание проверять отдельно.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://hobbyka.ru/catalog/",
+        "https://hobbyka.ru/catalog/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "скам",
+        "урн",
+        "уличн",
+        "парков",
+        "беседк",
+        "качел",
+        "стол",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "outdoor",
+          "title": "Уличная и парковая мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_aven",
+      "name": "АВЕН",
+      "site": "aven-maf.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://aven-maf.ru/usloviya-dlya-dilerov/",
+      "access_mode": "quote_request",
+      "notes": "Производитель. Мебель для улицы и дилерская программа. Игровое оборудование не включать в мебель автоматически.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://aven-maf.ru/usloviya-dlya-dilerov/",
+        "https://aven-maf.ru/mebel-dlya-dachi/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "скам",
+        "урн",
+        "уличн",
+        "парков",
+        "беседк",
+        "качел",
+        "стол",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "outdoor",
+          "title": "Уличная и парковая мебель"
+        }
+      ]
+    },
+    {
+      "id": "kb_metakon",
+      "name": "МетаКон",
+      "site": "zavod-metakon.ru",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://zavod-metakon.ru/catalog/krovati/metallicheskie_krovati/",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Металлические кровати; число ярусов, основание, нагрузка, ограждения и спальное место проверяются раздельно.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://zavod-metakon.ru/catalog/krovati/metallicheskie_krovati/",
+        "https://zavod-metakon.ru/catalog/krovati/metallicheskie_krovati/"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кроват",
+        "шкаф",
+        "тумб",
+        "стол",
+        "стул",
+        "матрас",
+        "стеллаж",
+        "сейф",
+        "локер",
+        "картотек",
+        "металлическ",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "metal_storage",
+          "title": "Металлическая мебель и хранение"
+        }
+      ]
+    },
+    {
+      "id": "kb_rusmebel",
+      "name": "РусМебель / rusmebel.org",
+      "site": "rusmebel.org",
+      "directions": [
+        "g-furniture"
+      ],
+      "source_url": "https://rusmebel.org/rusmebel/nashe-proizvodstvo.html",
+      "access_mode": "quote_request",
+      "notes": "Производитель-поставщик. Металлические кровати и оснащение спальных мест. Другие домены с названием РусМебель не объединять без сверки реквизитов.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://rusmebel.org/rusmebel/nashe-proizvodstvo.html",
+        "https://rusmebel.org/rusmebel/nashe-proizvodstvo.html"
+      ],
+      "contacts": {},
+      "focus_words": [
+        "кроват",
+        "шкаф",
+        "тумб",
+        "стол",
+        "стул",
+        "матрас",
+        "матрац",
+        "наматрасник",
+        "мебел",
+        "гарнитур"
+      ],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026",
+      "furniture_profiles": [
+        {
+          "id": "hotel_dormitory",
+          "title": "Гостиницы, общежития и спальные места"
+        },
+        {
+          "id": "mattresses",
+          "title": "Матрасы и основания"
+        }
+      ]
+    },
+    {
+      "id": "kb_marvel",
+      "name": "Марвел-Дистрибуция",
+      "site": "partner.marvel.ru",
+      "directions": [
+        "computers",
+        "office",
+        "network"
+      ],
+      "source_url": "https://partner.marvel.ru/",
+      "access_mode": "partner_request",
+      "notes": "Дистрибьютор. Переход с marvel.ru на партнёрский портал; условия конкретного договора не проверены.",
+      "recommended_priority": 1,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://partner.marvel.ru/",
+        "https://partner.marvel.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_dihouse",
+      "name": "diHouse",
+      "site": "di-house.ru",
+      "directions": [
+        "computers",
+        "g-av"
+      ],
+      "source_url": "https://di-house.ru/",
+      "access_mode": "partner_request",
+      "notes": "Дистрибьютор. Дистрибуция электроники; доступность бренда и конкретного SKU проверять.",
+      "recommended_priority": 1,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://di-house.ru/",
+        "https://di-house.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_oldi",
+      "name": "OLDI",
+      "site": "oldi.ru",
+      "directions": [
+        "computers",
+        "office"
+      ],
+      "source_url": "https://www.oldi.ru/",
+      "access_mode": "public_site",
+      "notes": "Продавец. Каталог и собственные сборки; фиксировать состав сборки и артикул продавца.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.oldi.ru/",
+        "https://www.oldi.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_xcom",
+      "name": "X-Com",
+      "site": "xcom.ru",
+      "directions": [
+        "computers",
+        "office",
+        "network"
+      ],
+      "source_url": "https://www.xcom.ru/",
+      "access_mode": "public_site",
+      "notes": "Продавец. Страница вернула пустое содержимое; включать после проверки доступа на сервере.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://www.xcom.ru/",
+        "https://www.xcom.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_aquarius",
+      "name": "Аквариус",
+      "site": "aq.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://www.aq.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. Паспорт конкретной конфигурации и партнёрский канал поставки.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.aq.ru/",
+        "https://www.aq.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_depo",
+      "name": "DEPO Computers",
+      "site": "depo.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://www.depo.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. Компьютеры и серверы; модель платформы не равна составу заказа.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.depo.ru/",
+        "https://www.depo.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_iru",
+      "name": "iRU",
+      "site": "iru.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://iru.ru/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Системы и ноутбуки; искать полный код исполнения.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://iru.ru/",
+        "https://iru.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_graviton",
+      "name": "Гравитон",
+      "site": "graviton.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://graviton.ru/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Продукция, поддержка, сертификаты; реестровый статус только конкретного изделия.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://graviton.ru/",
+        "https://graviton.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_icl",
+      "name": "ICL Техно",
+      "site": "icl-techno.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://icl-techno.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. Паспорта и конфигурации через карточки и поддержку.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://icl-techno.ru/",
+        "https://icl-techno.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_kraftway",
+      "name": "Kraftway",
+      "site": "kraftway.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://www.kraftway.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. Рабочие станции и серверы; уточнять исполнение.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://www.kraftway.ru/",
+        "https://www.kraftway.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_rdw",
+      "name": "RDW Computers",
+      "site": "rdwcomp.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://rdwcomp.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. Правильный домен rdwcomp.ru; rdw.ru относится к другой тематике.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://rdwcomp.ru/",
+        "https://rdwcomp.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_fplus",
+      "name": "Fplus",
+      "site": "fplustech.ru",
+      "directions": [
+        "computers",
+        "office"
+      ],
+      "source_url": "https://fplustech.ru/catalog/personalnye-kompyutery/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Правильный домен fplustech.ru; fplus.ru не использовать для IT.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://fplustech.ru/catalog/personalnye-kompyutery/",
+        "https://fplustech.ru/catalog/personalnye-kompyutery/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_inferit",
+      "name": "Инферит",
+      "site": "inferit.com",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://inferit.com/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. inferit.ru перенаправляет на inferit.com.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://inferit.com/",
+        "https://inferit.com/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_tonk",
+      "name": "ТОНК",
+      "site": "tonk.ru",
+      "directions": [
+        "computers"
+      ],
+      "source_url": "https://tonk.ru/",
+      "access_mode": "partner_request",
+      "notes": "Производитель. В этой проверке таймаут; перед включением проверить доступ и карточки.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://tonk.ru/",
+        "https://tonk.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_cactus",
+      "name": "CACTUS",
+      "site": "cactus-russia.ru",
+      "directions": [
+        "office",
+        "computers"
+      ],
+      "source_url": "https://cactus-russia.ru/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Совместимые расходники; сохранять именно CACTUS MPN, не подменять оригинальным.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://cactus-russia.ru/",
+        "https://cactus-russia.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_nvprint",
+      "name": "NV Print",
+      "site": "nvprint.ru",
+      "directions": [
+        "office"
+      ],
+      "source_url": "https://nvprint.ru/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Таймаут; характеристики и право использования каталога проверить при подключении.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "search_result",
+      "evidence_urls": [
+        "https://nvprint.ru/",
+        "https://nvprint.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_ramis",
+      "name": "Рамис",
+      "site": "ramis.ru",
+      "directions": [
+        "office"
+      ],
+      "source_url": "https://ramis.ru/",
+      "access_mode": "partner_request",
+      "notes": "Продавец. Расходники и запчасти; наличие и условия опта не подтверждены.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://ramis.ru/",
+        "https://ramis.ru/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    },
+    {
+      "id": "kb_hi_black",
+      "name": "Hi-Black",
+      "site": "hi-black.ru",
+      "directions": [
+        "office"
+      ],
+      "source_url": "https://hi-black.ru/catalog/kartridzhi_lazernye/",
+      "access_mode": "partner_request",
+      "notes": "Бренд производителя. Источник спецификаций собственных совместимых расходников, не оригинальных OEM.",
+      "recommended_priority": 2,
+      "priority_basis": "начальная оценка из пакета базы знаний (23.10.2026); после реальных находок — по ним",
+      "commercial_status": "not_contacted",
+      "legal_entity_verified": false,
+      "price_confirmed": false,
+      "api_credentials_available": false,
+      "crawl_permission": "not_checked",
+      "evidence_level": "official_page",
+      "evidence_urls": [
+        "https://hi-black.ru/catalog/kartridzhi_lazernye/",
+        "https://hi-black.ru/catalog/kartridzhi_lazernye/"
+      ],
+      "contacts": {},
+      "focus_words": [],
+      "from_package": "Tender_Knowledge_Base_Package 23.10.2026"
+    }
+  ],
+  "registry_imported_at": "2026-10-23",
+  "kb_imported_at": "2026-10-23",
+  "furniture_package_at": "2026-10-23"
+}

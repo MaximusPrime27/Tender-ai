@@ -1,0 +1,254 @@
+{
+  "researched_on": "2026-10-23",
+  "type": "exploratory_source_reading_not_platform_end_to_end",
+  "requirement_origin": "Специально составленные контрольные условия, не ТЗ пользователя",
+  "models": [
+    {
+      "id": "P01",
+      "model": "CHAIRMAN 523",
+      "source_urls": [
+        "https://chairman.ru/goods/boss/chairman-523.html",
+        "https://chairman.ru/netcat_files/multifile/2344/Chairman_523__LSP___11_25_.pdf"
+      ],
+      "identity_scope": "Указанная модель по карточке и связанной инструкции; реальное предложение продавца не квалифицировано",
+      "checks": [
+        {
+          "field": "load.user_kg",
+          "control_requirement": ">=150",
+          "observed": 150,
+          "status": "pass",
+          "locator": "HTML: таблица; PDF: страница 2",
+          "method": "html_and_ocr_with_visual_review"
+        },
+        {
+          "field": "castors.count",
+          "control_requirement": "=5",
+          "observed": 5,
+          "status": "pass",
+          "locator": "PDF: страница 1, напечатанное количество позиции 5",
+          "method": "visual_review_of_printed_quantity"
+        },
+        {
+          "field": "gaslift.class",
+          "control_requirement": "=4",
+          "observed": 4,
+          "status": "pass",
+          "locator": "HTML: таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "castors.stem_diameter_mm",
+          "control_requirement": "=11",
+          "observed": 11,
+          "status": "pass",
+          "locator": "HTML: таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "upholstery.front",
+          "control_requirement": "=натуральная кожа",
+          "observed": "натуральная кожа",
+          "status": "pass",
+          "locator": "HTML: сноска",
+          "method": "web_page_read"
+        },
+        {
+          "field": "upholstery.rear",
+          "control_requirement": "=натуральная кожа",
+          "observed": "экокожа",
+          "status": "mismatch",
+          "locator": "HTML: сноска",
+          "method": "web_page_read"
+        },
+        {
+          "field": "warranty.whole_product_months",
+          "control_requirement": ">=36",
+          "observed": null,
+          "status": "unknown",
+          "locator": "HTML: разные сроки для изделия и части элементов; единые 36 месяцев не подтверждены",
+          "method": "web_page_read"
+        },
+        {
+          "field": "seat.depth_mm",
+          "control_requirement": "=500",
+          "observed": null,
+          "status": "unknown",
+          "locator": "В прочитанных карточке и инструкции не установлено",
+          "method": "web_page_read"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "model": "Росметалл 111РВ",
+      "source_urls": [
+        "https://www.rosmet.com/catalog/shkolnaya_mebel/stoly_i_stulya_uchenicheskie/stoly_i_stulya_na_pryamougolnoy_trube/1233/"
+      ],
+      "identity_scope": "Общие свойства модели; выбор опций и окончательная цена должны быть привязаны к конкретному варианту",
+      "checks": [
+        {
+          "field": "tabletop.width_mm",
+          "control_requirement": "=700",
+          "observed": 700,
+          "status": "pass",
+          "locator": "HTML: описание и таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "tabletop.depth_mm",
+          "control_requirement": "=500",
+          "observed": 500,
+          "status": "pass",
+          "locator": "HTML: описание и таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "tabletop.thickness_mm",
+          "control_requirement": "=16",
+          "observed": 16,
+          "status": "pass",
+          "locator": "HTML: описание и таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "edge.thickness_mm",
+          "control_requirement": ">=2",
+          "observed": 1,
+          "status": "mismatch",
+          "locator": "HTML: описание и таблица",
+          "method": "web_page_read"
+        },
+        {
+          "field": "tabletop.material",
+          "control_requirement": "=ЛДСП",
+          "observed": "ЛДСП",
+          "status": "pass",
+          "locator": "HTML: описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "bag_hook.count",
+          "control_requirement": "=2",
+          "observed": 2,
+          "status": "pass",
+          "locator": "HTML: описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "corners.rounded",
+          "control_requirement": "=true",
+          "observed": null,
+          "status": "unknown",
+          "locator": "Закругление указано как опция; поставляемый вариант не согласован",
+          "method": "web_page_read"
+        },
+        {
+          "field": "height.continuous_range_mm",
+          "control_requirement": "continuous 520..640",
+          "observed": null,
+          "status": "unknown",
+          "locator": "Представлены разные ростовые исполнения; единого подтвержденного непрерывного диапазона нет",
+          "method": "web_page_read"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "model": "ФЕРРОПЛАСТ СММП-08-Я-ФП-03-08",
+      "source_urls": [
+        "https://shop.ferroplast.ru/products/stol-medicinskiiy-metallicheskiiy-peredvijnoiy-s-yashchikom-i-polkoiy-100022"
+      ],
+      "identity_scope": "Модель в развернутом описании; привязку к предложению, паспорту и составу поставки проверить дополнительно",
+      "checks": [
+        {
+          "field": "castors.count",
+          "control_requirement": "=4",
+          "observed": 4,
+          "status": "pass",
+          "locator": "HTML: развернутое описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "castors.braked_count",
+          "control_requirement": "=2",
+          "observed": 2,
+          "status": "pass",
+          "locator": "HTML: развернутое описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "coating.type",
+          "control_requirement": "=полимерно-порошковое",
+          "observed": "полимерно-порошковое",
+          "status": "pass",
+          "locator": "HTML: развернутое описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "color",
+          "control_requirement": "=серый",
+          "observed": "серый",
+          "status": "pass",
+          "locator": "HTML: карточка",
+          "method": "web_page_read"
+        },
+        {
+          "field": "service_life.years",
+          "control_requirement": ">=5",
+          "observed": {
+            "lower_bound": 5
+          },
+          "status": "pass",
+          "locator": "HTML: развернутое описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "castors.braked_count",
+          "control_requirement": ">=4",
+          "observed": 2,
+          "status": "mismatch",
+          "locator": "HTML: развернутое описание",
+          "method": "web_page_read"
+        },
+        {
+          "field": "body.width_mm",
+          "control_requirement": "=510",
+          "observed": null,
+          "status": "unknown",
+          "locator": "Размеры перечислены 510×585×850 без установленного порядка осей",
+          "method": "web_page_read"
+        },
+        {
+          "field": "drawers.count",
+          "control_requirement": "=1",
+          "observed": null,
+          "status": "unknown",
+          "locator": "Есть формулировки в единственном и множественном числе; состав следует подтвердить паспортом",
+          "method": "web_page_read"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "pass": 15,
+    "mismatch": 3,
+    "unknown": 6,
+    "conflict": 0
+  },
+  "technical_100_claim": false,
+  "pdf_reading": {
+    "url": "https://chairman.ru/netcat_files/multifile/2344/Chairman_523__LSP___11_25_.pdf",
+    "bytes": 1873662,
+    "sha256": "9de13e87d874ff1b6d0bdd6277a013a7aa7742764effc8aa03181bd8bc97e954",
+    "pages": 2,
+    "text_extraction_non_whitespace_chars": 0,
+    "ocr_engine": "Tesseract, eng, --psm 11",
+    "render_max_dimension_px": 1700,
+    "ocr_recognized_revision": true,
+    "ocr_recognized_load_150kg": true,
+    "ocr_fully_correct": false,
+    "printed_caster_quantity_visual_review": 5,
+    "note": "Число роликов установлено по напечатанному количеству в спецификации, не по подсчету нарисованных деталей. OCR недостаточен без проверки. Полные чужие PDF/страницы в пакет не вложены."
+  },
+  "scope_note": "Сопоставление контрольных полей размечено исследователем по открытым источникам. Выполнена локальная загрузка, извлечение текста, рендер, OCR и визуальная проверка PDF; автоматический парсер платформы здесь не запускался."
+}

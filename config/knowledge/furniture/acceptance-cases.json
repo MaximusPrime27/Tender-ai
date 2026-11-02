@@ -1,0 +1,989 @@
+{
+  "schema_version": "furniture-acceptance/1.0",
+  "fixtures_type": "synthetic_contract_tests_not_real_procurement",
+  "execution_status": "not_executed_on_platform",
+  "adapter_instruction": "Передать input в соответствующий действующий этап платформы. Сохранить фактический нормализованный результат. Expected задает проверяемые поля; дополнительные поля результата разрешены.",
+  "cases": [
+    {
+      "id": "C01",
+      "stage": "parse",
+      "scenario": "Размеры с заданным порядком осей",
+      "input": {
+        "text": "Габариты Ш×Г×В: 120×60×75 см"
+      },
+      "expected": {
+        "fields": {
+          "body.width_mm": 1200,
+          "body.depth_mm": 600,
+          "body.height_mm": 750
+        }
+      }
+    },
+    {
+      "id": "C02",
+      "stage": "parse",
+      "scenario": "Размеры без порядка осей",
+      "input": {
+        "text": "Габариты 510×585×850 мм",
+        "no_axis_definition_elsewhere": true
+      },
+      "expected": {
+        "axis_assignment_status": "unknown",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C03",
+      "stage": "match",
+      "scenario": "Больший размер не лучше точного",
+      "input": {
+        "required": {
+          "field": "body.width_mm",
+          "operator": "eq",
+          "value": 1200
+        },
+        "observed": {
+          "value": 1400,
+          "unit": "mm",
+          "applicability_verified": true
+        }
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C04",
+      "stage": "match",
+      "scenario": "Минимальная толщина",
+      "input": {
+        "required": {
+          "field": "tabletop.thickness_mm",
+          "operator": "gte",
+          "value": 18
+        },
+        "observed": {
+          "value": 16,
+          "unit": "mm",
+          "applicability_verified": true
+        }
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C05",
+      "stage": "match",
+      "scenario": "ЛДСП и МДФ различаются",
+      "input": {
+        "required": {
+          "field": "tabletop.material",
+          "operator": "eq",
+          "value": "МДФ"
+        },
+        "observed": {
+          "value": "ЛДСП",
+          "applicability_verified": true
+        }
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C06",
+      "stage": "match",
+      "scenario": "Кромка другого торца не закрывает требование",
+      "input": {
+        "required": {
+          "field": "edge.front_thickness_mm",
+          "operator": "gte",
+          "value": 2
+        },
+        "evidence": [
+          {
+            "field": "edge.other_thickness_mm",
+            "value": 2,
+            "unit": "mm"
+          }
+        ]
+      },
+      "expected": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "C07",
+      "stage": "match",
+      "scenario": "Дискретная регулировка не непрерывная",
+      "input": {
+        "required": {
+          "field": "height.adjustment_mode",
+          "value": "continuous",
+          "min": 520,
+          "max": 640
+        },
+        "observed": {
+          "mode": "discrete",
+          "positions_mm": [
+            520,
+            580,
+            640
+          ]
+        }
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C08",
+      "stage": "match",
+      "scenario": "Покрытие всего требуемого диапазона",
+      "input": {
+        "required": {
+          "field": "seat.height",
+          "operator": "covers_interval",
+          "min": 420,
+          "max": 540
+        },
+        "observed": {
+          "mode": "continuous",
+          "min": 420,
+          "max": 520,
+          "unit": "mm"
+        }
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C09",
+      "stage": "match",
+      "scenario": "Нельзя склеить ростовые варианты",
+      "input": {
+        "required": {
+          "field": "growth.groups",
+          "value": [
+            5,
+            6,
+            7
+          ]
+        },
+        "offer_variant": "2-4",
+        "page_available_variants": [
+          "2-4",
+          "3-5",
+          "4-6",
+          "5-7"
+        ],
+        "selected_variant_verified": true
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C10",
+      "stage": "match",
+      "scenario": "Опция не подтверждена в комплектации",
+      "input": {
+        "required": {
+          "field": "corners.rounded",
+          "value": true
+        },
+        "page_text": "Закругление углов — дополнительная комплектация",
+        "offer_includes_option": null
+      },
+      "expected": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "C11",
+      "stage": "parse_match",
+      "scenario": "Сноска обивки имеет значение",
+      "input": {
+        "required": "Все внешние поверхности — натуральная кожа",
+        "card_heading": "Натуральная кожа",
+        "footnote": "Лицевые части — натуральная кожа, боковые и задние — экокожа"
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C12",
+      "stage": "match",
+      "scenario": "Нагрузка стеллажа не нагрузка полки",
+      "input": {
+        "required": {
+          "field": "shelf.load_kg",
+          "operator": "gte",
+          "value": 100
+        },
+        "evidence": [
+          {
+            "field": "rack.load_kg",
+            "value": 500
+          }
+        ]
+      },
+      "expected": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "C13",
+      "stage": "match",
+      "scenario": "Подтвержденный материал и единица",
+      "input": {
+        "required": {
+          "field": "edge.front_thickness_mm",
+          "operator": "gte",
+          "value": 2
+        },
+        "observed": {
+          "field": "edge.front_thickness_mm",
+          "value": 0.2,
+          "unit": "cm",
+          "applicability_verified": true,
+          "source_supported": true
+        }
+      },
+      "expected": {
+        "status": "pass"
+      }
+    },
+    {
+      "id": "C14",
+      "stage": "identity",
+      "scenario": "Похожая модель — не точный вариант",
+      "input": {
+        "offer": {
+          "brand": "CHAIRMAN",
+          "model": "523 ЭКО"
+        },
+        "document": {
+          "brand": "CHAIRMAN",
+          "model": "523"
+        },
+        "explicit_applicability": false
+      },
+      "expected": {
+        "identity_status": "unresolved",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C15",
+      "stage": "evidence",
+      "scenario": "Противоречащие документы одной неустановленной ревизии",
+      "input": {
+        "required": {
+          "field": "load.user_kg",
+          "operator": "gte",
+          "value": 150
+        },
+        "facts": [
+          {
+            "value": 120,
+            "revision": null
+          },
+          {
+            "value": 150,
+            "revision": null
+          }
+        ],
+        "same_model": true,
+        "conflict_resolved": false
+      },
+      "expected": {
+        "status": "conflict",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C16",
+      "stage": "aggregate",
+      "scenario": "59 из 60 полей не равны 100%",
+      "input": {
+        "mandatory_statuses": [
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "unknown"
+        ],
+        "coverage_complete": true,
+        "identity_status": "exact_variant_bound"
+      },
+      "expected": {
+        "technical_100": false,
+        "unknown_count": 1
+      }
+    },
+    {
+      "id": "C17",
+      "stage": "parse",
+      "scenario": "Проверить поле после прежних лимитов",
+      "input": {
+        "positions": [
+          {
+            "id": "P1",
+            "requirements": [
+              {
+                "id": "R01",
+                "text": "Контрольное условие 01: значение 1"
+              },
+              {
+                "id": "R02",
+                "text": "Контрольное условие 02: значение 2"
+              },
+              {
+                "id": "R03",
+                "text": "Контрольное условие 03: значение 3"
+              },
+              {
+                "id": "R04",
+                "text": "Контрольное условие 04: значение 4"
+              },
+              {
+                "id": "R05",
+                "text": "Контрольное условие 05: значение 5"
+              },
+              {
+                "id": "R06",
+                "text": "Контрольное условие 06: значение 6"
+              },
+              {
+                "id": "R07",
+                "text": "Контрольное условие 07: значение 7"
+              },
+              {
+                "id": "R08",
+                "text": "Контрольное условие 08: значение 8"
+              },
+              {
+                "id": "R09",
+                "text": "Контрольное условие 09: значение 9"
+              },
+              {
+                "id": "R10",
+                "text": "Контрольное условие 10: значение 10"
+              },
+              {
+                "id": "R11",
+                "text": "Контрольное условие 11: значение 11"
+              },
+              {
+                "id": "R12",
+                "text": "Контрольное условие 12: значение 12"
+              },
+              {
+                "id": "R13",
+                "text": "Контрольное условие 13: значение 13"
+              },
+              {
+                "id": "R14",
+                "text": "Контрольное условие 14: значение 14"
+              },
+              {
+                "id": "R15",
+                "text": "Контрольное условие 15: значение 15"
+              },
+              {
+                "id": "R16",
+                "text": "Контрольное условие 16: значение 16"
+              },
+              {
+                "id": "R17",
+                "text": "Контрольное условие 17: значение 17"
+              },
+              {
+                "id": "R18",
+                "text": "Контрольное условие 18: значение 18"
+              },
+              {
+                "id": "R19",
+                "text": "Контрольное условие 19: значение 19"
+              },
+              {
+                "id": "R20",
+                "text": "Контрольное условие 20: значение 20"
+              },
+              {
+                "id": "R21",
+                "text": "Контрольное условие 21: значение 21"
+              },
+              {
+                "id": "R22",
+                "text": "Контрольное условие 22: значение 22"
+              },
+              {
+                "id": "R23",
+                "text": "Контрольное условие 23: значение 23"
+              },
+              {
+                "id": "R24",
+                "text": "Контрольное условие 24: значение 24"
+              },
+              {
+                "id": "R25",
+                "text": "Контрольное условие 25: значение 25"
+              },
+              {
+                "id": "R26",
+                "text": "Контрольное условие 26: значение 26"
+              },
+              {
+                "id": "R27",
+                "text": "Контрольное условие 27: значение 27"
+              },
+              {
+                "id": "R28",
+                "text": "Контрольное условие 28: значение 28"
+              },
+              {
+                "id": "R29",
+                "text": "Контрольное условие 29: значение 29"
+              },
+              {
+                "id": "R30",
+                "text": "Контрольное условие 30: значение 30"
+              },
+              {
+                "id": "R31",
+                "text": "Контрольное условие 31: значение 31"
+              },
+              {
+                "id": "R32",
+                "text": "Контрольное условие 32: значение 32"
+              },
+              {
+                "id": "R33",
+                "text": "Контрольное условие 33: значение 33"
+              },
+              {
+                "id": "R34",
+                "text": "Контрольное условие 34: значение 34"
+              },
+              {
+                "id": "R35",
+                "text": "Контрольное условие 35: значение 35"
+              },
+              {
+                "id": "R36",
+                "text": "Контрольное условие 36: значение 36"
+              },
+              {
+                "id": "R37",
+                "text": "Контрольное условие 37: значение 37"
+              },
+              {
+                "id": "R38",
+                "text": "Контрольное условие 38: значение 38"
+              },
+              {
+                "id": "R39",
+                "text": "Контрольное условие 39: значение 39"
+              },
+              {
+                "id": "R40",
+                "text": "Контрольное условие 40: значение 40"
+              },
+              {
+                "id": "R41",
+                "text": "Контрольное условие 41: значение 41"
+              },
+              {
+                "id": "R42",
+                "text": "Контрольное условие 42: значение 42"
+              },
+              {
+                "id": "R43",
+                "text": "Контрольное условие 43: значение 43"
+              },
+              {
+                "id": "R44",
+                "text": "Контрольное условие 44: значение 44"
+              },
+              {
+                "id": "R45",
+                "text": "Контрольное условие 45: значение 45"
+              },
+              {
+                "id": "R46",
+                "text": "Контрольное условие 46: значение 46"
+              },
+              {
+                "id": "R47",
+                "text": "Контрольное условие 47: значение 47"
+              },
+              {
+                "id": "R48",
+                "text": "Контрольное условие 48: значение 48"
+              },
+              {
+                "id": "R49",
+                "text": "Контрольное условие 49: значение 49"
+              },
+              {
+                "id": "R50",
+                "text": "Контрольное условие 50: значение 50"
+              },
+              {
+                "id": "R51",
+                "text": "Контрольное условие 51: значение 51"
+              },
+              {
+                "id": "R52",
+                "text": "Контрольное условие 52: значение 52"
+              },
+              {
+                "id": "R53",
+                "text": "Контрольное условие 53: значение 53"
+              },
+              {
+                "id": "R54",
+                "text": "Контрольное условие 54: значение 54"
+              },
+              {
+                "id": "R55",
+                "text": "Контрольное условие 55: значение 55"
+              },
+              {
+                "id": "R56",
+                "text": "Контрольное условие 56: значение 56"
+              },
+              {
+                "id": "R57",
+                "text": "Контрольное условие 57: значение 57"
+              },
+              {
+                "id": "R58",
+                "text": "Контрольное условие 58: значение 58"
+              },
+              {
+                "id": "R59",
+                "text": "Контрольное условие 59: значение 59"
+              },
+              {
+                "id": "R60",
+                "text": "Контрольное условие 60: значение 60"
+              }
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "requirements_count": 60,
+        "last_requirement_id": "R60"
+      }
+    },
+    {
+      "id": "C18",
+      "stage": "aggregate",
+      "scenario": "Непрочитанная страница блокирует полноту",
+      "input": {
+        "required_pages": 5,
+        "processed_pages": 4,
+        "mandatory_statuses": [
+          "pass",
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "expected": {
+        "coverage_complete": false,
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C19",
+      "stage": "parse",
+      "scenario": "Объединенная ячейка области применения",
+      "input": {
+        "table": {
+          "columns": [
+            "Позиция",
+            "Материал",
+            "Толщина"
+          ],
+          "rows": [
+            [
+              "Стол А",
+              "ЛДСП",
+              "18 мм"
+            ],
+            [
+              "Стол Б",
+              null,
+              "16 мм"
+            ]
+          ],
+          "merges": [
+            {
+              "column": "Материал",
+              "start_row": 1,
+              "end_row": 2
+            }
+          ]
+        }
+      },
+      "expected": {
+        "materials_by_position": {
+          "Стол А": "ЛДСП",
+          "Стол Б": "ЛДСП"
+        }
+      }
+    },
+    {
+      "id": "C20",
+      "stage": "custom",
+      "scenario": "Обещание изготовления не характеристика товара",
+      "input": {
+        "supplier_text": "Изготовим мебель по любым вашим размерам",
+        "approved_bom": false,
+        "approved_drawing": false
+      },
+      "expected": {
+        "candidate_type": "custom_manufacturing_candidate",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C21",
+      "stage": "commercial",
+      "scenario": "Технические совпадения при неизвестной доставке",
+      "input": {
+        "technical_100": true,
+        "goods_price": 10000,
+        "delivery_cost": null,
+        "assembly_required": true,
+        "assembly_cost": null
+      },
+      "expected": {
+        "commercial_ready": false,
+        "total_delivered_cost": null
+      }
+    },
+    {
+      "id": "C22",
+      "stage": "reader",
+      "scenario": "Ошибка доступа не отсутствие характеристики",
+      "input": {
+        "http_status": 403,
+        "field": "steel.thickness_mm"
+      },
+      "expected": {
+        "read_status": "access_blocked",
+        "status": "unknown",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C23",
+      "stage": "reader",
+      "scenario": "PDF без текста требует распознавания",
+      "input": {
+        "pdf_pages": 2,
+        "text_non_whitespace_chars": 0,
+        "images_or_vector_content": true
+      },
+      "expected": {
+        "next_action": "ocr_and_layout_read",
+        "read_complete": false
+      }
+    },
+    {
+      "id": "C24",
+      "stage": "parse",
+      "scenario": "OCR не должен менять знак сравнения",
+      "input": {
+        "raw_ocr": "Высота не более 750 мм",
+        "image_confirmed": true
+      },
+      "expected": {
+        "operator": "lte",
+        "value": 750,
+        "unit": "mm"
+      }
+    },
+    {
+      "id": "C25",
+      "stage": "bom",
+      "scenario": "Комплект должен содержать тумбу",
+      "input": {
+        "required_bom": [
+          {
+            "item": "стол",
+            "qty": 1
+          },
+          {
+            "item": "тумба",
+            "qty": 1
+          }
+        ],
+        "confirmed_offer_bom": [
+          {
+            "item": "стол",
+            "qty": 1
+          }
+        ],
+        "offer_bom_complete": true
+      },
+      "expected": {
+        "status": "mismatch"
+      }
+    },
+    {
+      "id": "C26",
+      "stage": "match",
+      "scenario": "Спальное место не габарит кровати",
+      "input": {
+        "required": {
+          "field": "bed.sleep_width_mm",
+          "value": 900
+        },
+        "evidence": [
+          {
+            "field": "body.width_mm",
+            "value": 900
+          }
+        ]
+      },
+      "expected": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "C27",
+      "stage": "documents",
+      "scenario": "Документ бренда без применимости к изделию",
+      "input": {
+        "certificate_exists": true,
+        "covers_article": null,
+        "required_document": true
+      },
+      "expected": {
+        "document_status": "unknown",
+        "deal_ready": false
+      }
+    },
+    {
+      "id": "C28",
+      "stage": "parse",
+      "scenario": "Изменение ТЗ заменяет прежнее условие",
+      "input": {
+        "original": {
+          "revision": 1,
+          "thickness_mm": 16
+        },
+        "amendment": {
+          "revision": 2,
+          "explicitly_replaces": "thickness_mm",
+          "value": 18
+        },
+        "amendment_applicability_verified": true
+      },
+      "expected": {
+        "active_thickness_mm": 18,
+        "superseded_revision": 1
+      }
+    },
+    {
+      "id": "C29",
+      "stage": "match",
+      "scenario": "Производственный допуск не расширяет ТЗ",
+      "input": {
+        "required": {
+          "field": "body.width_mm",
+          "operator": "between",
+          "min": 1195,
+          "max": 1205
+        },
+        "observed": {
+          "nominal": 1200,
+          "tolerance_plus_mm": 20,
+          "tolerance_minus_mm": 20
+        },
+        "tolerance_applies": true
+      },
+      "expected": {
+        "status": "unknown",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C30",
+      "stage": "search",
+      "scenario": "Исчерпан бюджет, остаются неизвестные",
+      "input": {
+        "queries_used": 20,
+        "query_budget": 20,
+        "mandatory_unknown_count": 3
+      },
+      "expected": {
+        "search_status": "continuation_required",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C31",
+      "stage": "aggregate",
+      "scenario": "Пустой набор не означает 100%",
+      "input": {
+        "mandatory_statuses": [],
+        "coverage_complete": false
+      },
+      "expected": {
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C32",
+      "stage": "evidence",
+      "scenario": "Локальный фрагмент должен подтверждать значение",
+      "input": {
+        "field": "tabletop.thickness_mm",
+        "llm_value": 18,
+        "source_text": "Стол поставляется в разобранном виде.",
+        "source_supported": false
+      },
+      "expected": {
+        "status": "unknown",
+        "technical_100": false
+      }
+    },
+    {
+      "id": "C33",
+      "stage": "commercial",
+      "scenario": "Цена за упаковку и количество",
+      "input": {
+        "price_per_pack": 10000,
+        "units_per_pack": 2,
+        "required_units": 3,
+        "pack_must_be_whole": true
+      },
+      "expected": {
+        "packs_to_buy": 2,
+        "purchased_units": 4,
+        "goods_cost": 20000
+      }
+    },
+    {
+      "id": "C34",
+      "stage": "parse",
+      "scenario": "Новое поле не теряется из-за словаря",
+      "input": {
+        "text": "На каждой дверце держатель для именной таблички",
+        "field_not_in_profile": true
+      },
+      "expected": {
+        "requirement_preserved": true
+      }
+    },
+    {
+      "id": "C35",
+      "stage": "aggregate",
+      "scenario": "Все условия доказаны для точного варианта",
+      "input": {
+        "mandatory_statuses": [
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "coverage_complete": true,
+        "requirements_set_independently_verified": true,
+        "identity_status": "exact_variant_bound",
+        "unresolved_conflicts": 0,
+        "all_evidence_applicable": true
+      },
+      "expected": {
+        "technical_100": true
+      }
+    },
+    {
+      "id": "C36",
+      "stage": "match",
+      "scenario": "Без молчаливого исключения требования",
+      "input": {
+        "required": {
+          "field": "color.code",
+          "value": "RAL 9003",
+          "mandatory": true
+        },
+        "found": null,
+        "exclusion_reason": null
+      },
+      "expected": {
+        "status": "unknown",
+        "technical_100": false
+      }
+    }
+  ]
+}

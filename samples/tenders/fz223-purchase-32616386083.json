@@ -1,0 +1,176 @@
+{
+  "submission_close_at": null,
+  "currency_code": "RUB",
+  "customer": "8610008541",
+  "delivery_places": [],
+  "doc_created_at": "2026-09-17T09:50:59.202000",
+  "doc_updated_at": "2026-09-17T09:50:59.202000",
+  "max_price": 134280,
+  "object_info": "Оказание услуг по организации питания детей в дестом лагере с дневным пребываением",
+  "okpd2": [
+    "56.29.20.120"
+  ],
+  "placer": "8610008541",
+  "plan_numbers": [
+    "2250854398"
+  ],
+  "position_numbers": [
+    "32"
+  ],
+  "published_at": "2026-09-17T12:52:39",
+  "purchase_number": "32616386083",
+  "purchase_type": "purchaseNoticeEP",
+  "region": 86,
+  "stage": 1,
+  "updated_at": "2026-09-17T12:52:39",
+  "docs": [
+    {
+      "doc_type": "purchaseNoticeEP",
+      "published_at": "2026-09-17T12:52:39",
+      "source": {
+        "guid": "2127fdfb-b147-47be-bfd0-2be9c65d5758",
+        "createDateTime": "2026-09-17T12:51:14",
+        "urlEIS": "https://lk.zakupki.gov.ru/223/purchase/private/purchase/notice-info/details.html?noticeInfoId=20259468",
+        "registrationNumber": "32616386083",
+        "name": "Оказание услуг по организации питания детей в дестом лагере с дневным пребываением",
+        "customer": {
+          "mainInfo": {
+            "fullName": "МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ ОБЩЕОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ГОРОДА НЯГАНИ \"СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА №14\"",
+            "shortName": "МАОУ Г. НЯГАНИ СОШ №14",
+            "iko": "58610008541861001001",
+            "inn": "8610008541",
+            "kpp": "861001001",
+            "ogrn": "1028601501345",
+            "legalAddress": "628187, ХАНТЫ-МАНСИЙСКИЙ АВТОНОМНЫЙ ОКРУГ - ЮГРА, г.о. НЯГАНЬ, Г.. НЯГАНЬ, УЛ. РАИМКУЛОВА, Д. 10",
+            "postalAddress": "628187, Ханты-Мансийский Автономный округ - Югра автономный округ, Нягань город, Раимкулова улица, корпус 10",
+            "email": "School14_86@mail.ru",
+            "okato": "71139000000",
+            "okopf": "75401",
+            "okopfName": "Муниципальные автономные учреждения",
+            "okpo": "39355357",
+            "okfs": "14",
+            "okfsName": "Муниципальная собственность",
+            "timeZone": {
+              "offset": "2",
+              "name": "МСК+2 (СГВ+5) Екатеринбург, Челябинск, Уфа"
+            },
+            "region": "ХАНТЫ-МАНСИЙСКИЙ АВТОНОМНЫЙ ОКРУГ - ЮГРА"
+          }
+        },
+        "purchaseMethodCode": "3363",
+        "purchaseCodeName": "Закупка у единственного поставщика (подрядчика, исполнителя) (до 01.07.18)",
+        "placer": {
+          "mainInfo": {
+            "fullName": "МУНИЦИПАЛЬНОЕ АВТОНОМНОЕ ОБЩЕОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ГОРОДА НЯГАНИ \"СРЕДНЯЯ ОБЩЕОБРАЗОВАТЕЛЬНАЯ ШКОЛА №14\"",
+            "shortName": "МАОУ Г. НЯГАНИ СОШ №14",
+            "iko": "58610008541861001001",
+            "inn": "8610008541",
+            "kpp": "861001001",
+            "ogrn": "1028601501345",
+            "legalAddress": "628187, ХАНТЫ-МАНСИЙСКИЙ АВТОНОМНЫЙ ОКРУГ - ЮГРА, г.о. НЯГАНЬ, Г.. НЯГАНЬ, УЛ. РАИМКУЛОВА, Д. 10",
+            "postalAddress": "628187, Ханты-Мансийский Автономный округ - Югра автономный округ, Нягань город, Раимкулова улица, корпус 10",
+            "email": "School14_86@mail.ru",
+            "okato": "71139000000",
+            "okopf": "75401",
+            "okopfName": "Муниципальные автономные учреждения",
+            "okpo": "39355357",
+            "okfs": "14",
+            "okfsName": "Муниципальная собственность",
+            "timeZone": {
+              "offset": "2",
+              "name": "МСК+2 (СГВ+5) Екатеринбург, Челябинск, Уфа"
+            },
+            "region": "ХАНТЫ-МАНСИЙСКИЙ АВТОНОМНЫЙ ОКРУГ - ЮГРА"
+          }
+        },
+        "contact": {
+          "firstName": "Е.",
+          "middleName": "М.",
+          "lastName": "Балчугова",
+          "phone": "+7 (34672) 26797",
+          "email": "Nyagan.mousosh2.buh@yandex.ru"
+        },
+        "publicationDateTime": "2026-09-17T12:52:39",
+        "status": "P",
+        "version": "1",
+        "notDishonest": "false",
+        "attachments": {
+          "totalDocumentsCount": "1",
+          "document": {
+            "guid": "83d7b866-cfaf-4a87-beee-4199e7ca163d",
+            "createDateTime": "2026-09-17T10:52:19",
+            "fileName": "Договор № Д 99 26 от 16.09.2026.pdf",
+            "description": "Договор № Д 99 26 от 16.09.2026",
+            "url": "https://zakupki.gov.ru/223/filestore/public/1.0/download/fz223/file.html?uid=2A6D65A0E27D4FC288ECC8775240CA6F"
+          }
+        },
+        "modificationDate": "2026-09-17T12:52:39",
+        "saveUserId": "9037954",
+        "deliveryPlaceIndication": "DIFFERENT_PLACE",
+        "emergency": "false",
+        "jointPurchase": "false",
+        "hidePurchase": "false",
+        "antimonopolyDecisionTaken": "false",
+        "lots": {
+          "lot": {
+            "guid": "dc8f8b7d-15d9-4d62-b900-9e32dfe87eb9",
+            "ordinalNumber": "1",
+            "lotEditEnabled": "false",
+            "lotData": {
+              "subject": "Оказание услуг по организации питания детей в лагере с дневным пребыванием",
+              "currency": {
+                "code": "RUB",
+                "digitalCode": "643",
+                "name": "Российский рубль"
+              },
+              "initialSum": "134280",
+              "deliveryPlace": {
+                "state": "Уральский федеральный округ",
+                "region": "Ханты-Мансийский Автономный округ - Юг АО",
+                "regionOkato": "71100000000",
+                "address": "Не заполнено"
+              },
+              "lotItems": {
+                "newCodes": "true",
+                "lotItem": {
+                  "guid": "726500fe-720d-42c5-ac50-bb5b80c743da",
+                  "ordinalNumber": "1",
+                  "okpd2": {
+                    "code": "56.29.20.120",
+                    "name": "Услуги школьных столовых и кухонь"
+                  },
+                  "okved2": {
+                    "code": "56.29.2",
+                    "name": "Деятельность столовых и буфетов при предприятиях и учреждениях"
+                  },
+                  "okei": {
+                    "code": "876",
+                    "name": "Условная единица"
+                  },
+                  "qty": "1"
+                }
+              },
+              "forSmallOrMiddle": "false",
+              "excludePurchaseFromPlan": "false",
+              "subcontractorsRequirement": "false",
+              "ignoredPurchase": "false",
+              "centralized": "false"
+            },
+            "deliveryPlaceIndication": "GL",
+            "jointLotData": {
+              "jointLot": "false"
+            },
+            "lotPlanInfo": {
+              "planRegistrationNumber": "2250854398",
+              "planGuid": "5f46233c-6ea0-45f8-8ab6-fc9611bb7384",
+              "positionNumber": "32",
+              "lotPlanPosition": "COMMODITY",
+              "positionGuid": "f3c1a411-0932-4a33-9327-1e602f07a971"
+            },
+            "cancelled": "false"
+          }
+        }
+      }
+    }
+  ]
+}

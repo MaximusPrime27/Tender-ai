@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- Снимок страницы сервиса tender-ai: «Профиль: что искать (все разделы раскрыты)». Разметку создаёт JavaScript сервиса — здесь она сохранена как есть, без скриптов. Стили — в styles.css. Меняйте только styles.css. -->
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Разбор документации — tender-ai</title>
+
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header>
+  <h1>tender-ai</h1>
+  <nav>
+    <a href="#tenders" data-tab="tenders" class="">Тендеры</a>
+    <a href="#analyses" data-tab="analyses">Разбор документации</a>
+    <a href="#alerts" data-tab="alerts" title="Закупки, по которым подтвердилась прибыль: новые и вся история">🔔 Уведомления <span class="bellcount" id="alertsCount" hidden="">0</span></a>
+    <a href="#profile" data-tab="profile" class="active">Профиль</a>
+  </nav>
+  <button class="btn" id="helpOpen" title="Как устроены закупки, как работать с сервисом, словарь терминов">❓ Справка</button>
+  <span class="provider" id="provider">LLM: gigachat · источник: gosplan+eis-rss</span>
+</header>
+
+
+
+
+
+
+
+
+<div id="alertPops" aria-live="polite"></div>
+
+<section id="view-profile">
+  <div class="page" id="profilePage">
+    <div class="card">
+      <div class="head" style="margin-bottom:10px"><h2 style="margin:0">Профиль: что искать <button type="button" class="help" data-help="profile" aria-label="Пояснение: Профиль компании">?</button></h2>
+        <span class="small muted">После сохранения лента переоценивается</span></div>
+      <form class="form" id="profileForm" style="gap:12px">
+
+        <div class="row" style="gap:10px 14px">
+          <div class="seg" role="radiogroup" aria-label="Режим поиска закупок">
+            <label title="Любой товар, на котором можно заработать: купить у поставщика дешевле и привезти заказчику"><input type="radio" name="mode" value="resale" checked="">Перепродажа</label>
+            <label title="Только то, чем занимается компания (коды и ключевые слова)"><input type="radio" name="mode" value="profile">По профилю</label>
+          </div><button type="button" class="help" data-help="mode" aria-label="Пояснение: Режим поиска закупок">?</button>
+          <span class="small muted">Работы, услуги и лицензируемые товары (лекарства, алкоголь, оружие) в перепродаже отсекаются сами.</span>
+        </div>
+
+        <div>
+          <div class="small" style="margin-bottom:6px"><b>Направление:</b> <span id="dirSummary">любой товар</span><button type="button" class="help" data-help="direction" aria-label="Пояснение: Направление">?</button></div>
+          <div class="chips">
+            <button type="button" class="btn" data-direction="it-network-cctv" title="компьютеры и периферия, МФУ и принтеры, картриджи, проекторы, сетевое и коммутационное оборудование, IP-телефония, СКУД, камеры и регистраторы видеонаблюдения, ИБП, кабели и разъёмы">Оргтехника, сеть, видеонаблюдение</button>
+            <button type="button" class="btn on" data-direction="" title="Очистить коды и ключевые слова — брать любой товар">Любой товар</button>
+          </div>
+          <details class="sec" style="margin-top:8px" open="">
+            <summary>Коды и ключевые слова <span class="small muted" id="dirCounts">кодов: 0 · слов: 0</span></summary>
+            <div class="body">
+              <label class="f">Коды ОКПД2 / КТРУ<button type="button" class="help" data-help="p_codes" aria-label="Пояснение: Коды ОКПД2 / КТРУ">?</button><input type="text" name="codes" placeholder="например 26.20, 26.30 — до 10" value=""></label>
+              <label class="f">Ключевые слова<button type="button" class="help" data-help="p_keywords" aria-label="Пояснение: Ключевые слова">?</button><input type="text" name="keywords" placeholder="через запятую" value=""></label>
+            </div>
+          </details>
+        </div>
+
+        <div class="gridc">
+          <label class="f">Регионы<button type="button" class="help" data-help="p_regions" aria-label="Пояснение: Регионы">?</button><input type="text" name="regions" placeholder="все" value=""></label>
+          <label class="f">НМЦК от, ₽<button type="button" class="help" data-help="p_price" aria-label="Пояснение: НМЦК от и до">?</button><input type="number" name="price_min" min="0" step="1000" placeholder="любая" value="30000"></label>
+          <label class="f">НМЦК до, ₽<input type="number" name="price_max" min="0" step="1000" placeholder="любая" value=""></label>
+          <label class="f">Дней до подачи, не меньше<button type="button" class="help" data-help="p_days" aria-label="Пояснение: Дней до окончания подачи">?</button><input type="number" name="min_days_to_deadline" min="0" max="60" value="2"></label>
+          <div class="f"><strong style="font-size:13px">Законы<button type="button" class="help" data-help="p_laws" aria-label="Пояснение: Законы">?</button></strong>
+            <div class="row" style="margin-top:6px">
+              <label><input type="checkbox" name="law44" checked=""> 44-ФЗ</label>
+              <label><input type="checkbox" name="law223" checked=""> 223-ФЗ</label>
+              <label title="Закупки компаний вне 44-ФЗ и 223-ФЗ — в ЕИС их нет (источник: Росэлторг, коммерческие закупки)"><input type="checkbox" name="lawCom"> коммерческие</label><button type="button" class="help" data-help="law_com" aria-label="Пояснение: Коммерческая закупка">?</button>
+            </div>
+          </div>
+          <label class="f wide">Стоп-слова<button type="button" class="help" data-help="p_stop" aria-label="Пояснение: Стоп-слова">?</button><input type="text" name="stop_words" placeholder="через запятую — такие закупки отсекаются" value="ремонт, строительство, капитальный"></label>
+        </div>
+
+        <details class="sec" open="">
+          <summary>Описание компании <span class="small muted">Посредник: закупаем товары у поставщиков дешевле и поставляем заказчик…</span><button type="button" class="help" data-help="p_description" aria-label="Пояснение: Описание компании">?</button></summary>
+          <div class="body"><textarea name="description" maxlength="5000" placeholder="Что поставляете, опыт, чего не делаете. Например: «Посредник: закупаем товары и поставляем заказчикам. Монтаж и ремонт не выполняем.»">Посредник: закупаем товары у поставщиков дешевле и поставляем заказчикам. Товар любой. Работы, монтаж, ремонт и услуги не выполняем.</textarea></div>
+        </details>
+
+        <details class="sec" open="">
+          <summary>Экономика: как считать прибыль <span class="small muted">УСН 6% · мин. маржа 10% · мин. прибыль 10&nbsp;000 ₽</span><button type="button" class="help" data-help="econ_settings" aria-label="Пояснение: Настройки экономики">?</button></summary>
+          <div class="body">
+            <div class="small muted">Подставляются в калькулятор каждой закупки. Цифры по умолчанию — ориентир, сверьте с бухгалтером.</div>
+            <div class="sub">Налоги</div>
+            <div class="gridc">
+              <label class="f">Налоговый режим<button type="button" class="help" data-help="e_tax_mode" aria-label="Пояснение: Налоговый режим">?</button><select name="e_tax_mode">
+                <option value="usn6" selected="">УСН «доходы» 6%</option>
+                <option value="usn15">УСН «доходы минус расходы» 15%</option>
+                <option value="osn">ОСН (с НДС)</option></select></label>
+              <label class="f">НДС, %<button type="button" class="help" data-help="e_vat_rate" aria-label="Пояснение: Ставка НДС">?</button><input type="number" name="e_vat_rate" min="0" step="0.1" value="22"></label>
+              <label class="f">Налог на прибыль (ОСН), %<button type="button" class="help" data-help="e_profit_tax_rate" aria-label="Пояснение: Налог на прибыль">?</button><input type="number" name="e_profit_tax_rate" min="0" step="0.1" value="25"></label>
+            </div>
+            <div class="sub">Прибыль и торги</div>
+            <div class="gridc">
+              <label class="f">Мин. маржа, %<button type="button" class="help" data-help="e_min_margin_pct" aria-label="Пояснение: Минимальная маржа">?</button><input type="number" name="e_min_margin_pct" min="0" step="0.1" value="10"></label>
+              <label class="f">Мин. прибыль, ₽<button type="button" class="help" data-help="e_min_profit" aria-label="Пояснение: Минимальная прибыль">?</button><input type="number" name="e_min_profit" min="0" step="1000" value="10000"></label>
+              <label class="f">Снижение на торгах, %<button type="button" class="help" data-help="e_expected_decline_pct" aria-label="Пояснение: Ожидаемое снижение на торгах">?</button><input type="number" name="e_expected_decline_pct" min="0" step="0.1" value="10"></label>
+              <label class="f">Плата площадке, %<button type="button" class="help" data-help="e_etp_fee_pct" aria-label="Пояснение: Плата площадке">?</button><input type="number" name="e_etp_fee_pct" min="0" step="0.01" value="1"></label>
+              <label class="f">Плата площадке, не больше ₽<button type="button" class="help" data-help="e_etp_fee_cap" aria-label="Пояснение: Предел платы площадке">?</button><input type="number" name="e_etp_fee_cap" min="0" step="100" value="5000"></label>
+            </div>
+            <div class="sub">Деньги и сроки</div>
+            <div class="gridc">
+              <label class="f">Стоимость денег, % год.<button type="button" class="help" data-help="e_money_cost_rate" aria-label="Пояснение: Стоимость денег">?</button><input type="number" name="e_money_cost_rate" min="0" step="0.1" value="20"></label>
+              <label class="f">Банк. гарантия, % год.<button type="button" class="help" data-help="e_bank_guarantee_rate" aria-label="Пояснение: Комиссия банковской гарантии">?</button><input type="number" name="e_bank_guarantee_rate" min="0" step="0.1" value="3"></label>
+              <label class="f">Срок поставки по умолч., дн.<button type="button" class="help" data-help="e_default_delivery_days" aria-label="Пояснение: Срок поставки по умолчанию">?</button><input type="number" name="e_default_delivery_days" min="0" step="1" value="10"></label>
+              <label class="f">Оплата после поставки, дн.<button type="button" class="help" data-help="e_default_payment_days" aria-label="Пояснение: Срок оплаты по умолчанию">?</button><input type="number" name="e_default_payment_days" min="0" step="1" value="10"></label>
+              <label class="f">От подачи до контракта, дн.<button type="button" class="help" data-help="e_bidding_days" aria-label="Пояснение: Дней от подачи до контракта">?</button><input type="number" name="e_bidding_days" min="0" step="1" value="14"></label>
+              <label class="f">«Мало времени» — меньше, дн.<button type="button" class="help" data-help="e_min_days_to_deliver" aria-label="Пояснение: Мало времени на поставку">?</button><input type="number" name="e_min_days_to_deliver" min="0" step="1" value="5"></label>
+            </div>
+            <div class="sub">Доставка</div>
+            <div class="gridc">
+              <label class="f">Логистика, % от закупки<button type="button" class="help" data-help="e_logistics_pct" aria-label="Пояснение: Логистика по умолчанию">?</button><input type="number" name="e_logistics_pct" min="0" step="0.1" value="5"></label>
+              <label class="f">Км в сутки<button type="button" class="help" data-help="e_delivery_km_per_day" aria-label="Пояснение: Скорость доставки">?</button><input type="number" name="e_delivery_km_per_day" min="0" step="10" value="500"></label>
+              <label class="f">Отгрузка и выдача, дн.<button type="button" class="help" data-help="e_delivery_handling_days" aria-label="Пояснение: Дни на отгрузку и выдачу">?</button><input type="number" name="e_delivery_handling_days" min="0" step="1" value="2"></label>
+              <label class="f">Мин. стоимость, ₽<button type="button" class="help" data-help="e_delivery_min_cost" aria-label="Пояснение: Минимальная стоимость доставки">?</button><input type="number" name="e_delivery_min_cost" min="0" step="100" value="1500"></label>
+              <label class="f">Запас к сроку, дн.<button type="button" class="help" data-help="e_delivery_reserve_days" aria-label="Пояснение: Запас к сроку">?</button><input type="number" name="e_delivery_reserve_days" min="0" step="1" value="1"></label>
+            </div>
+          </div>
+        </details>
+
+        <details class="sec" open="">
+          <summary>Telegram-дайджест <span class="small muted">оценка от 50 · до 15 закупок</span><button type="button" class="help" data-help="p_digest" aria-label="Пояснение: Telegram-дайджест">?</button></summary>
+          <div class="body gridc">
+            <label class="f">Порог оценки<input type="number" name="score_threshold" min="0" max="100" value="50"></label>
+            <label class="f">Закупок в дайджесте<input type="number" name="digest_size" min="1" max="50" value="15"></label>
+          </div>
+        </details>
+
+        <details class="sec" open="">
+          <summary>Источники закупок <span class="small muted">ГосПлан (API) + ЕИС, лента поиска</span><button type="button" class="help" data-help="tender_source" aria-label="Пояснение: Источник закупки">?</button></summary>
+          <div class="body">
+            <ul class="small" style="margin:0"><li><b>ГосПлан (API)</b> — API ГосПлана: закупки, извещения с позициями и ценами, прошлые контракты. Тестовый сервер бесплатный, но медленный и с лимитами; боевой — по ключу.</li><li><b>ЕИС, лента поиска</b> — Официальная лента поиска ЕИС (zakupki.gov.ru): бесплатно и без ключа. Даёт закон, номер, наименование, заказчика и цену; регион, срок подачи и коды подтягиваются из ГосПлана. Запрос не чаще раза в минуту — так требует сам ЕИС.</li></ul>
+            <div class="small muted">Задаются настройкой <code>TENDER_SOURCES</code> в .env (например, <code>gosplan,eis-rss</code>). Что бесплатно и что подключать — <code>docs/sources-review.md</code>.</div>
+          </div>
+        </details>
+
+        <div class="row savebar">
+          <button class="btn primary" type="submit">Сохранить и пересчитать</button>
+          <span class="small muted">Версия 4 · изменён 29.09, 07:10</span>
+        </div>
+      </form>
+    </div></div>
+</section>
+
+<div class="viewer" id="viewer" aria-hidden="true">
+  <div class="vh">
+    <div><strong id="vTitle"></strong><div class="small muted" id="vSub"></div></div>
+    <button class="btn" id="vClose" aria-label="Закрыть">✕</button>
+  </div>
+  <pre id="vText"></pre>
+</div>
+
+<div class="popover" hidden="" role="dialog"></div>
+
+
+
+</body></html>

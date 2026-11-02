@@ -1,0 +1,5 @@
+.tai-product-media{margin:0;min-width:0;border:1px solid #deddd5;border-radius:14px;overflow:hidden;background:#f4f2ec;color:#62655e}
+.tai-product-media img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#f4f2ec}
+.tai-product-media img[hidden]{display:none}
+.tai-product-media figcaption{padding:8px 12px;font:12px/1.4 system-ui,sans-serif;color:inherit;background:#faf9f6}
+.tai-product-empty{display:grid;min-height:120px;place-items:center;padding:16px;font:14px/1.4 system-ui,sans-serif}

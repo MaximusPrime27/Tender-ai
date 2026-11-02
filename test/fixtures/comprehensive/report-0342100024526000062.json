@@ -1,0 +1,708 @@
+{
+  "schema_version": "1.0",
+  "snapshot": {
+    "id": "illustrative-0342100024526000062-v1",
+    "input_revision": "secondary-docx-only-v1",
+    "as_of": "2026-10-19T19:17:10+03:00",
+    "mode": "illustrative",
+    "rules_version": "research-2026-10-19-not-production-approved",
+    "prompts_version": "1.0",
+    "calculator_version": null
+  },
+  "scope": {
+    "procurement_number": "0342100024526000062",
+    "lot_id": null,
+    "law": "44fz",
+    "procedure": "electronic_auction",
+    "basis": "reported"
+  },
+  "source_manifest": {
+    "expected_set_known": false,
+    "expected_primary_count": null,
+    "received_primary_count": 0,
+    "missing_known_roles": [
+      "notice",
+      "technical_specification",
+      "draft_contract",
+      "bid_instructions",
+      "nmck_justification"
+    ]
+  },
+  "coverage": {
+    "general": "unknown",
+    "specification": "unknown",
+    "bid_requirements": "unknown",
+    "secondary_document": "complete"
+  },
+  "sources": [
+    {
+      "id": "s-report",
+      "kind": "secondary_analysis",
+      "name": "📊_Анализ_закупки_0342100024526000062_2026_10_18_20_43_32.docx",
+      "url": null,
+      "received": true,
+      "sha256": "096dedb7908aec2d6ce2fb174d2523cb047b9e51361cc8932a2f081cb22cca22",
+      "revision": "uploaded-2026-10-19",
+      "limitations": [
+        "Отчёт другой программы; не заменяет документацию заказчика",
+        "Время примера фиксировано для воспроизводимости, не является журналом проверки реестров"
+      ]
+    },
+    {
+      "id": "s-eis",
+      "kind": "primary_procurement",
+      "name": "Карточка ЕИС",
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0342100024526000062",
+      "received": false,
+      "sha256": null,
+      "revision": null,
+      "limitations": [
+        "Тайм-аут получения; первичная редакция не проверена"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0016",
+      "quote": "50 291,00 руб.",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e2",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0022",
+      "quote": "20.10.2026 07:30 (МСК)",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e3",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0024",
+      "quote": "20.10.2026 07:30 (МСК)",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e4",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0028",
+      "quote": "10 рабочих дней с даты заключения контракта",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e5",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0275",
+      "quote": "Ориентир по цене: аналогичные МФУ (HP LaserJet M430f, 38 стр/мин, дуплекс) — от ~34 873 руб. При НМЦК 50 291 руб. есть запас для конкурентной цены.",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e6",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0018",
+      "quote": "3,00%",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e7",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0277",
+      "quote": "⚠️ Важно: для участия в закупке товар обязательно должен быть российского/евразийского происхождения с реестровой записью РРПП/ЕРПТ. При подборе модели проверяйте наличие в реестре.",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e8",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0373",
+      "quote": "Также для расчёта маржинальности укажите:",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e9",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0303",
+      "quote": "до 15.10.2026",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e10",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0308",
+      "quote": "до 16.10.2026",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    },
+    {
+      "id": "e11",
+      "source_id": "s-report",
+      "locator": "word/document.xml:P0313",
+      "quote": "до 17.10.2026",
+      "citation_verified": true,
+      "eligible_for_decision": false,
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "key": "nmck",
+      "value": "50291.00",
+      "unit": "RUB",
+      "status": "reported",
+      "evidence_ids": [
+        "e1"
+      ]
+    },
+    {
+      "id": "f2",
+      "key": "bid_deadline",
+      "value": "2026-10-20T07:30:00+03:00",
+      "unit": null,
+      "status": "reported",
+      "evidence_ids": [
+        "e2"
+      ]
+    },
+    {
+      "id": "f3",
+      "key": "auction_time",
+      "value": "2026-10-20T07:30:00+03:00",
+      "unit": null,
+      "status": "reported",
+      "evidence_ids": [
+        "e3"
+      ]
+    },
+    {
+      "id": "f4",
+      "key": "delivery_duration",
+      "value": "10",
+      "unit": "business_days",
+      "status": "reported",
+      "evidence_ids": [
+        "e4"
+      ]
+    },
+    {
+      "id": "f5",
+      "key": "price_reference",
+      "value": "34873.00",
+      "unit": "RUB",
+      "status": "reported",
+      "evidence_ids": [
+        "e5"
+      ]
+    },
+    {
+      "id": "f6",
+      "key": "security_rate",
+      "value": "3",
+      "unit": "percent",
+      "status": "reported",
+      "evidence_ids": [
+        "e6"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "gate": "source_manifest",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Ожидаемый первичный комплект не установлен",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "reading_general",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Прочитан только вторичный отчёт",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "reading_spec",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Нет первичного ТЗ и полной матрицы требований",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "reading_requirements",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Нет инструкции и форм заявки",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "legal",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Проверены отдельные положения; нет первичников и утверждённых production-правил",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "procedure",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Время аукциона требует сверки актуальной ЕИС/ЭТП",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "participant",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Досье участника не предоставлено",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "product",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Точная модель и происхождение не подтверждены",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "supplier",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Нет действующего подтверждения цены, наличия и поставки",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "economics",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Неизвестны полные затраты и налоги",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    },
+    {
+      "gate": "funding",
+      "status": "unknown",
+      "validation_state": "unverified",
+      "rationale": "Неизвестны бюджет и календарь денег",
+      "evidence_ids": [],
+      "rule_ids": [],
+      "checked_at": "2026-10-19T19:17:10+03:00",
+      "valid_until": null,
+      "hard_stop": false,
+      "applicability_reason": null,
+      "conditions": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "A01",
+      "category": "conflict",
+      "title": "Время аукциона требует сверки",
+      "details": "Вторичный отчёт содержит 07:30, открытая карточка показывала 09:30. Первичная редакция не получена.",
+      "evidence_ids": [
+        "e3"
+      ],
+      "rule_ids": [
+        "L42"
+      ],
+      "action_ids": [
+        "a-calendar"
+      ]
+    },
+    {
+      "id": "A08",
+      "category": "legal_review",
+      "title": "Ограничение описано как запрет",
+      "details": "В разных разделах образца последствия национального режима изложены неодинаково.",
+      "evidence_ids": [
+        "e7"
+      ],
+      "rule_ids": [
+        "L14"
+      ],
+      "action_ids": [
+        "a-primary"
+      ]
+    },
+    {
+      "id": "A25",
+      "category": "unknown",
+      "title": "Цена аналога не является подтверждённой закупочной ценой",
+      "details": "Нет конкретного действующего предложения и доказательства соответствия.",
+      "evidence_ids": [
+        "e5"
+      ],
+      "rule_ids": [],
+      "action_ids": [
+        "a-supplier"
+      ]
+    },
+    {
+      "id": "A27",
+      "category": "unknown",
+      "title": "Нет данных для положительного решения",
+      "details": "Не завершены правовая, товарная и финансовая проверки.",
+      "evidence_ids": [
+        "e8"
+      ],
+      "rule_ids": [],
+      "action_ids": [
+        "a-profile"
+      ]
+    },
+    {
+      "id": "A29",
+      "category": "commercial_risk",
+      "title": "План содержит прошедшие даты",
+      "details": "Плановые даты 15–17 октября уже прошли к дате исходного файла.",
+      "evidence_ids": [
+        "e9",
+        "e10",
+        "e11"
+      ],
+      "rule_ids": [],
+      "action_ids": [
+        "a-plan"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a-primary",
+      "title": "Получить актуальный комплект ЕИС/ЭТП",
+      "stage": "analysis",
+      "status": "todo",
+      "due_at": null,
+      "due_reason": "Назначить после проверки официального дедлайна; не выдумывать дату",
+      "depends_on": [],
+      "finding_ids": [
+        "A08"
+      ]
+    },
+    {
+      "id": "a-calendar",
+      "title": "Сверить сроки по действующей редакции",
+      "stage": "analysis",
+      "status": "todo",
+      "due_at": null,
+      "due_reason": "Назначить после проверки официального дедлайна; не выдумывать дату",
+      "depends_on": [
+        "a-primary"
+      ],
+      "finding_ids": [
+        "A01"
+      ]
+    },
+    {
+      "id": "a-supplier",
+      "title": "Подобрать точный товар и получить подтверждённое предложение",
+      "stage": "analysis",
+      "status": "todo",
+      "due_at": null,
+      "due_reason": "Назначить после проверки официального дедлайна; не выдумывать дату",
+      "depends_on": [
+        "a-primary"
+      ],
+      "finding_ids": [
+        "A25"
+      ]
+    },
+    {
+      "id": "a-profile",
+      "title": "Дополнить досье, налоговый профиль и бюджет",
+      "stage": "analysis",
+      "status": "todo",
+      "due_at": null,
+      "due_reason": "Назначить после проверки официального дедлайна; не выдумывать дату",
+      "depends_on": [],
+      "finding_ids": [
+        "A27"
+      ]
+    },
+    {
+      "id": "a-plan",
+      "title": "Пересчитать план от текущего времени",
+      "stage": "analysis",
+      "status": "todo",
+      "due_at": null,
+      "due_reason": "Назначить после проверки официального дедлайна; не выдумывать дату",
+      "depends_on": [
+        "a-calendar"
+      ],
+      "finding_ids": [
+        "A29"
+      ]
+    }
+  ],
+  "commercial": {
+    "status": "unknown",
+    "currency": "RUB",
+    "nmck_minor": "5029100",
+    "unverified_price_reference_minor": "3487300",
+    "selected_offer_id": null,
+    "contract_price_minor": null,
+    "net_profit_minor": null,
+    "funding_peak_minor": null,
+    "missing_inputs": [
+      "Подтверждённое соответствующее предложение",
+      "Плановая цена участия",
+      "Логистика и сервис",
+      "Налоговый профиль и НДС",
+      "График оплаты и доступный капитал"
+    ]
+  },
+  "application": {
+    "package_status": "needs_input",
+    "document_readiness": "unknown",
+    "platform_actions_readiness": "unknown",
+    "submitted": false,
+    "missing_inputs": [
+      "Досье организации и подписанта",
+      "Первичные требования заявки",
+      "Точная модель и подтверждения",
+      "Поля и формы действующей процедуры"
+    ]
+  },
+  "sections": [
+    {
+      "id": "decision",
+      "title": "Решение и следующие действия",
+      "status": "needs_input",
+      "summary": "Недостаточно данных для решения об участии.",
+      "fact_ids": [],
+      "finding_ids": [
+        "A27"
+      ]
+    },
+    {
+      "id": "passport",
+      "title": "Паспорт закупки",
+      "status": "reported",
+      "summary": "Поля получены из вторичного аналитического отчёта.",
+      "fact_ids": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f6"
+      ],
+      "finding_ids": [
+        "A01"
+      ]
+    },
+    {
+      "id": "coverage",
+      "title": "Полнота источников",
+      "status": "needs_input",
+      "summary": "10 страниц вторичного DOCX прочитаны; первичный комплект не получен.",
+      "fact_ids": [],
+      "finding_ids": []
+    },
+    {
+      "id": "participant",
+      "title": "Требования к участнику",
+      "status": "needs_input",
+      "summary": "Требуются первичные условия и досье организации.",
+      "fact_ids": [],
+      "finding_ids": []
+    },
+    {
+      "id": "products",
+      "title": "Товар и национальный режим",
+      "status": "needs_review",
+      "summary": "Происхождение и соответствие точной модели не подтверждены.",
+      "fact_ids": [],
+      "finding_ids": [
+        "A08"
+      ]
+    },
+    {
+      "id": "contract",
+      "title": "Контракт и обязательства",
+      "status": "needs_input",
+      "summary": "Пересказ условий требует сверки с проектом контракта.",
+      "fact_ids": [],
+      "finding_ids": []
+    },
+    {
+      "id": "calendar",
+      "title": "Календарь",
+      "status": "needs_review",
+      "summary": "Различить подачу и аукцион; проверить актуальные сроки.",
+      "fact_ids": [
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "finding_ids": [
+        "A01",
+        "A29"
+      ]
+    },
+    {
+      "id": "suppliers",
+      "title": "Поставщики",
+      "status": "needs_input",
+      "summary": "Список магазинов не подтверждает предложение.",
+      "fact_ids": [
+        "f5"
+      ],
+      "finding_ids": [
+        "A25"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "Экономика и деньги",
+      "status": "needs_input",
+      "summary": "Прибыль и денежный пик не рассчитаны.",
+      "fact_ids": [
+        "f1",
+        "f5"
+      ],
+      "finding_ids": [
+        "A27"
+      ]
+    },
+    {
+      "id": "issues",
+      "title": "Проблемы и вопросы",
+      "status": "needs_review",
+      "summary": "Все 33 замечания находятся в AUDIT_REFERENCE.md; это не 33 нарушения заказчика.",
+      "fact_ids": [],
+      "finding_ids": [
+        "A01",
+        "A08",
+        "A25",
+        "A27",
+        "A29"
+      ]
+    },
+    {
+      "id": "application",
+      "title": "Заявка и действия",
+      "status": "needs_input",
+      "summary": "Пакет не сформирован; подтверждение подачи отсутствует.",
+      "fact_ids": [],
+      "finding_ids": [
+        "A27"
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Основания и история",
+      "status": "reported",
+      "summary": "Снимок демонстрационный, создан для проверки корректных статусов.",
+      "fact_ids": [],
+      "finding_ids": []
+    }
+  ],
+  "expected_decision": "insufficient_data",
+  "rules": [
+    {
+      "id": "L42",
+      "act": "44-ФЗ",
+      "reference": "п. 23 ч. 1 ст. 42",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_144624/57e264699075c4dccf33283209e1d93f4bc1a3d1/",
+      "verification_state": "research_reference",
+      "effective_from": null,
+      "effective_until": null
+    },
+    {
+      "id": "L14",
+      "act": "44-ФЗ",
+      "reference": "ч. 4 ст. 14",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_144624/c360930e35e7953c74744ed45738094d9503d732/",
+      "verification_state": "research_reference",
+      "effective_from": null,
+      "effective_until": null
+    }
+  ]
+}

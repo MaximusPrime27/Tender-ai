@@ -1,0 +1,47 @@
+{
+  "44": [
+    {
+      "purchase_number": "SYN0000000000000001",
+      "object_info": "Поставка медицинского оборудования: аппарат ИВЛ для реанимации",
+      "max_price": 4800000.0,
+      "currency_code": "RUB",
+      "region": 77,
+      "okpd2": ["26.60.12.119"],
+      "ktru": [],
+      "customers": ["7701000001"],
+      "published_at": "2026-09-16T07:00:00",
+      "collecting_finished_at": "2026-10-15T05:00:00",
+      "purchase_type": "epNotificationEA20",
+      "stage": 1
+    },
+    {
+      "purchase_number": "SYN0000000000000002",
+      "object_info": "Ремонт медицинского оборудования в поликлинике",
+      "max_price": 350000.0,
+      "currency_code": "RUB",
+      "region": 77,
+      "okpd2": ["33.13.12.000"],
+      "ktru": [],
+      "customers": ["7701000002"],
+      "published_at": "2026-09-16T08:00:00",
+      "collecting_finished_at": "2026-10-01T05:00:00",
+      "purchase_type": "epNotificationEZK2020",
+      "stage": 1
+    }
+  ],
+  "223": [
+    {
+      "purchase_number": "SYN223000000003",
+      "object_info": "Поставка медицинского оборудования (мониторы пациента)",
+      "max_price": 1200000.0,
+      "currency_code": "RUB",
+      "region": 50,
+      "okpd2": ["26.60.12.110"],
+      "customer": "5001000003",
+      "published_at": "2026-09-16T12:00:00",
+      "submission_close_at": "2026-09-18T10:00:00",
+      "purchase_type": "purchaseNotice",
+      "stage": 1
+    }
+  ]
+}

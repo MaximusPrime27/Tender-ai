@@ -1,0 +1,868 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tender-ai:comprehensive-report:1",
+  "title": "Минимальный обменный контракт отчёта Tender AI",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "mode": {
+          "enum": [
+            "illustrative",
+            "live"
+          ]
+        },
+        "rules_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompts_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calculator_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "input_revision",
+        "as_of",
+        "mode",
+        "rules_version",
+        "prompts_version",
+        "calculator_version"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "procurement_number": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lot_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "law": {
+          "enum": [
+            "44fz",
+            "223fz",
+            "other",
+            "unknown"
+          ]
+        },
+        "procedure": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basis": {
+          "enum": [
+            "reported",
+            "verified",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "procurement_number",
+        "lot_id",
+        "law",
+        "procedure",
+        "basis"
+      ]
+    },
+    "source_manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "expected_set_known": {
+          "type": "boolean"
+        },
+        "expected_primary_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "received_primary_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing_known_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "expected_set_known",
+        "expected_primary_count",
+        "received_primary_count",
+        "missing_known_roles"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "general": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown",
+            "failed"
+          ]
+        },
+        "specification": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown",
+            "failed"
+          ]
+        },
+        "bid_requirements": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown",
+            "failed"
+          ]
+        },
+        "secondary_document": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "general",
+        "specification",
+        "bid_requirements",
+        "secondary_document"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "primary_procurement",
+              "secondary_analysis",
+              "aggregator",
+              "participant",
+              "supplier",
+              "manufacturer",
+              "registry",
+              "legal_rule",
+              "calculation",
+              "manual"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "received": {
+            "type": "boolean"
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "name",
+          "url",
+          "received",
+          "sha256",
+          "revision",
+          "limitations"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quote": {
+            "type": "string"
+          },
+          "citation_verified": {
+            "type": "boolean"
+          },
+          "eligible_for_decision": {
+            "type": "boolean"
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "source_id",
+          "locator",
+          "quote",
+          "citation_verified",
+          "eligible_for_decision",
+          "checked_at",
+          "valid_until"
+        ]
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "reported",
+              "verified",
+              "disputed",
+              "unknown"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "key",
+          "value",
+          "unit",
+          "status",
+          "evidence_ids"
+        ]
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "gate": {
+            "enum": [
+              "source_manifest",
+              "reading_general",
+              "reading_spec",
+              "reading_requirements",
+              "legal",
+              "procedure",
+              "participant",
+              "product",
+              "supplier",
+              "economics",
+              "funding"
+            ]
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown",
+              "not_applicable",
+              "conditional"
+            ]
+          },
+          "validation_state": {
+            "enum": [
+              "verified",
+              "unverified"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "rule_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "hard_stop": {
+            "type": "boolean"
+          },
+          "applicability_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "gate",
+          "status",
+          "validation_state",
+          "rationale",
+          "evidence_ids",
+          "rule_ids",
+          "checked_at",
+          "valid_until",
+          "hard_stop",
+          "applicability_reason",
+          "conditions"
+        ]
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "enum": [
+              "conflict",
+              "unknown",
+              "legal_review",
+              "commercial_risk",
+              "confirmed_failure"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "details": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "rule_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "action_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "category",
+          "title",
+          "details",
+          "evidence_ids",
+          "rule_ids",
+          "action_ids"
+        ]
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stage": {
+            "enum": [
+              "analysis",
+              "bid",
+              "signing",
+              "fulfillment"
+            ]
+          },
+          "status": {
+            "enum": [
+              "todo",
+              "overdue",
+              "blocked",
+              "done",
+              "needs_review"
+            ]
+          },
+          "due_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "due_reason": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "finding_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "stage",
+          "status",
+          "due_at",
+          "due_reason",
+          "depends_on",
+          "finding_ids"
+        ]
+      }
+    },
+    "commercial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "provisional",
+            "evaluated"
+          ]
+        },
+        "currency": {
+          "const": "RUB"
+        },
+        "nmck_minor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?\\d+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unverified_price_reference_minor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?\\d+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "selected_offer_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contract_price_minor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?\\d+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "net_profit_minor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?\\d+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "funding_peak_minor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?\\d+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "missing_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "status",
+        "currency",
+        "nmck_minor",
+        "unverified_price_reference_minor",
+        "selected_offer_id",
+        "contract_price_minor",
+        "net_profit_minor",
+        "funding_peak_minor",
+        "missing_inputs"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "package_status": {
+          "enum": [
+            "draft",
+            "needs_input",
+            "needs_review",
+            "blocked",
+            "prepared_for_transfer",
+            "transfer_verified",
+            "stale",
+            "unsupported"
+          ]
+        },
+        "document_readiness": {
+          "enum": [
+            "unknown",
+            "partial",
+            "verified",
+            "blocked"
+          ]
+        },
+        "platform_actions_readiness": {
+          "enum": [
+            "unknown",
+            "partial",
+            "verified",
+            "blocked"
+          ]
+        },
+        "submitted": {
+          "type": "boolean"
+        },
+        "missing_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "package_status",
+        "document_readiness",
+        "platform_actions_readiness",
+        "submitted",
+        "missing_inputs"
+      ]
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "reported",
+              "verified",
+              "needs_input",
+              "needs_review"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fact_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "finding_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "status",
+          "summary",
+          "fact_ids",
+          "finding_ids"
+        ]
+      }
+    },
+    "expected_decision": {
+      "enum": [
+        "insufficient_data",
+        "do_not_participate",
+        "participate_with_conditions",
+        "participate"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "act": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "verification_state": {
+            "enum": [
+              "research_reference",
+              "needs_review",
+              "approved"
+            ]
+          },
+          "effective_from": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "effective_until": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "act",
+          "reference",
+          "url",
+          "verification_state",
+          "effective_from",
+          "effective_until"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "snapshot",
+    "scope",
+    "source_manifest",
+    "coverage",
+    "sources",
+    "evidence",
+    "facts",
+    "checks",
+    "findings",
+    "actions",
+    "commercial",
+    "application",
+    "sections",
+    "expected_decision",
+    "rules"
+  ]
+}
