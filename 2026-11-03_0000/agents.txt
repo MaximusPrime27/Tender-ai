@@ -1,0 +1,119 @@
+АГЕНТЫ за 14 дн. (с 2026-10-20)
+
+== Прогоны: агент | всего | ошибок | последний
+coverage | 1 | 0 | 11-02 00:00
+
+== Последние ошибки
+
+== Показатели по дням (агент.показатель: значения по дням, старые → новые)
+дни: 10-30 10-31 11-01 11-02
+application.learned_from_user: 62 10 12 14
+application.lessons: 31 19 96 101
+application.not_ready: - 2 - 1
+application.prefilled: 4 2 17 23
+application.problems: 58 45 190 211
+application.ready: 15 8 47 48
+application.reviewed: 15 10 47 49
+bid.cheaper_site_found: - - - 4
+bid.cheaper_site_pages: - - 27 76
+bid.contract_lead_found: - - 1 2
+bid.contract_lead_items: - - 5 8
+bid.lessons: 10 19 116 60
+bid.model_enriched: - 16 50 19
+bid.profitable: 8 2 7 5
+bid.rechecked: - 40 140 81
+bid.rescued: - 2 2 7
+bid.reworked: - - 26 30
+bid.same_site_found: - - 752 497
+bid.same_site_pages: - - 1470 872
+checker.applications: 1 - 1 1
+checker.checked: 9 2 7 5
+checker.hold: 2 - 1 -
+checker.ok: 7 2 6 5
+checker.packages: 15 10 47 49
+coverage.forms_new: - - 1 2
+coverage.offers_found: - - 20 486
+coverage.pairs_tried: - - 22 196
+fixer.fixed: - 6 1 1
+fixer.lessons: - 6 1 1
+fixer.retried: - 10 1 1
+fixer.saved: - - 1 -
+kinds.cards: - 3584 3895 4019
+kinds.cards_new: - 3584 311 124
+kinds.checked: - 415 550 1817
+kinds.examples_new: - 1487 74 120
+kinds.removed: - 1 0 0
+kinds.repeat: - 1 0 0
+kinds.shadow: - 56 89 311
+ktru.empty: - - 10 8
+ktru.failed: - - 24 20
+ktru.read: - - 568 360
+manager.lessons: - 1 - -
+manager.reports: 2 2 1 1
+manager.task_done: - 11 9 13
+manager.task_stuck: - 2 12 12
+outcomes.found: 184 149 125 126
+outcomes.no_contract: 102 52 47 63
+package.auto_attest: - 7 34 19
+package.auto_marks: - 2 3 4
+package.auto_price: - 3 13 9
+package.built: 93 16 73 69
+package.final_blocked: 93 16 73 69
+package.fixed: 38 12 28 21
+package.lessons: 184 49 136 154
+package.marks_found: 6 6 3 3
+package.marks_missed: 24 16 50 60
+package.marks_suggested: 5 2 10 11
+package.redrafted: 12 12 39 26
+pages.learn_tries: - 27 - 6
+pages.lessons: - 109 549 300
+pages.rules: - 19 - 2
+pages.rules_dropped: - 2 - -
+pages.unread: - 144 862 566
+reader.absent: 565 213 151 172
+reader.agree: 341 190 175 144
+reader.anchor_fail: 11 6 4 -
+reader.anchor_hit: 9 2 - 1
+reader.anchor_used: - 8 4 1
+reader.anchors_learned: 51 25 10 4
+reader.lessons: 216 99 76 56
+reader.mismatch: 71 34 28 10
+reader.missed: 145 65 48 46
+scout.catalog_added: 30 1 0 0
+scout.good_sites: 30 21 19 14
+scout.lessons: 63 14 10 8
+scout.weak_sites: 30 36 37 35
+
+== Частые уроки (агент | код | площадка | раз | источник)
+bid | char_conflict_pick | — | 80 | self — выбран товар, характеристика которого не проходит по ТЗ — взят следующ
+bid | price_suspicious | — | 74 | self — Цена товара вдвое ниже прошлых контрактов
+reader | missed_delivery_place | РТС-тендер | 65 | self — Не нашёл: место поставки
+pages | page_unread | officemag.ru | 50 | self — Страница поставщика не прочитана
+pages | page_unread | attacher.ru | 46 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | Сбербанк-АСТ | 43 | self — Не нашёл: место поставки
+application | finding_legal_applicability_unknown | РТС-тендер · 44-ФЗ | 41 | self — Не установлено, какие правила применяются
+application | finding_legal_applicability_unknown | Сбербанк-АСТ · 44-ФЗ | 40 | self — Не установлено, какие правила применяются
+application | todo_file | РТС-тендер · 44-ФЗ | 40 | self — В файле «uploads/application/Декларация о соответствии (проект).docx» 
+application | todo_file | Сбербанк-АСТ · 44-ФЗ | 39 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
+pages | page_unread | marketvale.ru | 35 | self — Страница поставщика не прочитана
+pages | page_unread | etm.ru | 33 | self — Страница поставщика не прочитана
+reader | missed_nmck | РТС-тендер | 30 | self — Не нашёл: НМЦК
+pages | page_unread | bazismed.ru | 28 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | Росэлторг | 27 | self — Не нашёл: место поставки
+
+== Задачи управляющего: открытые и закрытые за период
+[done] pages: Выучить, где на этом сайте стоит цена | цель: новых таких ошибок за сутки — 0 | срок 11-02 | итог: справочник, цены там нет
+[done] pages: Выучить, где на этом сайте стоит цена | цель: новых таких ошибок за сутки — 0 | срок 11-02 | итог: новых ошибок нет
+[done] pages: Выучить, где на этом сайте стоит цена | цель: новых таких ошибок за сутки — 0 | срок 11-02 | итог: новых ошибок нет
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] package: Собрать заявки заново и заполнить всё, что можно без человека | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] package: Собрать заявки заново и заполнить всё, что можно без человека | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
+[open] reader: Перечитать закупку выученными опорами и сверить с ЕИС | цель: новых таких ошибок за 2 дня — 0 | срок 11-03
