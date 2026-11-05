@@ -1,105 +1,105 @@
-АГЕНТЫ за 14 дн. (с 2026-10-21)
+АГЕНТЫ за 14 дн. (с 2026-10-22)
 
 == Прогоны: агент | всего | ошибок | последний
-coverage | 2 | 0 | 11-03 00:00
+coverage | 3 | 0 | 11-04 00:01
 
 == Последние ошибки
 
 == Показатели по дням (агент.показатель: значения по дням, старые → новые)
-дни: 10-30 10-31 11-01 11-02 11-03
-application.learned_from_user: 62 10 12 14 16
-application.lessons: 31 19 96 101 81
-application.not_ready: - 2 - 1 -
-application.prefilled: 4 2 17 23 15
-application.problems: 58 45 190 211 171
-application.ready: 15 8 47 48 41
-application.reviewed: 15 10 47 49 41
-bid.cheaper_site_found: - - - 4 9
-bid.cheaper_site_pages: - - 27 76 66
-bid.contract_lead_found: - - 1 2 2
-bid.contract_lead_items: - - 5 8 10
-bid.lessons: 10 19 116 60 72
-bid.model_enriched: - 16 50 19 28
-bid.profitable: 8 2 7 5 3
-bid.rechecked: - 40 140 81 49
-bid.rescued: - 2 2 7 -
-bid.reworked: - - 26 30 24
-bid.same_site_found: - - 752 497 447
-bid.same_site_pages: - - 1470 872 834
-checker.applications: 1 - 1 1 -
-checker.checked: 9 2 7 5 3
-checker.hold: 2 - 1 - -
-checker.ok: 7 2 6 5 3
-checker.packages: 15 10 47 49 41
-coverage.forms_new: - - 1 2 13
-coverage.offers_found: - - 20 486 297
-coverage.pairs_tried: - - 22 196 179
-fixer.fixed: - 6 1 1 -
-fixer.lessons: - 6 1 1 -
-fixer.retried: - 10 1 1 -
-fixer.saved: - - 1 - -
-kinds.cards: - 3584 3895 4019 4135
-kinds.cards_new: - 3584 311 124 116
-kinds.checked: - 415 550 1817 3976
-kinds.examples_new: - 1487 74 120 107
-kinds.removed: - 1 0 0 0
-kinds.repeat: - 1 0 0 0
-kinds.shadow: - 56 89 311 916
-ktru.empty: - - 10 8 3
-ktru.failed: - - 24 20 6
-ktru.read: - - 568 360 236
-manager.lessons: - 1 - - -
-manager.reports: 2 2 1 1 1
-manager.task_done: - 11 9 13 18
-manager.task_stuck: - 2 12 12 21
-outcomes.found: 184 149 125 126 181
-outcomes.no_contract: 102 52 47 63 36
-package.auto_attest: - 7 34 19 15
-package.auto_marks: - 2 3 4 3
-package.auto_price: - 3 13 9 7
-package.built: 93 16 73 69 95
-package.final_blocked: 93 16 73 69 95
-package.fixed: 38 12 28 21 9
-package.lessons: 184 49 136 154 148
-package.marks_found: 6 6 3 3 4
-package.marks_missed: 24 16 50 60 79
-package.marks_suggested: 5 2 10 11 3
-package.redrafted: 12 12 39 26 22
-pages.learn_tries: - 27 - 6 -
-pages.lessons: - 109 549 300 305
-pages.rules: - 19 - 2 -
-pages.rules_dropped: - 2 - - -
-pages.unread: - 144 862 566 845
-reader.absent: 565 213 151 172 235
-reader.agree: 341 190 175 144 177
-reader.anchor_fail: 11 6 4 - 2
-reader.anchor_hit: 9 2 - 1 1
-reader.anchor_used: - 8 4 1 3
-reader.anchors_learned: 51 25 10 4 21
-reader.lessons: 216 99 76 56 129
-reader.mismatch: 71 34 28 10 31
-reader.missed: 145 65 48 46 98
-scout.catalog_added: 30 1 0 0 0
-scout.good_sites: 30 21 19 14 18
-scout.lessons: 63 14 10 8 11
-scout.weak_sites: 30 36 37 35 42
+дни: 10-30 10-31 11-01 11-02 11-03 11-04
+application.learned_from_user: 62 10 12 14 16 2
+application.lessons: 31 19 96 101 81 69
+application.not_ready: - 2 - 1 - 1
+application.prefilled: 4 2 17 23 15 16
+application.problems: 58 45 190 211 171 132
+application.ready: 15 8 47 48 41 34
+application.reviewed: 15 10 47 49 41 35
+bid.cheaper_site_found: - - - 4 9 4
+bid.cheaper_site_pages: - - 27 76 66 63
+bid.contract_lead_found: - - 1 2 2 1
+bid.contract_lead_items: - - 5 8 10 13
+bid.lessons: 10 19 116 60 72 90
+bid.model_enriched: - 16 50 19 28 32
+bid.profitable: 8 2 7 5 3 4
+bid.rechecked: - 40 140 81 49 152
+bid.rescued: - 2 2 7 - 1
+bid.reworked: - - 26 30 24 29
+bid.same_site_found: - - 752 497 447 605
+bid.same_site_pages: - - 1470 872 834 1202
+checker.applications: 1 - 1 1 - -
+checker.checked: 9 2 7 5 3 4
+checker.hold: 2 - 1 - - 2
+checker.ok: 7 2 6 5 3 2
+checker.packages: 15 10 47 49 41 35
+coverage.forms_new: - - 1 2 13 108
+coverage.offers_found: - - 20 486 297 397
+coverage.pairs_tried: - - 22 196 179 173
+fixer.fixed: - 6 1 1 - -
+fixer.lessons: - 6 1 1 - -
+fixer.retried: - 10 1 1 - -
+fixer.saved: - - 1 - - -
+kinds.cards: - 3584 3895 4019 4135 4374
+kinds.cards_new: - 3584 311 124 116 239
+kinds.checked: - 415 550 1817 3976 3102
+kinds.examples_new: - 1487 74 120 107 129
+kinds.removed: - 1 0 0 0 0
+kinds.repeat: - 1 0 0 0 0
+kinds.shadow: - 56 89 311 916 778
+ktru.empty: - - 10 8 3 1
+ktru.failed: - - 24 20 6 11
+ktru.read: - - 568 360 236 138
+manager.lessons: - 1 - - - -
+manager.reports: 2 2 1 1 1 1
+manager.task_done: - 11 9 13 18 2
+manager.task_stuck: - 2 12 12 21 -
+outcomes.found: 184 149 125 126 181 173
+outcomes.no_contract: 102 52 47 63 36 17
+package.auto_attest: - 7 34 19 15 7
+package.auto_marks: - 2 3 4 3 1
+package.auto_price: - 3 13 9 7 4
+package.built: 93 16 73 69 95 35
+package.final_blocked: 93 16 73 69 95 35
+package.fixed: 38 12 28 21 9 6
+package.lessons: 184 49 136 154 148 62
+package.marks_found: 6 6 3 3 4 1
+package.marks_missed: 24 16 50 60 79 28
+package.marks_suggested: 5 2 10 11 3 4
+package.redrafted: 12 12 39 26 22 9
+pages.learn_tries: - 27 - 6 - -
+pages.lessons: - 109 549 300 305 257
+pages.rules: - 19 - 2 - -
+pages.rules_dropped: - 2 - - - -
+pages.unread: - 144 862 566 845 754
+reader.absent: 565 213 151 172 235 180
+reader.agree: 341 190 175 144 177 150
+reader.anchor_fail: 11 6 4 - 2 3
+reader.anchor_hit: 9 2 - 1 1 1
+reader.anchor_used: - 8 4 1 3 4
+reader.anchors_learned: 51 25 10 4 21 6
+reader.lessons: 216 99 76 56 129 73
+reader.mismatch: 71 34 28 10 31 22
+reader.missed: 145 65 48 46 98 51
+scout.catalog_added: 30 1 0 0 0 0
+scout.good_sites: 30 21 19 14 18 16
+scout.lessons: 63 14 10 8 11 8
+scout.weak_sites: 30 36 37 35 42 46
 
 == Частые уроки (агент | код | площадка | раз | источник)
-bid | char_conflict_pick | — | 108 | self — выбран товар, характеристика которого не проходит по ТЗ — взят следующ
-bid | price_suspicious | — | 103 | self — Цена товара вдвое ниже прошлых контрактов
-reader | missed_delivery_place | РТС-тендер | 96 | self — Не нашёл: место поставки
-pages | page_unread | attacher.ru | 86 | self — Страница поставщика не прочитана
-application | finding_legal_applicability_unknown | РТС-тендер · 44-ФЗ | 61 | self — Не установлено, какие правила применяются
-application | todo_file | РТС-тендер · 44-ФЗ | 58 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
-reader | missed_delivery_place | Сбербанк-АСТ | 57 | self — Не нашёл: место поставки
-pages | page_unread | officemag.ru | 50 | self — Страница поставщика не прочитана
-application | finding_legal_applicability_unknown | Сбербанк-АСТ · 44-ФЗ | 45 | self — Не установлено, какие правила применяются
-application | todo_file | Сбербанк-АСТ · 44-ФЗ | 44 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
-reader | missed_nmck | РТС-тендер | 40 | self — Не нашёл: НМЦК
-pages | page_unread | e2e4online.ru | 40 | self — Страница поставщика не прочитана
-pages | page_unread | bazismed.ru | 37 | self — Страница поставщика не прочитана
-pages | page_unread | etm.ru | 37 | self — Страница поставщика не прочитана
-pages | page_unread | marketvale.ru | 35 | self — Страница поставщика не прочитана
+bid | price_suspicious | — | 147 | self — Цена товара вдвое ниже прошлых контрактов
+bid | char_conflict_pick | — | 136 | self — выбран товар, характеристика которого не проходит по ТЗ — взят следующ
+pages | page_unread | attacher.ru | 112 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | РТС-тендер | 110 | self — Не нашёл: место поставки
+application | finding_legal_applicability_unknown | РТС-тендер · 44-ФЗ | 76 | self — Не установлено, какие правила применяются
+application | todo_file | РТС-тендер · 44-ФЗ | 71 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
+reader | missed_delivery_place | Сбербанк-АСТ | 61 | self — Не нашёл: место поставки
+pages | page_unread | officemag.ru | 53 | self — Страница поставщика не прочитана
+application | finding_legal_applicability_unknown | Сбербанк-АСТ · 44-ФЗ | 50 | self — Не установлено, какие правила применяются
+application | todo_file | Сбербанк-АСТ · 44-ФЗ | 49 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
+pages | page_unread | e2e4online.ru | 48 | self — Страница поставщика не прочитана
+pages | page_unread | bazismed.ru | 48 | self — Страница поставщика не прочитана
+reader | missed_nmck | РТС-тендер | 46 | self — Не нашёл: НМЦК
+pages | page_unread | marketvale.ru | 46 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | Росэлторг | 43 | self — Не нашёл: место поставки
 
 == Задачи управляющего: открытые и закрытые за период
 [done] pages: Выучить, где на этом сайте стоит цена | цель: новых таких ошибок за сутки — 0 | срок 11-02 | итог: справочник, цены там нет
