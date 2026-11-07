@@ -1,1 +1,1 @@
--- No entries --
+Nov 06 05:19:29 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'exit-code'.
