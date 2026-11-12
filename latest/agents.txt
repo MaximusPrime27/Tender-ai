@@ -1,108 +1,110 @@
-АГЕНТЫ за 14 дн. (с 2026-10-28)
+АГЕНТЫ за 14 дн. (с 2026-10-29)
 
 == Прогоны: агент | всего | ошибок | последний
-coverage | 9 | 0 | 11-10 00:02
+coverage | 10 | 0 | 11-11 00:04
 
 == Последние ошибки
 
 == Показатели по дням (агент.показатель: значения по дням, старые → новые)
-дни: 10-30 10-31 11-01 11-02 11-03 11-04 11-05 11-06 11-07 11-08 11-09 11-10
-application.learned_from_user: 62 10 12 14 16 2 4 4 3 3 4 10
-application.lessons: 31 19 96 101 81 69 92 99 63 70 98 91
-application.not_ready: - 2 - 1 - 1 - - - - 1 -
-application.prefilled: 4 2 17 23 15 16 14 23 14 9 6 20
-application.problems: 58 45 190 211 171 132 175 185 115 133 190 195
-application.ready: 15 8 47 48 41 34 46 50 31 36 47 47
-application.reviewed: 15 10 47 49 41 35 46 50 31 36 48 47
-bid.cheaper_site_found: - - - 4 9 4 5 4 1 7 2 1
-bid.cheaper_site_pages: - - 27 76 66 63 81 78 57 64 96 69
-bid.contract_lead_found: - - 1 2 2 1 1 2 2 - - -
-bid.contract_lead_items: - - 5 8 10 13 2 11 8 4 5 5
-bid.lessons: 10 19 116 60 72 90 83 98 70 83 74 65
-bid.model_enriched: - 16 50 19 28 32 32 24 21 29 26 16
-bid.profitable: 8 2 7 5 3 4 6 15 9 7 9 5
-bid.rechecked: - 40 140 81 49 152 104 98 130 99 67 49
-bid.rescued: - 2 2 7 - 1 - - - 1 4 2
-bid.reworked: - - 26 30 24 29 36 44 30 36 34 25
-bid.same_site_found: - - 752 497 447 605 515 610 568 737 361 234
-bid.same_site_pages: - - 1470 872 834 1202 791 994 1189 1267 642 439
-checker.applications: 1 - 1 1 - - 1 4 3 2 3 2
-checker.checked: 9 2 7 5 3 4 6 15 9 7 9 5
-checker.hold: 2 - 1 - - 2 1 3 2 1 1 -
-checker.ok: 7 2 6 5 3 2 5 12 7 6 8 5
-checker.packages: 15 10 47 49 41 35 46 50 31 36 48 47
-coverage.forms_new: - - 1 2 13 108 219 216 204 43 15 143
-coverage.offers_found: - - 20 486 297 397 649 640 600 226 133 444
-coverage.pairs_tried: - - 22 196 179 173 221 217 206 89 51 152
-fixer.escalated: - - - - - - - 1 - - 2 2
-fixer.fixed: - 6 1 1 - - 1 - - - - 2
-fixer.lessons: - 6 1 1 - - 1 1 - - 2 4
-fixer.retried: - 10 1 1 - - 1 - - - - 2
-fixer.saved: - - 1 - - - - - - - - 1
-kinds.cards: - 3584 3895 4019 4135 4374 4477 4606 4700 4719 4823 4931
-kinds.cards_new: - 3584 311 124 116 239 103 129 94 19 104 108
-kinds.checked: - 415 550 1817 3976 3102 4954 5096 4976 6103 6158 5644
-kinds.examples_new: - 1487 74 120 107 129 77 77 75 65 82 42
-kinds.removed: - 1 0 0 0 0 0 0 0 0 0 0
-kinds.repeat: - 1 0 0 0 0 0 0 0 0 0 0
-kinds.shadow: - 56 89 311 916 778 1279 1364 1334 1617 1609 1439
-ktru.empty: - - 10 8 3 1 3 - - - 3 1
-ktru.failed: - - 24 20 6 11 9 5 - - 2 2
-ktru.read: - - 568 360 236 138 249 133 123 4 91 106
-manager.lessons: - 1 - - - - - - - - 2 1
-manager.reports: 2 2 1 1 1 1 1 1 1 1 2 2
-manager.task_done: - 11 9 13 18 2 7 3 7 14 8 7
-manager.task_stuck: - 2 12 12 21 - 3 3 5 19 6 8
-outcomes.forecast_err_sum: - - - - - - - - - - - 12.4
-outcomes.forecasts: - - - - - - - - - - - 1
-outcomes.found: 184 149 125 126 181 173 108 75 66 49 42 45
-outcomes.no_contract: 102 52 47 63 36 17 101 122 130 159 147 147
-package.auto_attest: - 7 34 19 15 7 12 11 6 5 16 19
-package.auto_marks: - 2 3 4 3 1 1 1 2 - 2 3
-package.auto_price: - 3 13 9 7 4 4 6 3 3 6 10
-package.built: 93 16 73 69 95 35 46 50 46 73 48 56
-package.final_blocked: 93 16 73 69 95 35 46 50 46 73 48 56
-package.fixed: 38 12 28 21 9 6 2 2 2 - - 6
-package.lessons: 184 49 136 154 148 62 82 80 59 95 108 145
-package.marks_found: 6 6 3 3 4 1 2 - - - - 2
-package.marks_missed: 24 16 50 60 79 28 32 35 29 78 42 53
-package.marks_suggested: 5 2 10 11 3 4 3 6 5 10 6 10
-package.redrafted: 12 12 39 26 22 9 15 12 8 5 17 24
-pages.learn_tries: - 27 - 6 - - 8 5 3 7 12 7
-pages.lessons: - 109 549 300 305 257 224 181 208 161 168 153
-pages.rules: - 19 - 2 - - 5 2 2 2 8 3
-pages.rules_dropped: - 2 - - - - - - 1 1 1 -
-pages.unread: - 144 862 566 845 754 758 642 519 833 878 370
-reader.absent: 565 213 151 172 235 180 189 177 169 166 331 213
-reader.agree: 341 190 175 144 177 150 153 153 143 140 302 212
-reader.anchor_fail: 11 6 4 - 2 3 - 5 1 3 6 3
-reader.anchor_hit: 9 2 - 1 1 1 2 1 - 7 19 1
-reader.anchor_used: - 8 4 1 3 4 2 6 1 10 25 4
-reader.anchors_learned: 51 25 10 4 21 6 4 12 13 7 14 26
-reader.lessons: 216 99 76 56 129 73 73 75 74 84 164 119
-reader.mismatch: 71 34 28 10 31 22 16 18 25 22 45 33
-reader.missed: 145 65 48 46 98 51 57 57 49 62 119 86
-scout.catalog_added: 30 1 0 0 0 0 0 0 0 0 0 0
-scout.good_sites: 30 21 19 14 18 16 15 13 14 14 13 13
-scout.lessons: 63 14 10 8 11 8 4 5 3 10 4 3
-scout.weak_sites: 30 36 37 35 42 46 45 47 47 54 54 54
+дни: 10-30 10-31 11-01 11-02 11-03 11-04 11-05 11-06 11-07 11-08 11-09 11-10 11-11
+application.learned_from_user: 62 10 12 14 16 2 4 4 3 3 4 10 4
+application.lessons: 31 19 96 101 81 69 92 99 63 70 98 91 69
+application.not_ready: - 2 - 1 - 1 - - - - 1 - -
+application.prefilled: 4 2 17 23 15 16 14 23 14 9 6 20 11
+application.problems: 58 45 190 211 171 132 175 185 115 133 190 195 131
+application.ready: 15 8 47 48 41 34 46 50 31 36 47 47 34
+application.reviewed: 15 10 47 49 41 35 46 50 31 36 48 47 34
+bid.cheaper_site_found: - - - 4 9 4 5 4 1 7 2 1 9
+bid.cheaper_site_pages: - - 27 76 66 63 81 78 57 64 96 69 57
+bid.contract_lead_found: - - 1 2 2 1 1 2 2 - - - -
+bid.contract_lead_items: - - 5 8 10 13 2 11 8 4 5 5 2
+bid.lessons: 10 19 116 60 72 90 83 98 70 83 74 65 48
+bid.model_enriched: - 16 50 19 28 32 32 24 21 29 26 16 24
+bid.profitable: 8 2 7 5 3 4 6 15 9 7 9 5 3
+bid.rechecked: - 40 140 81 49 152 104 98 130 99 67 49 35
+bid.rescued: - 2 2 7 - 1 - - - 1 4 2 -
+bid.reworked: - - 26 30 24 29 36 44 30 36 34 25 29
+bid.same_site_found: - - 752 497 447 605 515 610 568 737 361 234 128
+bid.same_site_pages: - - 1470 872 834 1202 791 994 1189 1267 642 439 275
+brief.auto: - - - - - - - - - - - - 2385
+brief.built: - - - - - - - - - - - - 70
+checker.applications: 1 - 1 1 - - 1 4 3 2 3 2 -
+checker.checked: 9 2 7 5 3 4 6 15 9 7 9 5 3
+checker.hold: 2 - 1 - - 2 1 3 2 1 1 - -
+checker.ok: 7 2 6 5 3 2 5 12 7 6 8 5 3
+checker.packages: 15 10 47 49 41 35 46 50 31 36 48 47 34
+coverage.forms_new: - - 1 2 13 108 219 216 204 43 15 143 125
+coverage.offers_found: - - 20 486 297 397 649 640 600 226 133 444 381
+coverage.pairs_tried: - - 22 196 179 173 221 217 206 89 51 152 134
+fixer.escalated: - - - - - - - 1 - - 2 2 4
+fixer.fixed: - 6 1 1 - - 1 - - - - 2 -
+fixer.lessons: - 6 1 1 - - 1 1 - - 2 4 4
+fixer.retried: - 10 1 1 - - 1 - - - - 2 -
+fixer.saved: - - 1 - - - - - - - - 1 -
+kinds.cards: - 3584 3895 4019 4135 4374 4477 4606 4700 4719 4823 4931 4987
+kinds.cards_new: - 3584 311 124 116 239 103 129 94 19 104 108 56
+kinds.checked: - 415 550 1817 3976 3102 4954 5096 4976 6103 6158 5644 6738
+kinds.examples_new: - 1487 74 120 107 129 77 77 75 65 82 42 66
+kinds.removed: - 1 0 0 0 0 0 0 0 0 0 0 0
+kinds.repeat: - 1 0 0 0 0 0 0 0 0 0 0 0
+kinds.shadow: - 56 89 311 916 778 1279 1364 1334 1617 1609 1439 1557
+ktru.empty: - - 10 8 3 1 3 - - - 3 1 1
+ktru.failed: - - 24 20 6 11 9 5 - - 2 2 3
+ktru.read: - - 568 360 236 138 249 133 123 4 91 106 47
+manager.lessons: - 1 - - - - - - - - 2 1 1
+manager.reports: 2 2 1 1 1 1 1 1 1 1 2 2 1
+manager.task_done: - 11 9 13 18 2 7 3 7 14 8 7 9
+manager.task_stuck: - 2 12 12 21 - 3 3 5 19 6 8 15
+outcomes.forecast_err_sum: - - - - - - - - - - - 12.4 -
+outcomes.forecasts: - - - - - - - - - - - 1 -
+outcomes.found: 184 149 125 126 181 173 108 75 66 49 42 45 86
+outcomes.no_contract: 102 52 47 63 36 17 101 122 130 159 147 147 94
+package.auto_attest: - 7 34 19 15 7 12 11 6 5 16 19 11
+package.auto_marks: - 2 3 4 3 1 1 1 2 - 2 3 1
+package.auto_price: - 3 13 9 7 4 4 6 3 3 6 10 2
+package.built: 93 16 73 69 95 35 46 50 46 73 48 56 50
+package.final_blocked: 93 16 73 69 95 35 46 50 46 73 48 56 50
+package.fixed: 38 12 28 21 9 6 2 2 2 - - 6 4
+package.lessons: 184 49 136 154 148 62 82 80 59 95 108 145 69
+package.marks_found: 6 6 3 3 4 1 2 - - - - 2 -
+package.marks_missed: 24 16 50 60 79 28 32 35 29 78 42 53 33
+package.marks_suggested: 5 2 10 11 3 4 3 6 5 10 6 10 2
+package.redrafted: 12 12 39 26 22 9 15 12 8 5 17 24 12
+pages.learn_tries: - 27 - 6 - - 8 5 3 7 12 7 9
+pages.lessons: - 109 549 300 305 257 224 181 208 161 168 153 120
+pages.rules: - 19 - 2 - - 5 2 2 2 8 3 1
+pages.rules_dropped: - 2 - - - - - - 1 1 1 - -
+pages.unread: - 144 862 566 845 754 758 642 519 833 878 370 491
+reader.absent: 565 213 151 172 235 180 189 177 169 166 331 213 242
+reader.agree: 341 190 175 144 177 150 153 153 143 140 302 212 214
+reader.anchor_fail: 11 6 4 - 2 3 - 5 1 3 6 3 -
+reader.anchor_hit: 9 2 - 1 1 1 2 1 - 7 19 1 1
+reader.anchor_used: - 8 4 1 3 4 2 6 1 10 25 4 1
+reader.anchors_learned: 51 25 10 4 21 6 4 12 13 7 14 26 19
+reader.lessons: 216 99 76 56 129 73 73 75 74 84 164 119 106
+reader.mismatch: 71 34 28 10 31 22 16 18 25 22 45 33 39
+reader.missed: 145 65 48 46 98 51 57 57 49 62 119 86 67
+scout.catalog_added: 30 1 0 0 0 0 0 0 0 0 0 0 0
+scout.good_sites: 30 21 19 14 18 16 15 13 14 14 13 13 13
+scout.lessons: 63 14 10 8 11 8 4 5 3 10 4 3 6
+scout.weak_sites: 30 36 37 35 42 46 45 47 47 54 54 54 56
 
 == Частые уроки (агент | код | площадка | раз | источник)
-bid | price_suspicious | — | 349 | self — Цена товара вдвое ниже прошлых контрактов
-bid | char_conflict_pick | — | 304 | self — выбран товар, характеристика которого не проходит по ТЗ — взят следующ
-reader | missed_delivery_place | РТС-тендер | 207 | self — Не нашёл: место поставки
-pages | page_unread | attacher.ru | 207 | self — Страница поставщика не прочитана
-application | finding_legal_applicability_unknown | РТС-тендер · 44-ФЗ | 196 | self — Не установлено, какие правила применяются
-application | todo_file | РТС-тендер · 44-ФЗ | 185 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
-reader | missed_delivery_place | Сбербанк-АСТ | 108 | self — Не нашёл: место поставки
-bid | margin_suspicious | — | 101 | self — Маржа по начальной цене 57.7% при неподтверждённых требованиях — вероя
-application | finding_legal_applicability_unknown | Сбербанк-АСТ · 44-ФЗ | 93 | self — Не установлено, какие правила применяются
-application | todo_file | Сбербанк-АСТ · 44-ФЗ | 90 | self — В файле «uploads/application/Декларация о соответствии (проект).docx» 
+bid | price_suspicious | — | 369 | self — Цена товара вдвое ниже прошлых контрактов
+bid | char_conflict_pick | — | 321 | self — выбран товар, характеристика которого не проходит по ТЗ — взят следующ
+pages | page_unread | attacher.ru | 217 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | РТС-тендер | 214 | self — Не нашёл: место поставки
+application | finding_legal_applicability_unknown | РТС-тендер · 44-ФЗ | 206 | self — Не установлено, какие правила применяются
+application | todo_file | РТС-тендер · 44-ФЗ | 195 | self — В файле «uploads/application/Заявка на участие.docx» не заполнено мест
+reader | missed_delivery_place | Сбербанк-АСТ | 120 | self — Не нашёл: место поставки
+bid | margin_suspicious | — | 110 | self — Маржа по начальной цене 57.7% при неподтверждённых требованиях — вероя
+application | finding_legal_applicability_unknown | Сбербанк-АСТ · 44-ФЗ | 102 | self — Не установлено, какие правила применяются
+application | todo_file | Сбербанк-АСТ · 44-ФЗ | 98 | self — В файле «uploads/application/Декларация о соответствии (проект).docx» 
+reader | missed_delivery_place | — | 89 | self — Не нашёл: место поставки
 pages | page_unread | bazismed.ru | 85 | self — Страница поставщика не прочитана
-reader | missed_delivery_place | — | 82 | self — Не нашёл: место поставки
-reader | missed_nmck | РТС-тендер | 79 | self — Не нашёл: НМЦК
-pages | page_unread | e2e4online.ru | 76 | self — Страница поставщика не прочитана
-reader | missed_delivery_place | Росэлторг | 72 | self — Не нашёл: место поставки
+reader | missed_nmck | РТС-тендер | 84 | self — Не нашёл: НМЦК
+pages | page_unread | e2e4online.ru | 79 | self — Страница поставщика не прочитана
+reader | missed_delivery_place | Росэлторг | 77 | self — Не нашёл: место поставки
 
 == Задачи управляющего: открытые и закрытые за период
 [done] pages: Выучить, где на этом сайте стоит цена | цель: новых таких ошибок за сутки — 0 | срок 11-02 | итог: справочник, цены там нет
