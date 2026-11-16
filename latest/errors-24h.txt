@@ -1,1 +1,62 @@
--- No entries --
+Nov 15 05:20:21 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 05:20:21 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 05:52:47 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 05:52:47 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 06:00:03 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 06:00:03 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 08:33:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 08:33:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 08:43:07 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 08:43:07 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 09:24:55 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 09:24:55 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 09:33:05 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 09:33:05 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 10:12:10 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 10:12:10 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 10:19:57 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 10:19:57 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 10:39:23 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'exit-code'.
+Nov 15 10:40:37 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'exit-code'.
+Nov 15 10:45:03 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'exit-code'.
+Nov 15 11:17:09 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 11:17:09 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 11:24:53 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 11:24:53 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 12:24:28 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'exit-code'.
+Nov 15 13:27:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 13:27:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 13:35:04 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 13:35:04 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 16:26:38 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 16:26:38 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 16:44:01 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 16:44:01 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 16:51:56 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 16:51:56 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 17:14:19 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 17:14:19 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 17:23:08 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 17:23:08 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 18:20:24 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 18:20:24 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 18:28:13 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 18:28:13 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 18:36:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 18:36:20 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 18:44:13 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 18:44:13 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 19:31:33 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 19:31:33 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 19:39:23 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 19:39:23 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 20:22:01 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 20:22:01 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 20:29:50 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 20:29:50 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 23:08:35 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 23:08:35 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 23:16:07 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 23:16:07 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
+Nov 15 23:23:50 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Main process exited, code=dumped, status=6/ABRT
+Nov 15 23:23:50 9108465-yg133605.twc1.net systemd[1]: tender-ai.service: Failed with result 'core-dump'.
